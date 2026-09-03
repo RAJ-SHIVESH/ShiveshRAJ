@@ -1,0 +1,1515 @@
+/* =========================================================
+   PRODUCTION ACCESSIBILITY + MAINTAINABILITY LAYER
+   Loaded after style.css. Keep final cross-site accessibility,
+   focus, motion, and interaction fixes here.
+   ========================================================= */
+
+:root{
+  --a11y-focus: #ffffff;
+  --a11y-focus-ring: rgba(92,168,255,.55);
+  --a11y-skip-bg: #071018;
+  --a11y-skip-text: #ffffff;
+  --a11y-target-offset: 88px;
+}
+
+html{scroll-behavior:smooth;}
+section[id], article[id], main[id]{scroll-margin-top:var(--a11y-target-offset);}
+
+/* Keyboard users get a consistent, high-contrast focus indicator. */
+:where(a,button,input,select,textarea,[role="tab"]):focus-visible{
+  outline:2px solid var(--a11y-focus);
+  outline-offset:3px;
+  box-shadow:0 0 0 5px var(--a11y-focus-ring);
+}
+
+/* Skip directly past the visual intro/header into the main landmark. */
+.skip-link{
+  position:fixed;
+  left:16px;
+  top:12px;
+  z-index:20000;
+  padding:11px 16px;
+  border-radius:8px;
+  background:var(--a11y-skip-bg);
+  color:var(--a11y-skip-text);
+  border:1px solid rgba(255,255,255,.35);
+  text-decoration:none;
+  transform:translateY(-160%);
+  transition:transform .18s ease;
+}
+.skip-link:focus-visible{transform:translateY(0);}
+
+/* Back-to-top is a real interactive control, not a cursor-hidden decoration. */
+.backtop{cursor:pointer;}
+
+/* Improve keyboard semantics for the capability tabs without changing layout. */
+.expertise-tabs [role="tab"]{cursor:pointer;}
+.expertise-tabs [role="tab"][aria-selected="true"]{position:relative;}
+
+/* Avoid hiding meaningful focus targets behind the sticky header. */
+#main-content:focus{outline:none;}
+
+/* External-action controls remain comfortably targetable on touch devices. */
+@media (max-width:780px){
+  .portfolio-reference-action{min-height:44px;}
+}
+
+/* A single final motion policy for the production layer. */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    scroll-behavior:auto !important;
+    transition-duration:.01ms !important;
+  }
+}
+
+/* Support operating-system high-contrast modes. */
+@media (forced-colors:active){
+  :where(a,button,input,select,textarea,[role="tab"]):focus-visible{
+    outline:2px solid CanvasText;
+    outline-offset:3px;
+    box-shadow:none;
+  }
+  .skip-link{
+    background:Canvas;
+    color:CanvasText;
+    border-color:CanvasText;
+  }
+}
+
+/* =========================================================
+   HEADER SCALE - 25% LARGER THAN THE CURRENT APPROVED SIZE
+   Keeps the same layout and visual proportions while improving
+   readability and click/tap targets.
+   ========================================================= */
+.premium-header.portfolio-reference-header .premium-header-shell.portfolio-reference-shell{
+  min-height:69px;
+  padding:0 28px;
+  gap:20px;
+}
+.portfolio-nav-link{
+  padding:0 25px;
+  font-size:10.5px;
+}
+.portfolio-reference-actions{gap:10px;}
+.portfolio-reference-action{
+  min-height:45px;
+  font-size:10.5px;
+  gap:10px;
+}
+.portfolio-reference-meeting{
+  min-width:165px;
+  padding:0 18px;
+}
+.portfolio-reference-icon{
+  width:16px;
+  height:16px;
+}
+.portfolio-reference-linkedin-mark{
+  width:16px;
+  height:16px;
+  font-size:12px;
+}
+
+@media(max-width:1550px){
+  .portfolio-reference-header .premium-header-shell.portfolio-reference-shell{min-height:69px;padding:0 21px;}
+  .portfolio-nav-link{padding:0 16px;font-size:9px;}
+  .portfolio-reference-actions{gap:16px;}
+  .portfolio-reference-action{min-height:45px;font-size:9px;gap:8px;}
+  .portfolio-reference-meeting{min-width:141px;padding:0 14px;}
+  .portfolio-reference-icon,.portfolio-reference-linkedin-mark{width:15px;height:15px;}
+}
+
+@media(max-width:1180px){
+  .portfolio-reference-header .premium-header-shell.portfolio-reference-shell{min-height:53px;padding:0 15px;gap:10px;}
+  .portfolio-nav-link{padding:0 10px;font-size:7.5px;}
+  .portfolio-reference-actions{gap:9px;}
+  .portfolio-reference-action{min-height:33px;font-size:7.5px;gap:5px;}
+  .portfolio-reference-meeting{min-width:113px;padding:0 9px;}
+  .portfolio-reference-icon,.portfolio-reference-linkedin-mark{width:13px;height:13px;}
+  .portfolio-reference-linkedin-mark{font-size:9px;}
+}
+
+@media(max-width:850px){
+  .portfolio-reference-header .premium-header-shell.portfolio-reference-shell{padding:9px 10px;gap:6px;}
+  .portfolio-reference-nav{min-height:28px;}
+  .portfolio-nav-link{padding:0 10px;font-size:6.25px;}
+  .portfolio-reference-actions{gap:9px;}
+  .portfolio-reference-action{min-height:25px;font-size:6.25px;gap:5px;}
+  .portfolio-reference-meeting{padding:0 9px;}
+  .portfolio-reference-icon,.portfolio-reference-linkedin-mark{width:13px;height:13px;}
+  .portfolio-reference-linkedin-mark{font-size:7.5px;}
+}
+
+@media(max-width:620px){
+  .portfolio-reference-header .premium-header-shell.portfolio-reference-shell{padding:8px 9px;}
+  .portfolio-reference-actions{gap:6px;}
+  .portfolio-reference-action{min-width:24px;}
+  .portfolio-reference-meeting{min-width:24px;padding:0 6px;}
+  .portfolio-reference-icon,.portfolio-reference-linkedin-mark{width:13px;height:13px;}
+}
+
+/* =========================================================
+   FINAL CAREER TIMELINE - VISIBLE TRAVELLING COMET / LIGHT-SWORD EFFECT
+   The rail stays subtle. The moving light is the hero and physically
+   reaches each stop before activating that stop.
+========================================================= */
+#timeline.timeline-v2 .timeline-v2-track{
+  --journey-teal:#6bd8b5;
+  --journey-blue:#86b9ec;
+  --journey-purple:#aaa5ee;
+  --journey-orange:#ff9b70;
+  --journey-gold:#f0ca5d;
+  position:relative !important;
+  padding-top:78px !important;
+  overflow:visible !important;
+}
+
+/* Keep the career rail elegant and quiet so the travelling light is obvious. */
+#timeline.timeline-v2 .timeline-v2-track::before{
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  right:0 !important;
+  top:28px !important;
+  height:2px !important;
+  width:auto !important;
+  background:linear-gradient(90deg,rgba(107,216,181,.48),rgba(134,185,236,.42),rgba(170,165,238,.42),rgba(255,155,112,.42),rgba(240,202,93,.52)) !important;
+  box-shadow:0 0 8px rgba(117,180,214,.10) !important;
+  z-index:1 !important;
+}
+
+#timeline.timeline-v2 .timeline-v2-motion-lane{
+  position:absolute !important;
+  inset:0 !important;
+  display:block !important;
+  pointer-events:none !important;
+  overflow:visible !important;
+  z-index:30 !important;
+}
+
+/* Bright moving head - intentionally above the permanent milestone dots. */
+#timeline.timeline-v2 .timeline-v2-moving-light{
+  --journey-light:var(--journey-teal);
+  position:absolute !important;
+  left:0 !important;
+  top:21px !important;
+  width:14px !important;
+  height:14px !important;
+  display:block !important;
+  border-radius:50% !important;
+  transform:translateX(-50%) !important;
+  background:radial-gradient(circle at 35% 35%,#ffffff 0 18%,var(--journey-light) 38%,color-mix(in srgb,var(--journey-light) 72%,transparent) 72%,transparent 100%) !important;
+  color:var(--journey-light) !important;
+  opacity:1 !important;
+  animation:none !important;
+  transition:opacity .22s ease,filter .28s ease !important;
+  filter:drop-shadow(0 0 5px #ffffff) drop-shadow(0 0 11px var(--journey-light)) drop-shadow(0 0 24px color-mix(in srgb,var(--journey-light) 72%,transparent)) !important;
+  box-shadow:0 0 0 2px color-mix(in srgb,var(--journey-light) 22%,transparent),0 0 20px var(--journey-light),0 0 42px color-mix(in srgb,var(--journey-light) 58%,transparent) !important;
+  will-change:left,opacity,filter;
+  z-index:31 !important;
+}
+
+/* Long tapered comet / lightsaber trail behind the head. */
+#timeline.timeline-v2 .timeline-v2-moving-light::after{
+  content:"" !important;
+  position:absolute !important;
+  right:52% !important;
+  top:50% !important;
+  width:118px !important;
+  height:3px !important;
+  transform:translateY(-50%) !important;
+  transform-origin:right center !important;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    color-mix(in srgb,var(--journey-light) 8%,transparent) 18%,
+    color-mix(in srgb,var(--journey-light) 30%,transparent) 52%,
+    color-mix(in srgb,var(--journey-light) 82%,transparent) 88%,
+    #ffffff 100%) !important;
+  border-radius:999px !important;
+  opacity:.92 !important;
+  filter:blur(.35px) drop-shadow(0 0 8px var(--journey-light)) !important;
+  pointer-events:none !important;
+}
+
+/* Soft luminous aura around the travelling head. */
+#timeline.timeline-v2 .timeline-v2-moving-light::before{
+  content:"" !important;
+  position:absolute !important;
+  left:50% !important;
+  top:50% !important;
+  width:34px !important;
+  height:34px !important;
+  transform:translate(-50%,-50%) !important;
+  border-radius:50% !important;
+  background:radial-gradient(circle,color-mix(in srgb,var(--journey-light) 34%,transparent) 0%,color-mix(in srgb,var(--journey-light) 12%,transparent) 46%,transparent 72%) !important;
+  animation:timeline-light-breathe 1.15s ease-in-out infinite alternate !important;
+  pointer-events:none !important;
+  z-index:-1 !important;
+}
+
+@keyframes timeline-light-breathe{
+  from{transform:translate(-50%,-50%) scale(.82);opacity:.55;}
+  to{transform:translate(-50%,-50%) scale(1.18);opacity:1;}
+}
+
+/* Five permanent career stops. */
+#timeline.timeline-v2 .timeline-v2-item{--timeline-stop:var(--journey-teal);}
+#timeline.timeline-v2 .timeline-v2-education{--timeline-stop:var(--journey-teal) !important;}
+#timeline.timeline-v2 .timeline-v2-experience{--timeline-stop:var(--journey-blue) !important;}
+#timeline.timeline-v2 .timeline-v2-education2{--timeline-stop:var(--journey-purple) !important;}
+#timeline.timeline-v2 .timeline-v2-guestready{--timeline-stop:var(--journey-orange) !important;}
+#timeline.timeline-v2 .timeline-v2-allianz{--timeline-stop:var(--journey-gold) !important;}
+
+#timeline.timeline-v2 .timeline-v2-item::before{
+  content:"" !important;
+  position:absolute !important;
+  left:50% !important;
+  top:-56px !important;
+  width:16px !important;
+  height:16px !important;
+  border-radius:50% !important;
+  transform:translateX(-50%) scale(1) !important;
+  background:#0b121b !important;
+  border:2px solid var(--timeline-stop) !important;
+  box-sizing:border-box !important;
+  z-index:9 !important;
+  opacity:1 !important;
+  animation:none !important;
+  transition:transform .32s ease,background-color .32s ease,box-shadow .32s ease,border-color .32s ease !important;
+  box-shadow:0 0 0 4px rgba(5,14,23,.92),0 0 9px color-mix(in srgb,var(--timeline-stop) 26%,transparent) !important;
+}
+
+/* The exact stop reached by the moving light briefly comes alive. */
+#timeline.timeline-v2 .timeline-v2-item.is-timeline-active::before{
+  transform:translateX(-50%) scale(1.34) !important;
+  background:var(--timeline-stop) !important;
+  box-shadow:0 0 0 5px rgba(5,14,23,.92),0 0 18px var(--timeline-stop),0 0 38px color-mix(in srgb,var(--timeline-stop) 74%,transparent) !important;
+}
+
+#timeline.timeline-v2 .timeline-v2-card{
+  animation:none !important;
+  transition:filter .36s ease,box-shadow .36s ease,border-color .36s ease,transform .36s ease !important;
+}
+
+#timeline.timeline-v2 .timeline-v2-item.is-timeline-active .timeline-v2-card{
+  filter:drop-shadow(0 0 15px color-mix(in srgb,var(--timeline-stop) 34%,transparent)) !important;
+  box-shadow:0 16px 34px rgba(0,0,0,.16),0 0 30px color-mix(in srgb,var(--timeline-stop) 24%,transparent) !important;
+}
+
+@media(max-width:1100px){
+  #timeline.timeline-v2 .timeline-v2-track::before{left:0 !important;right:0 !important;width:auto !important;}
+}
+
+@media(prefers-reduced-motion:reduce){
+  #timeline.timeline-v2 .timeline-v2-moving-light{display:none !important;}
+  #timeline.timeline-v2 .timeline-v2-item::before,
+  #timeline.timeline-v2 .timeline-v2-card{transition:none !important;animation:none !important;}
+}
+
+/* Hero capabilities CTA — kept exclusively in the hero. */
+.hero-capabilities-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  width:auto;
+  min-height:38px;
+  margin-top:0;
+  padding:0 14px 0 16px;
+  border:1px solid color-mix(in srgb,var(--accent,#58d9d2) 58%,rgba(255,255,255,.12));
+  border-radius:999px;
+  background:linear-gradient(135deg,rgba(10,24,35,.9),rgba(11,20,31,.72));
+  color:rgba(230,238,246,.92);
+  text-decoration:none;
+  font-size:.62rem;
+  font-weight:700;
+  letter-spacing:.105em;
+  box-shadow:0 8px 22px rgba(0,0,0,.14),inset 0 1px 0 rgba(255,255,255,.05);
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,background .2s ease;
+}
+.hero-capabilities-label{white-space:nowrap;}
+.hero-capabilities-label strong{color:var(--accent,#58d9d2);font:inherit;}
+.hero-capabilities-icon{
+  width:24px;
+  height:24px;
+  display:grid;
+  place-items:center;
+  flex:0 0 24px;
+  border-radius:50%;
+  border:1px solid color-mix(in srgb,var(--accent,#58d9d2) 60%,transparent);
+  color:var(--accent,#58d9d2);
+  font-size:.95rem;
+  line-height:1;
+}
+.hero-capabilities-link:hover{
+  transform:translateY(-1px);
+  border-color:var(--accent,#58d9d2);
+  box-shadow:0 10px 26px rgba(0,0,0,.18),0 0 16px color-mix(in srgb,var(--accent,#58d9d2) 12%,transparent);
+}
+@media(max-width:640px){
+  .hero-capabilities-link{width:auto;min-height:34px;padding:0 12px;gap:8px;font-size:.56rem;letter-spacing:.085em;}
+  .hero-capabilities-icon{width:22px;height:22px;flex-basis:22px;font-size:.88rem;}
+}
+@media(prefers-reduced-motion:reduce){.hero-capabilities-link{transition:none;}}
+
+/* Visible email contact - compact and responsive */
+.portfolio-reference-email{
+  gap:8px;
+  letter-spacing:.025em;
+}
+.portfolio-reference-email-label{
+  color:#d1d4d8;
+}
+.portfolio-reference-email-address{
+  color:#93a0b4;
+  letter-spacing:0;
+  font-weight:600;
+  text-transform:none;
+  transition:color .2s ease;
+}
+.portfolio-reference-email:hover .portfolio-reference-email-address,
+.portfolio-reference-email:focus-visible .portfolio-reference-email-address{
+  color:#43d8bd;
+}
+@media(max-width:1550px){
+  .portfolio-reference-email-address{font-size:.92em;}
+}
+@media(max-width:1180px){
+  .portfolio-reference-email-address{display:none;}
+  .portfolio-reference-email{gap:8px;}
+}
+@media(max-width:700px){
+  .portfolio-reference-email-label{display:none;}
+}
+
+/* FINAL PRODUCTION OVERRIDES - last stylesheet wins for the approved polish. */
+.portfolio-reference-header{
+  position:sticky!important;top:0;z-index:1000;
+  background:rgba(8,12,16,.88)!important;
+  border-bottom:1px solid rgba(147,160,180,.14)!important;
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+}
+.portfolio-reference-header .premium-header-shell.portfolio-reference-shell{min-height:58px!important;padding:0 24px!important;}
+.portfolio-nav-link,.portfolio-reference-action{font-size:9px!important;letter-spacing:.08em!important;}
+.portfolio-nav-link{padding-inline:14px!important;}
+.portfolio-reference-action{min-height:34px!important;}
+.portfolio-reference-meeting{min-width:128px!important;}
+.portfolio-reference-work-button{min-width:80px!important;}
+.portfolio-reference-email-address{font-size:8px!important;}
+
+#timeline.timeline-v2 .timeline-v2-track{position:relative;padding-top:68px!important;--journey-light:#6bd8b5;}
+#timeline.timeline-v2 .timeline-v2-motion-lane{left:3%!important;right:3%!important;top:31px!important;height:2px!important;background:linear-gradient(90deg,rgba(67,216,189,.18),rgba(90,167,255,.18),rgba(167,122,242,.18),rgba(241,160,95,.18),rgba(231,196,93,.22))!important;box-shadow:none!important;}
+#timeline.timeline-v2 .timeline-v2-moving-light{position:absolute!important;top:50%!important;left:0!important;width:9px!important;height:9px!important;margin:0!important;border-radius:50%!important;transform:translate(-50%,-50%)!important;background:var(--journey-light)!important;animation:none!important;transition:none!important;box-shadow:0 0 0 3px rgba(8,12,16,.95),0 0 14px var(--journey-light),0 0 28px color-mix(in srgb,var(--journey-light) 44%,transparent)!important;}
+#timeline.timeline-v2 .timeline-v2-moving-light::before{content:"";position:absolute;top:50%;right:100%;width:76px;height:2px;transform:translateY(-50%);background:linear-gradient(90deg,transparent,var(--journey-light));opacity:.55;}
+#timeline.timeline-v2 .timeline-v2-item::before{animation:none!important;background:#0b121b!important;transition:background .18s ease,box-shadow .18s ease,transform .18s ease!important;}
+#timeline.timeline-v2 .timeline-v2-item .timeline-v2-card{animation:none!important;filter:none!important;transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease!important;}
+#timeline.timeline-v2 .timeline-v2-item.is-timeline-active::before{background:var(--accent)!important;transform:translateX(-50%) scale(1.18)!important;box-shadow:0 0 0 5px rgba(8,12,16,.92),0 0 14px var(--accent),0 0 28px color-mix(in srgb,var(--accent) 55%,transparent)!important;}
+#timeline.timeline-v2 .timeline-v2-item.is-timeline-active .timeline-v2-card{border-color:color-mix(in srgb,var(--accent) 46%,rgba(147,160,180,.16))!important;box-shadow:0 18px 42px rgba(0,0,0,.18),0 0 28px color-mix(in srgb,var(--accent) 13%,transparent)!important;transform:translateY(-2px);}
+#timeline.timeline-v2 .timeline-v2-item:not(.is-timeline-active) .timeline-v2-card{box-shadow:none!important;}
+
+.projects-scroll-intro{display:none!important;}
+.not-found-main{min-height:80vh;display:grid;place-items:center;text-align:center;}
+.case-dashboard-visual .chart-bars i{height:var(--h)!important;}
+.case-dashboard-visual .chart-bars .bar-1{--h:82%;}.case-dashboard-visual .chart-bars .bar-2{--h:58%;}.case-dashboard-visual .chart-bars .bar-3{--h:72%;}.case-dashboard-visual .chart-bars .bar-4{--h:42%;}.case-dashboard-visual .chart-bars .bar-5{--h:65%;}.case-dashboard-visual .chart-bars .bar-6{--h:51%;}
+
+@media(max-width:980px){
+  .portfolio-reference-header .premium-header-shell.portfolio-reference-shell{min-height:52px!important;padding:0 14px!important;}
+  .portfolio-reference-action{font-size:8px!important;}
+  .hero-achievements-box{grid-template-columns:repeat(3,minmax(0,1fr))!important;}
+}
+@media(max-width:700px){
+  .portfolio-reference-header .premium-header-shell.portfolio-reference-shell{min-height:auto!important;padding:8px 10px!important;gap:7px!important;}
+  .portfolio-reference-nav,.portfolio-reference-actions{width:100%;overflow-x:auto;}
+  .portfolio-nav-link{font-size:7px!important;padding-inline:9px!important;}
+  .portfolio-reference-action{font-size:7px!important;min-height:28px!important;}
+  .portfolio-reference-email-address{display:none!important;}
+  .photo-reference-copy h1{font-size:clamp(38px,12vw,56px)!important;}
+  .hero-achievements-box{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+  #timeline.timeline-v2 .timeline-v2-track{overflow-x:auto!important;}
+  #timeline.timeline-v2 .timeline-v2-item{min-width:190px!important;}
+}
+@media(prefers-reduced-motion:reduce){
+  #timeline.timeline-v2 .timeline-v2-moving-light{display:none!important;}
+  #timeline.timeline-v2 .timeline-v2-item::before,#timeline.timeline-v2 .timeline-v2-card{animation:none!important;transition:none!important;}
+}
+
+
+/* =========================================================
+   FINAL TIMELINE GEOMETRY + 3D LIGHT
+   The milestone centres and travelling light share the same
+   horizontal reference and the line passes through their centres.
+   ========================================================= */
+#timeline.timeline-v2 .timeline-v2-motion-lane{
+  top:31px!important;
+  height:4px!important;
+  transform:none!important;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.20) 0,rgba(255,255,255,.07) 26%,rgba(34,55,72,.92) 55%,rgba(0,0,0,.56) 100%),
+    linear-gradient(90deg,rgba(67,216,189,.52),rgba(90,167,255,.54),rgba(167,122,242,.52),rgba(241,160,95,.52),rgba(231,196,93,.60))!important;
+  border-radius:999px!important;
+  box-shadow:0 1px 0 rgba(255,255,255,.08),0 3px 9px rgba(0,0,0,.28),0 0 12px rgba(103,168,205,.09)!important;
+}
+#timeline.timeline-v2 .timeline-v2-motion-lane::before{
+  inset:1px 0 auto!important;
+  height:1px!important;
+  background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.22),rgba(255,255,255,.04))!important;
+  opacity:.8!important;
+}
+#timeline.timeline-v2 .timeline-v2-item::before{
+  top:-44px!important;
+  width:18px!important;
+  height:18px!important;
+  border:2px solid color-mix(in srgb,var(--timeline-stop) 92%,white)!important;
+  background:
+    radial-gradient(circle at 30% 26%,rgba(255,255,255,.98) 0 8%,color-mix(in srgb,var(--timeline-stop) 92%,white) 10%,var(--timeline-stop) 36%,color-mix(in srgb,var(--timeline-stop) 68%,#07101a) 58%,#07101a 76%)!important;
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,.58),
+    inset 0 -2px 3px rgba(0,0,0,.72),
+    0 0 0 4px rgba(5,14,23,.94),
+    0 0 10px color-mix(in srgb,var(--timeline-stop) 24%,transparent)!important;
+}
+#timeline.timeline-v2 .timeline-v2-item.is-timeline-active::before{
+  transform:translateX(-50%) scale(1.24)!important;
+  background:
+    radial-gradient(circle at 31% 27%,#ffffff 0 10%,color-mix(in srgb,var(--accent) 88%,white) 14%,var(--accent) 39%,color-mix(in srgb,var(--accent) 58%,#06101a) 60%,#06101a 78%)!important;
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,.72),
+    inset 0 -2px 4px rgba(0,0,0,.72),
+    0 0 0 5px rgba(5,14,23,.94),
+    0 0 12px var(--accent),
+    0 0 28px color-mix(in srgb,var(--accent) 40%,transparent)!important;
+}
+#timeline.timeline-v2 .timeline-v2-moving-light{
+  top:50%!important;
+  width:13px!important;
+  height:13px!important;
+  background:
+    radial-gradient(circle at 30% 26%,#ffffff 0 12%,color-mix(in srgb,var(--journey-light) 82%,white) 22%,var(--journey-light) 44%,color-mix(in srgb,var(--journey-light) 48%,#06101a) 67%,#06101a 82%)!important;
+  border:1px solid color-mix(in srgb,var(--journey-light) 80%,white)!important;
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,.72),
+    inset 0 -2px 4px rgba(0,0,0,.75),
+    0 0 0 3px rgba(5,14,23,.96),
+    0 0 14px var(--journey-light),
+    0 0 32px color-mix(in srgb,var(--journey-light) 42%,transparent)!important;
+}
+#timeline.timeline-v2 .timeline-v2-moving-light::before{
+  width:92px!important;
+  height:3px!important;
+  background:linear-gradient(90deg,transparent 0%,color-mix(in srgb,var(--journey-light) 12%,transparent) 48%,color-mix(in srgb,var(--journey-light) 64%,transparent) 100%)!important;
+  filter:blur(.55px)!important;
+  opacity:.8!important;
+}
+#timeline.timeline-v2 .timeline-v2-moving-light::after{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:-8px!important;
+  border-radius:50%!important;
+  background:radial-gradient(circle,color-mix(in srgb,var(--journey-light) 24%,transparent) 0%,transparent 70%)!important;
+  pointer-events:none!important;
+}
+@media(max-width:700px){
+  #timeline.timeline-v2 .timeline-v2-motion-lane{top:29px!important;}
+  #timeline.timeline-v2 .timeline-v2-item::before{top:-42px!important;}
+}
+
+
+/* =========================================================
+   READABILITY UPGRADE — PROJECTS & WORK EXPERIENCE
+   Slightly larger typography for clearer scanning without
+   changing the established compact layout.
+========================================================= */
+.home-page #projects .projects-reference-card h3,
+.home-page #projects .project-experience-card h3,
+.home-page #projects .project-reference-card h3{
+  font-size:21px!important;
+  line-height:1.22!important;
+}
+
+.home-page #projects .projects-reference-card>p,
+.home-page #projects .project-experience-card>p,
+.home-page #projects .project-reference-card>p{
+  font-size:14px!important;
+  line-height:1.68!important;
+}
+
+.home-page #projects .projects-reference-card li,
+.home-page #projects .project-experience-card li,
+.home-page #projects .project-reference-card li{
+  font-size:13.5px!important;
+  line-height:1.6!important;
+}
+
+/* Work experience timeline: stronger title/body readability. */
+.home-page #timeline .timeline-v2-card h3{
+  font-size:20px!important;
+  line-height:1.2!important;
+}
+
+.home-page #timeline .timeline-v2-card p,
+.home-page #timeline .timeline-v2-copy{
+  font-size:13px!important;
+  line-height:1.6!important;
+}
+
+/* Experience cards outside the timeline. */
+.home-page #experience .experience-card h3,
+.home-page .experience-panel .experience-card h3{
+  font-size:20px!important;
+  line-height:1.2!important;
+}
+
+.home-page #experience .experience-card p,
+.home-page .experience-panel .experience-card p{
+  font-size:13.5px!important;
+  line-height:1.62!important;
+}
+
+/* Keep small metadata readable too, without making the layout heavy. */
+.home-page #timeline .timeline-v2-meta-box,
+.home-page #timeline .timeline-v2-tags span{
+  font-size:9px!important;
+}
+
+@media(max-width:760px){
+  .home-page #projects .projects-reference-card h3,
+  .home-page #projects .project-experience-card h3,
+  .home-page #projects .project-reference-card h3{
+    font-size:19px!important;
+  }
+
+  .home-page #projects .projects-reference-card>p,
+  .home-page #projects .project-experience-card>p,
+  .home-page #projects .project-reference-card>p{
+    font-size:13.5px!important;
+    line-height:1.64!important;
+  }
+
+  .home-page #timeline .timeline-v2-card h3{
+    font-size:19px!important;
+  }
+
+  .home-page #timeline .timeline-v2-card p,
+  .home-page #timeline .timeline-v2-copy{
+    font-size:13px!important;
+    line-height:1.58!important;
+  }
+}
+
+/* =========================================================
+   PROJECT CARD — FINAL COMPACTION OVERRIDE
+========================================================= */
+.project-page .project-experience-grid{
+  align-items:start !important;
+}
+.project-page .project-experience-card.project-reference-card{
+  min-height:0 !important;
+  height:auto !important;
+  align-self:start !important;
+  display:flex !important;
+  flex-direction:column !important;
+}
+.project-page .project-experience-card h3,
+.project-page .project-experience-card p{
+  min-height:0 !important;
+}
+.project-page .project-exp-top{
+  min-height:0 !important;
+}
+.project-page .project-exp-tags{
+  margin-top:12px !important;
+}
+.project-page .project-exp-bottom{
+  margin-top:0 !important;
+}
+
+/* =========================================================
+   PROJECT CARD — REMOVE THE REMAINING VOID BELOW DESCRIPTION
+   Keep the content flow tight: description -> tags -> metric.
+========================================================= */
+.project-page .project-experience-card.project-reference-card{
+  min-height:0 !important;
+  height:fit-content !important;
+  align-self:start !important;
+}
+.project-page .project-experience-card.project-reference-card .project-exp-meta{
+  margin-bottom:10px !important;
+}
+.project-page .project-experience-card.project-reference-card h3{
+  min-height:0 !important;
+  margin:0 0 10px !important;
+}
+.project-page .project-experience-card.project-reference-card p{
+  min-height:0 !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.project-page .project-experience-card.project-reference-card .project-exp-tags{
+  margin-top:10px !important;
+  padding:8px 0 12px !important;
+}
+.project-page .project-experience-card.project-reference-card .project-exp-bottom{
+  margin-top:0 !important;
+}
+
+/* =========================================================
+   FINAL PROJECT CARD COMPACTION — REMOVE ALL UNUSED SPACE
+   The cards must finish immediately after their real content:
+   description → tags → outcome / case-study action.
+========================================================= */
+.project-page .project-experience-grid{
+  align-items:start !important;
+}
+.project-page .project-experience-card.project-reference-card{
+  display:flex !important;
+  flex-direction:column !important;
+  align-self:start !important;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  padding-bottom:0 !important;
+}
+.project-page .project-experience-card.project-reference-card .project-exp-top,
+.project-page .project-experience-card.project-reference-card h3,
+.project-page .project-experience-card.project-reference-card p{
+  min-height:0 !important;
+}
+.project-page .project-experience-card.project-reference-card h3{
+  margin-bottom:8px !important;
+}
+.project-page .project-experience-card.project-reference-card p{
+  margin:0 !important;
+  padding:0 !important;
+}
+.project-page .project-experience-card.project-reference-card .project-exp-tags{
+  margin-top:8px !important;
+  margin-bottom:0 !important;
+  padding-top:6px !important;
+  padding-bottom:12px !important;
+}
+.project-page .project-experience-card.project-reference-card .project-exp-bottom{
+  margin-top:0 !important;
+  flex:0 0 auto !important;
+}
+
+/* =========================================================
+   FINAL PROJECT CARDS — TRUE COMPACT CONTENT FLOW
+   Remove all artificial vertical stretching and auto-spacer
+   behavior. Cards end directly after their content.
+========================================================= */
+.project-page .project-experience-grid{
+  align-items:start !important;
+}
+.project-page .project-experience-card.project-reference-card{
+  display:flex !important;
+  flex-direction:column !important;
+  flex:0 0 auto !important;
+  align-self:start !important;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  padding:20px 20px 0 !important;
+}
+.project-page .project-experience-card.project-reference-card h3{
+  min-height:0 !important;
+  margin:14px 0 8px !important;
+}
+.project-page .project-experience-card.project-reference-card p{
+  min-height:0 !important;
+  height:auto !important;
+  margin:0 !important;
+}
+.project-page .project-experience-card.project-reference-card .project-exp-tags{
+  margin-top:14px !important;
+  padding:0 0 14px !important;
+}
+.project-page .project-experience-card.project-reference-card .project-exp-bottom{
+  margin:0 -20px !important;
+  min-height:0 !important;
+  padding:14px 20px 16px !important;
+}
+/* Eliminate any leftover auto-spacing declarations inherited from older variants. */
+.project-page .project-experience-card.project-reference-card *{
+  --project-card-spacer:0px;
+}
+
+
+/* =========================================================
+   PROJECT CARDS — EXPERIENCE-STYLE COMPACT REBUILD
+   Mirrors the visual rhythm of the Work Experience cards:
+   logo + date/signal -> metadata -> divider -> title/impact -> tags -> outcome.
+========================================================= */
+.project-page .project-experience-grid{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:18px !important;
+  align-items:start !important;
+}
+.project-page .project-experience-card.project-reference-card{
+  position:relative !important;
+  display:flex !important;
+  flex-direction:column !important;
+  min-width:0 !important;
+  min-height:0 !important;
+  height:auto !important;
+  padding:14px 24px 0 !important;
+  overflow:hidden !important;
+  border-radius:18px !important;
+  border:1px solid rgba(126,150,177,.20) !important;
+  background:linear-gradient(145deg,rgba(12,24,36,.98),rgba(7,14,22,.99)) !important;
+  box-shadow:0 12px 30px rgba(0,0,0,.16) !important;
+}
+.project-page .project-experience-card.project-reference-card:nth-child(1){--project-accent:#28d6b4 !important;}
+.project-page .project-experience-card.project-reference-card:nth-child(2){--project-accent:#4ba8ff !important;}
+.project-page .project-experience-card.project-reference-card:nth-child(3){--project-accent:#b77cff !important;}
+.project-page .project-experience-card.project-reference-card:before{
+  left:22px !important;
+  width:68px !important;
+  height:3px !important;
+  background:var(--project-accent) !important;
+  box-shadow:0 0 14px color-mix(in srgb,var(--project-accent) 55%,transparent) !important;
+}
+.project-page .project-card-number{
+  left:22px !important;
+  top:16px !important;
+  z-index:4 !important;
+  min-width:46px !important;
+  padding:8px 12px !important;
+  border:0 !important;
+  border-radius:8px !important;
+  color:#eef5f9 !important;
+  background:color-mix(in srgb,var(--project-accent) 32%,#162838) !important;
+  font:900 15px/1 var(--mono,monospace) !important;
+}
+.project-page .project-exp-top{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:16px !important;
+  min-height:122px !important;
+  margin:16px 0 0 !important;
+  padding:28px 0 18px !important;
+  border-bottom:1px solid rgba(126,150,177,.18) !important;
+}
+.project-page .project-exp-logo{
+  width:122px !important;
+  height:92px !important;
+  flex:0 0 122px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:10px !important;
+  border-radius:16px !important;
+  background:#f0f2f1 !important;
+  box-shadow:0 10px 22px rgba(0,0,0,.16) !important;
+  overflow:hidden !important;
+}
+.project-page .project-exp-logo img{
+  display:block !important;
+  width:auto !important;
+  height:auto !important;
+  max-width:100% !important;
+  max-height:100% !important;
+  object-fit:contain !important;
+}
+.project-page .project-exp-top-right{
+  min-width:0 !important;
+  margin-left:auto !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-end !important;
+  justify-content:space-between !important;
+  gap:10px !important;
+  min-height:92px !important;
+}
+.project-page .project-exp-date{
+  margin:0 !important;
+  color:var(--project-accent) !important;
+  font:800 10px/1.45 var(--mono,monospace) !important;
+  letter-spacing:.06em !important;
+  white-space:nowrap !important;
+}
+.project-page .project-exp-signal{
+  width:68px !important;
+  height:68px !important;
+  display:flex !important;
+  align-items:flex-end !important;
+  justify-content:center !important;
+  gap:5px !important;
+  padding:14px !important;
+  border:1px solid color-mix(in srgb,var(--project-accent) 42%,transparent) !important;
+  border-radius:50% !important;
+  background:color-mix(in srgb,var(--project-accent) 7%,transparent) !important;
+  box-shadow:inset 0 0 20px color-mix(in srgb,var(--project-accent) 5%,transparent) !important;
+}
+.project-page .project-exp-signal i{
+  display:block !important;
+  width:5px !important;
+  border-radius:4px 4px 1px 1px !important;
+  background:var(--project-accent) !important;
+  opacity:.92 !important;
+}
+.project-page .project-exp-signal i:nth-child(1){height:16px !important;}
+.project-page .project-exp-signal i:nth-child(2){height:26px !important;}
+.project-page .project-exp-signal i:nth-child(3){height:36px !important;}
+.project-page .project-exp-signal i:nth-child(4){height:44px !important;}
+.project-page .project-exp-meta{margin:14px 0 0 !important;}
+.project-page .project-exp-role,
+.project-page .project-exp-division{
+  display:block !important;
+  color:#aeb9c4 !important;
+  font:800 8px/1.35 var(--mono,monospace) !important;
+  letter-spacing:.09em !important;
+  text-transform:uppercase !important;
+}
+.project-page .project-exp-division{margin-top:5px !important;color:var(--project-accent) !important;}
+.project-page .project-experience-card.project-reference-card h3{
+  margin:28px 0 18px !important;
+  min-height:0 !important;
+  color:#edf2f6 !important;
+  font-size:25px !important;
+  line-height:1.16 !important;
+  letter-spacing:-.035em !important;
+}
+.project-page .project-experience-card.project-reference-card p{
+  margin:0 !important;
+  min-height:0 !important;
+  color:#aeb9c5 !important;
+  font-size:14px !important;
+  line-height:1.62 !important;
+}
+.project-page .project-exp-tags{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:8px !important;
+  margin:22px 0 18px !important;
+  padding:0 !important;
+}
+.project-page .project-exp-tags span{
+  padding:7px 10px !important;
+  border:1px solid color-mix(in srgb,var(--project-accent) 56%,transparent) !important;
+  border-radius:999px !important;
+  color:var(--project-accent) !important;
+  background:rgba(5,13,21,.38) !important;
+  font:700 7px/1 var(--mono,monospace) !important;
+  letter-spacing:.07em !important;
+}
+.project-page .project-exp-bottom{
+  margin:0 -24px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:16px !important;
+  min-height:72px !important;
+  padding:15px 24px 17px !important;
+  border-top:1px solid rgba(126,150,177,.16) !important;
+  background:rgba(5,11,18,.30) !important;
+}
+.project-page .project-exp-bottom>div{display:flex !important;flex-direction:column !important;gap:4px !important;}
+.project-page .project-exp-bottom strong{color:var(--project-accent) !important;font-size:20px !important;line-height:1 !important;}
+.project-page .project-exp-bottom small{margin:0 !important;color:#748398 !important;font-size:7px !important;}
+.project-page .project-exp-link{margin:0 !important;color:var(--project-accent) !important;font-size:8px !important;letter-spacing:.08em !important;}
+
+@media(max-width:1180px){
+  .project-page .project-experience-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+  .project-page .project-experience-card.project-reference-card:last-child{grid-column:1/-1 !important;}
+}
+@media(max-width:760px){
+  .project-page .project-experience-grid{grid-template-columns:1fr !important;gap:14px !important;}
+  .project-page .project-experience-card.project-reference-card:last-child{grid-column:auto !important;}
+  .project-page .project-experience-card.project-reference-card{padding:14px 18px 0 !important;}
+  .project-page .project-exp-top{min-height:108px !important;}
+  .project-page .project-exp-logo{width:104px !important;height:80px !important;flex-basis:104px !important;}
+  .project-page .project-exp-signal{width:58px !important;height:58px !important;}
+  .project-page .project-exp-date{font-size:9px !important;white-space:normal !important;text-align:right !important;}
+  .project-page .project-exp-bottom{margin:0 -18px !important;padding-inline:18px !important;}
+}
+
+/* =========================================================
+   PROJECTS — EXPERIENCE-CARD VISUAL SYSTEM
+   Mirrors the supplied Work Experience card composition.
+========================================================= */
+.home-page #projects .projects-reference-grid{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:18px !important;
+  align-items:start !important;
+}
+.home-page #projects .projects-reference-card{
+  --project-accent:var(--portfolio-teal,#19e0b2) !important;
+  position:relative !important;
+  display:flex !important;
+  flex-direction:column !important;
+  min-width:0 !important;
+  min-height:0 !important;
+  height:auto !important;
+  align-self:start !important;
+  padding:14px 24px 0 !important;
+  overflow:hidden !important;
+  border:1px solid color-mix(in srgb,var(--project-accent) 48%,transparent) !important;
+  border-radius:18px !important;
+  background:radial-gradient(circle at 92% 7%,color-mix(in srgb,var(--project-accent) 11%,transparent),transparent 35%),linear-gradient(145deg,rgba(15,24,34,.98),rgba(7,13,20,.99)) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.025),0 16px 34px rgba(0,0,0,.18) !important;
+}
+.home-page #projects .projects-reference-teal{--project-accent:#42d7b3 !important;}
+.home-page #projects .projects-reference-blue{--project-accent:#5ca8ff !important;}
+.home-page #projects .projects-reference-purple{--project-accent:#b477ff !important;}
+.home-page #projects .projects-reference-card::before{
+  content:"" !important;
+  position:absolute !important;
+  top:0 !important;
+  left:22px !important;
+  width:68px !important;
+  height:3px !important;
+  border-radius:0 0 8px 8px !important;
+  background:var(--project-accent) !important;
+  box-shadow:0 0 16px var(--project-accent) !important;
+  opacity:.9 !important;
+}
+.home-page #projects .projects-reference-card:hover{
+  transform:translateY(-4px) !important;
+  border-color:var(--project-accent) !important;
+  box-shadow:0 22px 46px rgba(0,0,0,.28),0 0 28px color-mix(in srgb,var(--project-accent) 13%,transparent) !important;
+}
+.home-page #projects .projects-reference-index{
+  position:absolute !important;
+  z-index:3 !important;
+  left:22px !important;
+  top:16px !important;
+  padding:8px 12px !important;
+  border-radius:8px !important;
+  color:#dce5ed !important;
+  background:color-mix(in srgb,var(--project-accent) 34%,#12202a) !important;
+  box-shadow:0 0 20px color-mix(in srgb,var(--project-accent) 10%,transparent) !important;
+  font:900 15px/1 var(--mono,monospace) !important;
+  letter-spacing:.09em !important;
+}
+.home-page #projects .projects-reference-head{
+  position:relative !important;
+  z-index:1 !important;
+  display:grid !important;
+  grid-template-columns:104px minmax(0,1fr) 54px !important;
+  align-items:center !important;
+  gap:14px !important;
+  min-height:116px !important;
+  margin-top:16px !important;
+  padding:28px 0 18px !important;
+  border-bottom:1px solid rgba(126,150,177,.18) !important;
+}
+.home-page #projects .projects-reference-company{
+  width:104px !important;
+  height:92px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  margin:0 !important;
+  padding:10px !important;
+  overflow:hidden !important;
+  border:1px solid rgba(255,255,255,.45) !important;
+  border-radius:14px !important;
+  background:#f4f5f3 !important;
+  box-shadow:0 10px 24px rgba(0,0,0,.22) !important;
+}
+.home-page #projects .projects-reference-company img{
+  display:block !important;
+  width:auto !important;
+  height:auto !important;
+  max-width:90px !important;
+  max-height:58px !important;
+  object-fit:contain !important;
+}
+.home-page #projects .projects-reference-head-info{min-width:0 !important;}
+.home-page #projects .projects-reference-period{
+  display:flex !important;
+  align-items:center !important;
+  flex-wrap:wrap !important;
+  gap:7px !important;
+  margin:0 0 15px !important;
+  color:var(--project-accent) !important;
+  font:900 10px/1.25 var(--mono,monospace) !important;
+  letter-spacing:.04em !important;
+}
+.home-page #projects .projects-reference-period i{font-style:normal !important;opacity:.75 !important;}
+.home-page #projects .projects-reference-meta{
+  margin:0 !important;
+  color:color-mix(in srgb,var(--project-accent) 88%,#fff) !important;
+  font:850 8px/1.75 var(--mono,monospace) !important;
+  letter-spacing:.075em !important;
+}
+.home-page #projects .projects-reference-insight{
+  width:54px !important;
+  height:54px !important;
+  justify-self:end !important;
+  border:1px solid color-mix(in srgb,var(--project-accent) 30%,transparent) !important;
+  border-radius:50% !important;
+  background:radial-gradient(circle,color-mix(in srgb,var(--project-accent) 12%,transparent),rgba(8,14,21,.12)) !important;
+  box-shadow:inset 0 0 24px color-mix(in srgb,var(--project-accent) 10%,transparent) !important;
+}
+.home-page #projects .projects-reference-insight-growth{display:flex !important;align-items:flex-end !important;justify-content:center !important;gap:4px !important;padding:13px 10px !important;box-sizing:border-box !important;}
+.home-page #projects .projects-reference-insight-growth i{display:block !important;width:5px !important;border-radius:4px 4px 1px 1px !important;background:var(--project-accent) !important;box-shadow:0 0 10px var(--project-accent) !important;}
+.home-page #projects .projects-reference-insight-growth i:nth-child(1){height:12px !important}.home-page #projects .projects-reference-insight-growth i:nth-child(2){height:20px !important}.home-page #projects .projects-reference-insight-growth i:nth-child(3){height:28px !important}.home-page #projects .projects-reference-insight-growth i:nth-child(4){height:36px !important}
+.home-page #projects .projects-reference-insight-pie{display:block !important;background:conic-gradient(var(--project-accent) 0 26%,rgba(92,168,255,.24) 26% 48%,rgba(255,255,255,.06) 48% 74%,transparent 74%) !important;}
+.home-page #projects .projects-reference-insight-people{display:flex !important;align-items:center !important;justify-content:center !important;color:var(--project-accent) !important;font-size:16px !important;letter-spacing:-5px !important;text-indent:-2px !important;}
+.home-page #projects .projects-reference-rule{
+  position:relative !important;
+  z-index:1 !important;
+  height:1px !important;
+  margin:25px 0 24px !important;
+  background:linear-gradient(90deg,color-mix(in srgb,var(--project-accent) 50%,transparent),rgba(255,255,255,.08)) !important;
+}
+.home-page #projects .projects-reference-card h3{
+  position:relative !important;
+  z-index:1 !important;
+  margin:0 0 15px !important;
+  color:#f2f4f7 !important;
+  font-size:21px !important;
+  line-height:1.17 !important;
+  letter-spacing:-.025em !important;
+  font-weight:820 !important;
+}
+.home-page #projects .projects-reference-card>p{
+  position:relative !important;
+  z-index:1 !important;
+  display:block !important;
+  margin:0 !important;
+  max-width:100% !important;
+  color:#b8c2ce !important;
+  font-size:13px !important;
+  line-height:1.55 !important;
+}
+.home-page #projects .projects-reference-impact{
+  display:inline-block !important;
+  margin-right:10px !important;
+  color:var(--project-accent) !important;
+  font:850 8px/1 var(--mono,monospace) !important;
+  letter-spacing:.09em !important;
+}
+.home-page #projects .projects-reference-tags{
+  position:relative !important;
+  z-index:1 !important;
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:7px !important;
+  margin:22px 0 18px !important;
+  padding:0 !important;
+}
+.home-page #projects .projects-reference-tags span{
+  padding:7px 9px !important;
+  border:1px solid color-mix(in srgb,var(--project-accent) 54%,transparent) !important;
+  border-radius:999px !important;
+  background:rgba(7,13,20,.45) !important;
+  color:var(--project-accent) !important;
+  font:850 8px/1 var(--mono,monospace) !important;
+  letter-spacing:.055em !important;
+  white-space:nowrap !important;
+}
+.home-page #projects .projects-reference-footer{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:16px !important;
+  margin:0 -24px !important;
+  padding:15px 24px 17px !important;
+  border-top:1px solid rgba(126,150,177,.16) !important;
+  background:rgba(5,11,18,.30) !important;
+}
+.home-page #projects .projects-reference-footer>div{display:flex !important;flex-direction:column !important;gap:4px !important;}
+.home-page #projects .projects-reference-footer strong{color:var(--project-accent) !important;font:900 20px/1 var(--mono,monospace) !important;}
+.home-page #projects .projects-reference-footer small{color:#748398 !important;font:500 7px/1.2 var(--mono,monospace) !important;letter-spacing:.04em !important;}
+.home-page #projects .projects-reference-footer a{color:var(--project-accent) !important;font:850 8px/1 var(--mono,monospace) !important;letter-spacing:.08em !important;white-space:nowrap !important;}
+
+/* Standalone Projects page uses the same card composition. */
+.project-page .project-experience-grid{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:18px !important;align-items:start !important;}
+.project-page .project-experience-card.project-reference-card{min-height:0 !important;height:auto !important;align-self:start !important;}
+.project-page .project-exp-top{min-height:0 !important;}
+.project-page .project-exp-logo{flex:0 0 122px !important;}
+.project-page .project-exp-tags{margin-top:14px !important;}
+.project-page .project-exp-bottom{margin-top:0 !important;}
+
+@media(max-width:1180px){
+  .home-page #projects .projects-reference-grid,.project-page .project-experience-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+  .home-page #projects .projects-reference-card:nth-child(3),.project-page .project-experience-card.project-reference-card:last-child{grid-column:1/-1 !important;}
+}
+@media(max-width:760px){
+  .home-page #projects .projects-reference-grid,.project-page .project-experience-grid{grid-template-columns:1fr !important;gap:14px !important;}
+  .home-page #projects .projects-reference-card:nth-child(3),.project-page .project-experience-card.project-reference-card:last-child{grid-column:auto !important;}
+  .home-page #projects .projects-reference-card{padding:14px 18px 0 !important;}
+  .home-page #projects .projects-reference-head{grid-template-columns:88px minmax(0,1fr) 48px !important;gap:10px !important;min-height:104px !important;}
+  .home-page #projects .projects-reference-company{width:88px !important;height:82px !important;}
+  .home-page #projects .projects-reference-company img{max-width:76px !important;max-height:52px !important;}
+  .home-page #projects .projects-reference-insight{width:48px !important;height:48px !important;}
+  .home-page #projects .projects-reference-footer{margin:0 -18px !important;padding-inline:18px !important;}
+  .project-page .project-experience-card.project-reference-card{padding-left:18px !important;padding-right:18px !important;}
+  .project-page .project-exp-logo{flex-basis:104px !important;width:104px !important;height:80px !important;}
+  .project-page .project-exp-bottom{margin-left:-18px !important;margin-right:-18px !important;padding-inline:18px !important;}
+}
+
+/* =========================================================
+   FINAL NEON BULB TIMELINE - MOVING LIGHT EFFECT
+   The JavaScript controls the horizontal travel. These styles make
+   the travelling point read as a bright neon bulb with a visible
+   glow/trail while each milestone remains a polished illuminated node.
+========================================================= */
+#timeline.timeline-v2 .timeline-v2-motion-lane{
+  height:3px!important;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.05)),
+    linear-gradient(90deg,rgba(107,216,181,.38),rgba(134,185,236,.35),rgba(170,165,238,.35),rgba(255,155,112,.38),rgba(240,202,93,.42))!important;
+  box-shadow:
+    0 0 5px rgba(120,188,220,.20),
+    0 0 16px rgba(120,188,220,.10)!important;
+}
+
+#timeline.timeline-v2 .timeline-v2-moving-light{
+  width:17px!important;
+  height:17px!important;
+  border:1px solid color-mix(in srgb,var(--journey-light) 78%,white)!important;
+  border-radius:50%!important;
+  background:
+    radial-gradient(circle at 34% 31%,#ffffff 0 13%,#f9ffff 18%,color-mix(in srgb,var(--journey-light) 94%,white) 30%,var(--journey-light) 47%,color-mix(in srgb,var(--journey-light) 52%,#07101a) 68%,#07101a 84%)!important;
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,.85),
+    inset 0 -2px 4px rgba(0,0,0,.65),
+    0 0 0 3px rgba(5,14,23,.96),
+    0 0 7px #ffffff,
+    0 0 15px var(--journey-light),
+    0 0 30px color-mix(in srgb,var(--journey-light) 72%,transparent),
+    0 0 52px color-mix(in srgb,var(--journey-light) 36%,transparent)!important;
+  filter:drop-shadow(0 0 7px #ffffff) drop-shadow(0 0 14px var(--journey-light))!important;
+  animation:timeline-neon-bulb-pulse 1.05s ease-in-out infinite alternate!important;
+}
+
+#timeline.timeline-v2 .timeline-v2-moving-light::before{
+  width:150px!important;
+  height:4px!important;
+  right:56%!important;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    color-mix(in srgb,var(--journey-light) 5%,transparent) 22%,
+    color-mix(in srgb,var(--journey-light) 22%,transparent) 48%,
+    color-mix(in srgb,var(--journey-light) 58%,transparent) 78%,
+    #ffffff 100%)!important;
+  opacity:.92!important;
+  filter:blur(.8px) drop-shadow(0 0 7px var(--journey-light))!important;
+}
+
+#timeline.timeline-v2 .timeline-v2-moving-light::after{
+  inset:-12px!important;
+  border-radius:50%!important;
+  background:radial-gradient(circle,
+    color-mix(in srgb,var(--journey-light) 28%,transparent) 0%,
+    color-mix(in srgb,var(--journey-light) 13%,transparent) 34%,
+    transparent 72%)!important;
+  opacity:.95!important;
+  filter:blur(.35px)!important;
+  animation:timeline-neon-aura 1.05s ease-in-out infinite alternate!important;
+}
+
+@keyframes timeline-neon-bulb-pulse{
+  from{filter:drop-shadow(0 0 6px #ffffff) drop-shadow(0 0 11px var(--journey-light));}
+  to{filter:drop-shadow(0 0 10px #ffffff) drop-shadow(0 0 19px var(--journey-light)) drop-shadow(0 0 30px color-mix(in srgb,var(--journey-light) 40%,transparent));}
+}
+
+@keyframes timeline-neon-aura{
+  from{transform:scale(.82);opacity:.58;}
+  to{transform:scale(1.12);opacity:1;}
+}
+
+#timeline.timeline-v2 .timeline-v2-item::before{
+  width:19px!important;
+  height:19px!important;
+  background:
+    radial-gradient(circle at 33% 30%,#ffffff 0 10%,color-mix(in srgb,var(--timeline-stop) 88%,white) 17%,var(--timeline-stop) 40%,color-mix(in srgb,var(--timeline-stop) 54%,#07101a) 63%,#07101a 82%)!important;
+  border:2px solid color-mix(in srgb,var(--timeline-stop) 82%,white)!important;
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,.7),
+    inset 0 -2px 4px rgba(0,0,0,.66),
+    0 0 0 4px rgba(5,14,23,.94),
+    0 0 9px color-mix(in srgb,var(--timeline-stop) 42%,transparent),
+    0 0 18px color-mix(in srgb,var(--timeline-stop) 24%,transparent)!important;
+}
+
+#timeline.timeline-v2 .timeline-v2-item.is-timeline-active::before{
+  transform:translateX(-50%) scale(1.34)!important;
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,.82),
+    inset 0 -2px 4px rgba(0,0,0,.66),
+    0 0 0 5px rgba(5,14,23,.94),
+    0 0 12px #ffffff,
+    0 0 24px var(--accent),
+    0 0 42px color-mix(in srgb,var(--accent) 54%,transparent)!important;
+}
+
+@media(prefers-reduced-motion:reduce){
+  #timeline.timeline-v2 .timeline-v2-moving-light{
+    animation:none!important;
+    filter:none!important;
+  }
+  #timeline.timeline-v2 .timeline-v2-moving-light::after{animation:none!important;}
+}
+
+/* =========================================================
+   FINAL TIMELINE REFINEMENT - CLEAN NEON BULBS
+   Keep the rail elegant. The bulbs carry the visual energy without
+   creating oversized halos or a blown-out first milestone.
+========================================================= */
+#timeline.timeline-v2 .timeline-v2-motion-lane{
+  top:31px!important;
+  height:3px!important;
+  border-radius:999px!important;
+  background:linear-gradient(90deg,
+    rgba(107,216,181,.48) 0%,
+    rgba(134,185,236,.46) 25%,
+    rgba(170,165,238,.46) 50%,
+    rgba(255,155,112,.48) 75%,
+    rgba(240,202,93,.52) 100%)!important;
+  box-shadow:0 0 7px rgba(124,188,219,.14),0 1px 0 rgba(255,255,255,.10)!important;
+}
+
+#timeline.timeline-v2 .timeline-v2-motion-lane::before{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  height:1px!important;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.24),transparent)!important;
+  opacity:.8!important;
+}
+
+/* Moving bulb: bright core + restrained neon halo + short directional trail. */
+#timeline.timeline-v2 .timeline-v2-moving-light{
+  width:14px!important;
+  height:14px!important;
+  border:1px solid color-mix(in srgb,var(--journey-light) 86%,white)!important;
+  border-radius:50%!important;
+  background:radial-gradient(circle at 32% 28%,
+    #ffffff 0 16%,
+    color-mix(in srgb,var(--journey-light) 90%,white) 27%,
+    var(--journey-light) 46%,
+    color-mix(in srgb,var(--journey-light) 45%,#07101a) 68%,
+    #07101a 84%)!important;
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,.9),
+    0 0 0 3px rgba(5,14,23,.95),
+    0 0 8px var(--journey-light),
+    0 0 18px color-mix(in srgb,var(--journey-light) 48%,transparent)!important;
+  filter:none!important;
+  animation:timeline-bulb-pulse 1.15s ease-in-out infinite alternate!important;
+}
+
+#timeline.timeline-v2 .timeline-v2-moving-light::before{
+  content:""!important;
+  width:82px!important;
+  height:2px!important;
+  right:70%!important;
+  top:50%!important;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    color-mix(in srgb,var(--journey-light) 18%,transparent) 42%,
+    color-mix(in srgb,var(--journey-light) 58%,transparent) 78%,
+    rgba(255,255,255,.78) 100%)!important;
+  transform:translateY(-50%)!important;
+  opacity:.72!important;
+  filter:blur(.35px)!important;
+}
+
+#timeline.timeline-v2 .timeline-v2-moving-light::after{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:-7px!important;
+  border-radius:50%!important;
+  background:radial-gradient(circle,
+    color-mix(in srgb,var(--journey-light) 18%,transparent) 0%,
+    transparent 72%)!important;
+  opacity:.7!important;
+  filter:blur(.2px)!important;
+  animation:timeline-bulb-aura 1.15s ease-in-out infinite alternate!important;
+}
+
+@keyframes timeline-bulb-pulse{
+  from{box-shadow:
+    inset 0 1px 1px rgba(255,255,255,.9),
+    0 0 0 3px rgba(5,14,23,.95),
+    0 0 7px var(--journey-light),
+    0 0 15px color-mix(in srgb,var(--journey-light) 40%,transparent);}
+  to{box-shadow:
+    inset 0 1px 1px rgba(255,255,255,.95),
+    0 0 0 3px rgba(5,14,23,.95),
+    0 0 10px var(--journey-light),
+    0 0 22px color-mix(in srgb,var(--journey-light) 52%,transparent);}
+}
+
+@keyframes timeline-bulb-aura{
+  from{transform:scale(.88);opacity:.48;}
+  to{transform:scale(1.05);opacity:.78;}
+}
+
+/* Milestones: all read as the same physical bulb; active one gets only a modest lift. */
+#timeline.timeline-v2 .timeline-v2-item::before{
+  width:16px!important;
+  height:16px!important;
+  border:2px solid color-mix(in srgb,var(--timeline-stop) 84%,white)!important;
+  background:radial-gradient(circle at 32% 28%,
+    #ffffff 0 15%,
+    color-mix(in srgb,var(--timeline-stop) 88%,white) 24%,
+    var(--timeline-stop) 46%,
+    color-mix(in srgb,var(--timeline-stop) 42%,#07101a) 67%,
+    #07101a 84%)!important;
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,.78),
+    inset 0 -2px 3px rgba(0,0,0,.55),
+    0 0 0 3px rgba(5,14,23,.94),
+    0 0 7px color-mix(in srgb,var(--timeline-stop) 36%,transparent),
+    0 0 14px color-mix(in srgb,var(--timeline-stop) 18%,transparent)!important;
+}
+
+#timeline.timeline-v2 .timeline-v2-item.is-timeline-active::before{
+  transform:translateX(-50%) scale(1.15)!important;
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,.88),
+    inset 0 -2px 3px rgba(0,0,0,.58),
+    0 0 0 4px rgba(5,14,23,.94),
+    0 0 9px #ffffff,
+    0 0 16px var(--accent),
+    0 0 25px color-mix(in srgb,var(--accent) 30%,transparent)!important;
+}
+
+@media(prefers-reduced-motion:reduce){
+  #timeline.timeline-v2 .timeline-v2-moving-light,
+  #timeline.timeline-v2 .timeline-v2-moving-light::after{
+    animation:none!important;
+  }
+}
+
+/* =========================================================
+   TIMELINE LIGHT — REFERENCE-MATCHED ELECTRICAL SIGNAL
+   Lighting only. No layout, card, logo, text, spacing, colour-system,
+   or timeline-structure changes.
+   ========================================================= */
+#timeline.timeline-v2 .timeline-v2-motion-lane{
+  left:1.15%!important;
+  right:1.15%!important;
+  top:31px!important;
+  height:2px!important;
+  border-radius:999px!important;
+  background:
+    linear-gradient(90deg,
+      rgba(61,224,184,.82) 0%,
+      rgba(70,194,255,.80) 24%,
+      rgba(144,104,255,.80) 50%,
+      rgba(255,111,91,.84) 75%,
+      rgba(255,205,77,.88) 100%)!important;
+  box-shadow:
+    0 0 5px rgba(89,195,230,.12),
+    0 1px 2px rgba(255,255,255,.12)!important;
+}
+
+#timeline.timeline-v2 .timeline-v2-motion-lane::before{
+  inset:-1px 0 auto!important;
+  width:100%!important;
+  height:1px!important;
+  background:linear-gradient(90deg,
+    rgba(255,255,255,.05) 0%,
+    rgba(255,255,255,.20) 50%,
+    rgba(255,255,255,.05) 100%)!important;
+  opacity:.75!important;
+  filter:none!important;
+}
+
+#timeline.timeline-v2 .timeline-v2-moving-light{
+  width:10px!important;
+  height:10px!important;
+  border:1px solid rgba(255,255,255,.96)!important;
+  border-radius:50%!important;
+  background:radial-gradient(circle at 34% 30%,
+    #ffffff 0 24%,
+    color-mix(in srgb,var(--journey-light) 88%,white) 36%,
+    var(--journey-light) 56%,
+    color-mix(in srgb,var(--journey-light) 46%,#06101a) 72%,
+    transparent 86%)!important;
+  box-shadow:
+    0 0 0 2px rgba(6,13,21,.92),
+    0 0 5px #ffffff,
+    0 0 12px var(--journey-light),
+    0 0 22px color-mix(in srgb,var(--journey-light) 44%,transparent)!important;
+  animation:none!important;
+  filter:none!important;
+  opacity:1!important;
+}
+
+/* Concentrated electrical wake: brightest at the bulb, quickly fading behind it. */
+#timeline.timeline-v2 .timeline-v2-moving-light::before{
+  content:""!important;
+  position:absolute!important;
+  top:50%!important;
+  right:100%!important;
+  width:150px!important;
+  height:2px!important;
+  transform:translateY(-50%)!important;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    color-mix(in srgb,var(--journey-light) 5%,transparent) 22%,
+    color-mix(in srgb,var(--journey-light) 15%,transparent) 52%,
+    color-mix(in srgb,var(--journey-light) 42%,transparent) 78%,
+    rgba(255,255,255,.90) 100%)!important;
+  opacity:.95!important;
+  filter:blur(.45px)!important;
+}
+
+/* Very soft halo only around the travelling signal; no whole-line flash. */
+#timeline.timeline-v2 .timeline-v2-moving-light::after{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:-9px!important;
+  border-radius:50%!important;
+  background:radial-gradient(circle,
+    color-mix(in srgb,var(--journey-light) 22%,transparent) 0%,
+    color-mix(in srgb,var(--journey-light) 8%,transparent) 34%,
+    transparent 72%)!important;
+  opacity:.72!important;
+  filter:blur(.6px)!important;
+  animation:none!important;
+}
+
+/* Keep the fixed milestone bulbs crisp; only their own local neon halo is shown. */
+#timeline.timeline-v2 .timeline-v2-item::before{
+  width:14px!important;
+  height:14px!important;
+  border:2px solid color-mix(in srgb,var(--timeline-stop) 78%,white)!important;
+  background:radial-gradient(circle at 34% 30%,
+    #ffffff 0 23%,
+    color-mix(in srgb,var(--timeline-stop) 88%,white) 36%,
+    var(--timeline-stop) 56%,
+    color-mix(in srgb,var(--timeline-stop) 38%,#06101a) 74%,
+    #06101a 86%)!important;
+  box-shadow:
+    0 0 0 3px rgba(5,14,23,.94),
+    0 0 6px color-mix(in srgb,var(--timeline-stop) 55%,transparent),
+    0 0 13px color-mix(in srgb,var(--timeline-stop) 22%,transparent)!important;
+}
+
+#timeline.timeline-v2 .timeline-v2-item.is-timeline-active::before{
+  transform:translateX(-50%) scale(1.12)!important;
+  box-shadow:
+    0 0 0 3px rgba(5,14,23,.94),
+    0 0 7px #ffffff,
+    0 0 13px var(--accent),
+    0 0 22px color-mix(in srgb,var(--accent) 28%,transparent)!important;
+}
+
+/* FINAL TIMELINE TYPOGRAPHY — match the B.Tech education label to the timeline body copy */
+.home-page #timeline .timeline-v2-education .timeline-v2-card > p{
+  font-family:var(--sans,"DM Sans","Inter",system-ui,sans-serif)!important;
+  font-size:13px!important;
+  line-height:1.6!important;
+  font-weight:400!important;
+  letter-spacing:0!important;
+  color:#b8c0cb!important;
+  -webkit-font-smoothing:antialiased!important;
+  text-rendering:optimizeLegibility!important;
+}
