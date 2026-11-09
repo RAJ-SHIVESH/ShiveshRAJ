@@ -1513,3 +1513,120 @@ section[id], article[id], main[id]{scroll-margin-top:var(--a11y-target-offset);}
   -webkit-font-smoothing:antialiased!important;
   text-rendering:optimizeLegibility!important;
 }
+
+
+/* =========================================================
+   DANONE LIVE PROJECT — additive styles only
+   ========================================================= */
+.danone-page{padding-top:clamp(34px,5vw,70px);padding-bottom:70px}
+.danone-hero{padding:clamp(28px,4vw,54px);border:1px solid var(--line-strong);border-radius:18px;background:linear-gradient(135deg,rgba(92,168,255,.075),transparent 48%),linear-gradient(180deg,#0e1722,#0b1119);box-shadow:var(--shadow)}
+.danone-eyebrow,.danone-kicker,.danone-status-card-top,.danone-progress-label,.danone-card-index,.danone-deliverable-number,.danone-coming-soon{font-family:var(--mono);letter-spacing:.09em;font-size:10px;font-weight:600}
+.danone-eyebrow{display:flex;align-items:center;gap:10px;color:var(--muted);margin-bottom:28px}
+.danone-live-dot,.danone-status-live i,.danone-state i{width:7px;height:7px;border-radius:50%;background:#19e0b2;display:inline-block;box-shadow:0 0 12px rgba(25,224,178,.6)}
+.danone-eyebrow-divider{color:var(--line-strong)}
+.danone-hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(250px,.7fr);gap:clamp(28px,5vw,70px);align-items:center}
+.danone-hero h1{font-size:clamp(38px,5.4vw,68px);line-height:1.02;letter-spacing:-.055em;margin:14px 0 20px;max-width:780px}
+.danone-hero h1 span{color:#5ca8ff}
+.danone-lede{max-width:680px;color:#b5c0ce;font-size:clamp(15px,1.5vw,18px);line-height:1.75}
+.danone-meta-line{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:24px 0;color:var(--muted);font:11px var(--mono)}
+.danone-meta-line i{width:3px;height:3px;border-radius:50%;background:#5ca8ff}
+.danone-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.danone-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 17px;border-radius:8px;text-decoration:none;font:600 10px var(--mono);letter-spacing:.055em;transition:transform .2s ease,border-color .2s ease}
+.danone-button:hover{transform:translateY(-2px)}
+.danone-button-primary{background:#5ca8ff;color:#071018;border:1px solid #5ca8ff}
+.danone-button-secondary{background:rgba(255,255,255,.025);color:var(--ink);border:1px solid var(--line-strong)}
+.danone-button-secondary:hover{border-color:#5ca8ff}
+.danone-status-card{border:1px solid rgba(92,168,255,.3);border-radius:14px;padding:22px;background:rgba(5,12,20,.72)}
+.danone-status-card-top{display:flex;justify-content:space-between;color:var(--muted)}
+.danone-status-live{display:flex;align-items:center;gap:7px;color:#19e0b2}
+.danone-status-number{font:500 54px var(--mono);letter-spacing:-.08em;margin:25px 0 4px}
+.danone-status-number span{font-size:19px;color:var(--muted)}
+.danone-status-card>strong{font-size:16px}
+.danone-status-card p{color:var(--muted);font-size:13px;line-height:1.6}
+.danone-progress{height:5px;background:#253243;border-radius:10px;overflow:hidden;margin:23px 0 9px}
+.danone-progress span{display:block;width:50%;height:100%;background:#19e0b2;border-radius:10px}
+.danone-progress-label{display:flex;justify-content:space-between;gap:8px;color:var(--muted-2);font-size:8px}
+.danone-section{padding:clamp(38px,6vw,72px) 0 0}
+.danone-section-heading{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end;margin-bottom:24px}
+.danone-section-heading h2{font-size:clamp(27px,3.2vw,40px);line-height:1.1;letter-spacing:-.04em;margin:10px 0 0}
+.danone-section-heading h2 em{font-style:normal;color:#5ca8ff}
+.danone-section-heading>p{color:var(--muted);font-size:13px;line-height:1.75;margin:0;max-width:560px}
+.danone-overview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.danone-info-card{padding:22px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(160deg,rgba(255,255,255,.025),rgba(255,255,255,.008))}
+.danone-card-index{color:#5ca8ff}
+.danone-info-card h3{font-size:17px;margin:22px 0 8px}
+.danone-info-card p{font-size:13px;line-height:1.7;color:var(--muted);margin:0}
+.danone-deliverable-list{display:grid;gap:13px}
+.danone-deliverable{display:grid;grid-template-columns:70px 1fr;gap:20px;padding:25px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.018)}
+.danone-deliverable-done{border-color:rgba(25,224,178,.25)}
+.danone-deliverable-number{font-size:26px;color:#5ca8ff;letter-spacing:-.06em}
+.danone-deliverable-content{min-width:0}
+.danone-deliverable-top{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.danone-kicker{color:var(--muted)}
+.danone-state{display:inline-flex;align-items:center;gap:7px;font:600 9px var(--mono);letter-spacing:.06em;color:#19e0b2}
+.danone-state-progress{color:#f0b65b}
+.danone-state-progress i{background:#f0b65b;box-shadow:0 0 12px rgba(240,182,91,.45)}
+.danone-deliverable h3{font-size:21px;margin:13px 0 8px}
+.danone-deliverable p,.danone-deliverable li{font-size:13px;line-height:1.7;color:var(--muted)}
+.danone-deliverable ul{padding-left:18px;margin:12px 0 18px}
+.danone-text-link{display:inline-flex;gap:10px;align-items:center;color:#5ca8ff;text-decoration:none;font:600 10px var(--mono);letter-spacing:.04em}
+.danone-text-link:hover{text-decoration:underline}
+.danone-coming-soon{display:inline-flex;gap:8px;align-items:center;color:#f0b65b;border:1px solid rgba(240,182,91,.25);background:rgba(240,182,91,.06);padding:9px 11px;border-radius:6px;margin-top:10px}
+.danone-table-wrap{border:1px solid var(--line);border-radius:12px;overflow:auto;background:rgba(255,255,255,.012)}
+.danone-forecast-table{border-collapse:collapse;width:100%;min-width:680px;font-variant-numeric:tabular-nums}
+.danone-forecast-table th,.danone-forecast-table td{padding:15px 16px;text-align:right;border-bottom:1px solid var(--line);font-size:12px;white-space:nowrap}
+.danone-forecast-table thead th{font:600 10px var(--mono);color:#5ca8ff;background:rgba(92,168,255,.055)}
+.danone-forecast-table thead th:first-child,.danone-forecast-table tbody th{text-align:left}
+.danone-forecast-table tbody th{color:var(--ink);font-weight:600}
+.danone-forecast-table tbody td{color:#c4cfdb;font-family:var(--mono)}
+.danone-forecast-table tbody tr:last-child th,.danone-forecast-table tbody tr:last-child td{border-bottom:0}
+.danone-table-note,.danone-disclosure{font-size:11px;line-height:1.7;color:var(--muted-2);margin:12px 2px 0}
+.danone-workbook-card,.danone-feedback-card{display:flex;align-items:center;gap:20px;padding:22px;border:1px solid var(--line-strong);border-radius:12px;background:linear-gradient(120deg,rgba(25,224,178,.045),rgba(255,255,255,.012))}
+.danone-excel-icon{width:48px;height:48px;flex:0 0 48px;display:grid;place-items:center;border-radius:9px;background:#147c52;color:white;font:700 24px var(--sans)}
+.danone-workbook-copy{display:grid;gap:5px;flex:1;min-width:0}
+.danone-workbook-copy strong,.danone-feedback-card strong{font-size:14px}
+.danone-workbook-copy span,.danone-workbook-copy small{font-size:11px;color:var(--muted);line-height:1.5}
+.danone-disclosure{margin-top:13px}
+.danone-feedback-card{justify-content:space-between;gap:24px}
+.danone-feedback-card p{font-size:12px;line-height:1.7;color:var(--muted);margin:7px 0 0;max-width:650px}
+.danone-back-link{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);margin-top:55px;padding-top:22px}
+.danone-back-link a{color:var(--muted);text-decoration:none;font:600 10px var(--mono);letter-spacing:.05em}
+.danone-back-link a:hover{color:#5ca8ff}
+@media(max-width:760px){
+ .danone-hero-grid,.danone-section-heading{grid-template-columns:1fr}
+ .danone-overview-grid{grid-template-columns:1fr}
+ .danone-section-heading{gap:12px}
+ .danone-workbook-card,.danone-feedback-card{align-items:flex-start;flex-wrap:wrap}
+ .danone-workbook-copy{flex-basis:calc(100% - 70px)}
+ .danone-workbook-card .danone-button,.danone-feedback-card .danone-button{width:100%}
+ .danone-deliverable{grid-template-columns:42px 1fr;padding:18px;gap:12px}
+ .danone-deliverable-number{font-size:20px}
+ .danone-deliverable-top{align-items:flex-start;flex-direction:column}
+ .danone-progress-label{font-size:7px}
+ .danone-back-link{flex-direction:column}
+}
+
+
+/* DANONE homepage feature and projects-list card — additive only */
+.danone-home-live{margin:0 auto 28px;padding:clamp(24px,4vw,42px);border:1px solid rgba(92,168,255,.28);border-radius:16px;background:linear-gradient(115deg,rgba(92,168,255,.08),transparent 58%),#0b121a}
+.danone-home-live-top,.danone-home-live-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.danone-home-live-status{font:600 9px var(--mono);letter-spacing:.08em;color:#19e0b2}
+.danone-home-live-status i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#19e0b2;margin-right:7px}
+.danone-home-live-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;padding:25px 0}
+.danone-home-live h2{font-size:clamp(27px,3.4vw,42px);line-height:1.08;letter-spacing:-.045em;margin:0 0 12px}
+.danone-home-live h2 span{color:#5ca8ff}
+.danone-home-live p{font-size:13px;line-height:1.7;color:var(--muted);max-width:570px}
+.danone-home-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}
+.danone-home-tags span{font:9px var(--mono);letter-spacing:.04em;color:#9fb0c4;border:1px solid var(--line-strong);padding:6px 8px;border-radius:4px}
+.danone-home-milestones{display:grid;gap:10px}
+.danone-home-milestones>div{padding:13px 15px;border:1px solid var(--line);border-radius:8px;background:rgba(0,0,0,.16);display:grid;gap:5px}
+.danone-home-milestones span{font:9px var(--mono);color:#5ca8ff;letter-spacing:.06em}
+.danone-home-milestones strong{font-size:13px}
+.danone-home-milestones small{font-size:11px;color:var(--muted)}
+.danone-home-live-bottom{border-top:1px solid var(--line);padding-top:16px}
+.danone-home-live-bottom>span{font:9px var(--mono);color:var(--muted);letter-spacing:.06em}
+.danone-home-live-bottom b{color:#19e0b2;margin-left:8px}
+.danone-home-live-bottom>a{color:#5ca8ff;text-decoration:none;font:600 10px var(--mono);letter-spacing:.05em}
+.danone-home-live-bottom>a:hover{text-decoration:underline}
+.danone-project-mark{display:grid;place-items:center;width:46px;height:46px;border-radius:9px;background:#e8f2ee;color:#126b4d;font:800 25px var(--sans)}
+@media(max-width:760px){.danone-home-live-grid{grid-template-columns:1fr;gap:18px}.danone-home-live-bottom{align-items:flex-start;flex-direction:column}}

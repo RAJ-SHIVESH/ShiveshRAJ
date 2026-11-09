@@ -19,3 +19,9 @@ Upload the contents of this folder to the root of your GitHub repository. Keep t
 
 ### Assets
 All asset filenames are lowercase and GitHub-friendly; the HTML/CSS/JS references have been updated to match them.
+
+## Danone live project
+- `danone-financial-model.html` — Danone financial modelling case study.
+- `assets/danone-financial-model.xlsx` — downloadable Excel workbook.
+
+The homepage and Projects page include links to the new case study. Existing pages and assets are retained.
