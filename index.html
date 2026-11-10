@@ -1,553 +1,4373 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>Shivesh Raj | Finance × FP&amp;A × BI</title>
-<meta content="Finance and FP&amp;A professional with 3+ years of experience across forecasting, budgeting, variance analysis, financial close, reporting, reconciliation and finance transformation." name="description"/>
-<meta content="Shivesh Raj" name="author"/>
-<meta content="index, follow" name="robots"/>
-<meta content="#070b10" name="theme-color"/>
-<meta content="Shivesh Raj | Finance × FP&amp;A × BI" property="og:title"/>
-<meta content="Finance and FP&amp;A professional with 3+ years of experience across forecasting, budgeting, variance analysis, financial close, reporting, reconciliation and finance transformation." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Shivesh Raj | Finance × FP&amp;A × BI" name="twitter:title"/>
-<meta content="Finance and FP&amp;A professional with 3+ years of experience across forecasting, budgeting, variance analysis, financial close, reporting, reconciliation and finance transformation." name="twitter:description"/>
-<link href="style.css" rel="stylesheet"/><link href="production.css" rel="stylesheet"/>
-<script id="dynamic-canonical">(function(){var u=location.href.split("#")[0];var l=document.createElement("link");l.id="dynamic-canonical-duplicate-2";l.rel="canonical";l.href=u;document.head.appendChild(l);var m=document.createElement("meta");m.setAttribute("property","og:url");m.content=u;document.head.appendChild(m);})();</script>
-<!-- HERO RESTORE: restores the earlier three-column desktop composition and full-width achievements row. -->
-<!-- FINAL HERO COMPOSITION FIX: restores the approved three-column structure. -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Shivesh Raj | Finance × FP&A × BI</title>
+<meta name="description" content="Finance and FP&A professional with 3+ years of experience across forecasting, budgeting, variance analysis, financial close, reporting, reconciliation and finance transformation.">
+<meta name="author" content="Shivesh Raj">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#070b10">
+<meta property="og:title" content="Shivesh Raj | Finance × FP&A × BI">
+<meta property="og:description" content="Finance and FP&A professional with 3+ years of experience across forecasting, budgeting, variance analysis, financial close, reporting, reconciliation and finance transformation.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/og-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shivesh Raj | Finance × FP&A × BI">
+<meta name="twitter:description" content="Finance and FP&A professional with 3+ years of experience across forecasting, budgeting, variance analysis, financial close, reporting, reconciliation and finance transformation.">
+<meta name="twitter:image" content="assets/og-preview.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+
+<style id="homepage-hero-compact-overrides">
+  /* Compact homepage hero: use the empty top space for the heading. */
+  .home-page .home-main {
+    padding-top: 0 !important;
+  }
+
+  .home-page .commandbar {
+    margin-bottom: 10px !important;
+  }
+
+  .home-page .command-quick {
+    margin-bottom: 24px !important;
+  }
+
+  .home-page .home-hero {
+    padding-top: 12px !important;
+    padding-bottom: 42px !important;
+    min-height: auto !important;
+  }
+
+  .home-page .home-hero .hero-grid {
+    align-items: start !important;
+    min-height: 0 !important;
+    gap: 56px !important;
+  }
+
+  .home-page .home-hero .hero-grid > .reveal:first-child {
+    padding-top: 0 !important;
+  }
+
+  .home-page .home-hero h1 {
+    margin-top: 14px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .home-page .profile-hero-card {
+    width: min(100%, 340px) !important;
+    max-width: 340px !important;
+    justify-self: end !important;
+    padding: 18px !important;
+    border-radius: 18px !important;
+  }
+
+  .home-page .profile-photo-frame {
+    height: 225px !important;
+    min-height: 225px !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+  }
+
+  .home-page .profile-photo-frame img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    display: block !important;
+  }
+
+  .home-page .profile-hero-copy {
+    padding-top: 14px !important;
+  }
+
+  .home-page .profile-hero-copy .big {
+    font-size: 22px !important;
+    line-height: 1.1 !important;
+    margin: 5px 0 8px !important;
+  }
+
+  .home-page .profile-hero-copy p {
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .home-page .hero-proof {
+    gap: 6px !important;
+  }
+
+  .home-page .hero-proof span {
+    font-size: 10px !important;
+  }
+
+  /* Keep the three project cards compact and clearly visible together. */
+  .home-page .selected-work-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+  }
+
+  .home-page .selected-work-card {
+    padding: 20px !important;
+    min-height: 0 !important;
+  }
+
+  .home-page .selected-work-card h3 {
+    font-size: 20px !important;
+    line-height: 1.2 !important;
+  }
+
+  .home-page .selected-work-card p {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+  }
+
+  @media (max-width: 1000px) {
+    .home-page .home-hero .hero-grid {
+      grid-template-columns: minmax(0, 1fr) 300px !important;
+      gap: 34px !important;
+    }
+
+    .home-page .profile-hero-card {
+      max-width: 300px !important;
+    }
+
+    .home-page .profile-photo-frame {
+      height: 195px !important;
+      min-height: 195px !important;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .home-page .home-hero .hero-grid,
+    .home-page .selected-work-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    .home-page .profile-hero-card {
+      width: 100% !important;
+      max-width: 360px !important;
+      justify-self: start !important;
+    }
+  }
+</style>
+
+
+<style id="profile-name-layout">
+  /* Remove the old top-left identity spacing after the brand is removed. */
+  .home-page .topbar-inner {
+    justify-content: flex-end !important;
+  }
+
+  /* Name directly beneath the profile image. */
+  .home-page .profile-name-under-photo {
+    margin: 10px 0 0 !important;
+    text-align: center !important;
+    font-size: 15px !important;
+    line-height: 1.2 !important;
+    font-weight: 700 !important;
+    letter-spacing: .16em !important;
+    color: #f3f5f7 !important;
+  }
+
+  .home-page .profile-hero-card {
+    align-items: stretch !important;
+  }
+</style>
+
+
+<style id="compact-finance-tabs">
+  /* Compact FINANCE OS tabs — sized closer to the reference screenshot. */
+  .decision-pipeline{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr) !important;
+    gap:10px !important;
+    align-items:center !important;
+    margin-top:20px !important;
+  }
+
+  .decision-step{
+    min-height:72px !important;
+    height:72px !important;
+    padding:11px 14px !important;
+    border-radius:10px !important;
+    display:grid !important;
+    grid-template-columns:auto 1fr !important;
+    grid-template-rows:auto auto !important;
+    column-gap:10px !important;
+    row-gap:3px !important;
+    align-content:center !important;
+    text-align:left !important;
+  }
+
+  .decision-step > span{
+    grid-column:1 !important;
+    grid-row:1 / span 2 !important;
+    align-self:center !important;
+    font-size:9px !important;
+    line-height:1 !important;
+    opacity:.8 !important;
+  }
+
+  .decision-step > b{
+    grid-column:2 !important;
+    grid-row:1 !important;
+    font-size:13px !important;
+    line-height:1.1 !important;
+    letter-spacing:.04em !important;
+  }
+
+  .decision-step > small{
+    grid-column:2 !important;
+    grid-row:2 !important;
+    font-size:10px !important;
+    line-height:1.2 !important;
+    white-space:nowrap !important;
+    opacity:.75 !important;
+  }
+
+  .decision-pipeline > i{
+    font-size:13px !important;
+    text-align:center !important;
+    opacity:.9 !important;
+  }
+
+  .decision-detail{
+    margin-top:16px !important;
+    padding:20px 22px !important;
+    border-radius:12px !important;
+  }
+
+  @media (max-width:900px){
+    .decision-pipeline{
+      grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    }
+    .decision-pipeline > i{
+      display:none !important;
+    }
+  }
+
+  @media (max-width:600px){
+    .decision-pipeline{
+      grid-template-columns:1fr !important;
+    }
+    .decision-step{
+      height:64px !important;
+      min-height:64px !important;
+    }
+  }
+</style>
+
+
+<style id="portfolio-expertise-tabs">
+/* Reference-style expertise explorer: compact vertical tabs + large detail panel */
+.portfolio-expertise-section{
+  padding-top:72px!important;
+  padding-bottom:78px!important;
+}
+.portfolio-expertise-section .section-head{
+  margin-bottom:28px!important;
+}
+.portfolio-expertise-section .section-head h2{
+  margin-bottom:10px!important;
+}
+.portfolio-expertise-section .expertise-explorer{
+  display:grid!important;
+  grid-template-columns:270px minmax(0,1fr)!important;
+  gap:22px!important;
+  align-items:start!important;
+  padding:24px!important;
+  border:1px solid rgba(126,150,177,.18)!important;
+  border-radius:18px!important;
+  background:linear-gradient(180deg,rgba(17,25,37,.72),rgba(10,15,23,.72))!important;
+}
+.portfolio-expertise-section .expertise-tabs{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:8px!important;
+}
+.portfolio-expertise-section .expertise-tab{
+  width:100%!important;
+  min-height:50px!important;
+  padding:0 13px!important;
+  border:1px solid rgba(126,150,177,.18)!important;
+  border-radius:9px!important;
+  background:rgba(12,19,29,.76)!important;
+  color:#8e9bad!important;
+  display:grid!important;
+  grid-template-columns:24px 1fr 16px!important;
+  align-items:center!important;
+  gap:7px!important;
+  text-align:left!important;
+  cursor:pointer!important;
+  transition:all .18s ease!important;
+}
+.portfolio-expertise-section .expertise-tab > span{
+  font-size:9px!important;
+  color:#d7aa43!important;
+  font-weight:700!important;
+  font-family:var(--mono,monospace)!important;
+}
+.portfolio-expertise-section .expertise-tab b{
+  font-size:11px!important;
+  line-height:1.2!important;
+  font-weight:600!important;
+  letter-spacing:.02em!important;
+}
+.portfolio-expertise-section .expertise-tab i{
+  font-style:normal!important;
+  text-align:right!important;
+  opacity:.55!important;
+  font-size:13px!important;
+}
+.portfolio-expertise-section .expertise-tab:hover{
+  border-color:rgba(20,203,163,.55)!important;
+  color:#e9edf2!important;
+  transform:translateX(2px)!important;
+}
+.portfolio-expertise-section .expertise-tab.active{
+  border-color:#0bc89b!important;
+  background:rgba(11,200,155,.07)!important;
+  color:#f3f5f7!important;
+  box-shadow:inset 3px 0 0 #0bc89b!important;
+}
+.portfolio-expertise-section .expertise-tab.active i{
+  color:#0bc89b!important;
+  opacity:1!important;
+}
+.portfolio-expertise-section .expertise-detail{
+  min-height:260px!important;
+  padding:26px 28px!important;
+  border:1px solid rgba(126,150,177,.18)!important;
+  border-radius:14px!important;
+  background:rgba(9,15,24,.78)!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+}
+.portfolio-expertise-section .expertise-detail h3{
+  margin:7px 0 9px!important;
+  font-size:24px!important;
+  line-height:1.15!important;
+}
+.portfolio-expertise-section .expertise-detail > p{
+  max-width:760px!important;
+  margin:0 0 15px!important;
+  font-size:13px!important;
+  line-height:1.55!important;
+  color:#9ba8b9!important;
+}
+.portfolio-expertise-section .detail-tools{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  gap:7px!important;
+  margin-top:2px!important;
+}
+.portfolio-expertise-section .detail-tools span{
+  padding:6px 9px!important;
+  border:1px solid rgba(126,150,177,.2)!important;
+  border-radius:999px!important;
+  font-size:9px!important;
+  text-transform:uppercase!important;
+  letter-spacing:.04em!important;
+  color:#aeb9c8!important;
+}
+.portfolio-expertise-section .expertise-proof{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:10px!important;
+  margin-top:22px!important;
+}
+.portfolio-expertise-section .expertise-proof > div{
+  padding:12px 13px!important;
+  border:1px solid rgba(20,203,163,.22)!important;
+  border-radius:9px!important;
+  background:rgba(12,24,30,.48)!important;
+}
+.portfolio-expertise-section .expertise-proof strong{
+  display:block!important;
+  font-size:17px!important;
+  line-height:1.1!important;
+  color:#f3f5f7!important;
+}
+.portfolio-expertise-section .expertise-proof small{
+  display:block!important;
+  margin-top:5px!important;
+  font-size:9px!important;
+  line-height:1.35!important;
+  color:#7f8ea1!important;
+}
+@media(max-width:800px){
+  .portfolio-expertise-section .expertise-explorer{
+    grid-template-columns:1fr!important;
+    padding:16px!important;
+  }
+  .portfolio-expertise-section .expertise-tabs{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+@media(max-width:520px){
+  .portfolio-expertise-section .expertise-tabs{
+    grid-template-columns:1fr!important;
+  }
+  .portfolio-expertise-section .expertise-proof{
+    grid-template-columns:1fr!important;
+  }
+  .portfolio-expertise-section .expertise-detail{
+    min-height:230px!important;
+    padding:20px!important;
+  }
+}
+</style>
+
+
+<style id="finance-os-reference-layout">
+/* Finance OS redesigned to match the reference: compact tabs on the LEFT, detail panel on the RIGHT. */
+.finance-expertise-layout{
+  padding-top:72px !important;
+  padding-bottom:72px !important;
+}
+.finance-expertise-layout .decision-head{
+  margin-bottom:28px !important;
+}
+.finance-expertise-layout .decision-head h2{
+  margin:8px 0 10px !important;
+}
+.finance-explorer{
+  display:grid !important;
+  grid-template-columns:270px minmax(0,1fr) !important;
+  gap:22px !important;
+  align-items:stretch !important;
+  padding:24px !important;
+  border:1px solid rgba(126,150,177,.18) !important;
+  border-radius:18px !important;
+  background:linear-gradient(180deg,rgba(17,25,37,.72),rgba(10,15,23,.72)) !important;
+}
+.finance-tabs{
+  display:flex !important;
+  flex-direction:column !important;
+  gap:8px !important;
+}
+.finance-tab{
+  width:100% !important;
+  min-height:50px !important;
+  height:50px !important;
+  padding:0 13px !important;
+  border:1px solid rgba(126,150,177,.18) !important;
+  border-radius:9px !important;
+  background:rgba(12,19,29,.76) !important;
+  color:#8e9bad !important;
+  display:grid !important;
+  grid-template-columns:24px 1fr 16px !important;
+  align-items:center !important;
+  gap:7px !important;
+  text-align:left !important;
+  cursor:pointer !important;
+  transition:all .18s ease !important;
+}
+.finance-tab > span{
+  font-size:9px !important;
+  color:#d7aa43 !important;
+  font-weight:700 !important;
+  font-family:var(--mono,monospace) !important;
+}
+.finance-tab b{
+  font-size:11px !important;
+  line-height:1.2 !important;
+  font-weight:600 !important;
+  letter-spacing:.02em !important;
+}
+.finance-tab i{
+  font-style:normal !important;
+  text-align:right !important;
+  opacity:.55 !important;
+  font-size:13px !important;
+}
+.finance-tab:hover{
+  border-color:rgba(20,203,163,.55) !important;
+  color:#e9edf2 !important;
+  transform:translateX(2px) !important;
+}
+.finance-tab.active{
+  border-color:#0bc89b !important;
+  background:rgba(11,200,155,.07) !important;
+  color:#f3f5f7 !important;
+  box-shadow:inset 3px 0 0 #0bc89b !important;
+}
+.finance-tab.active i{
+  color:#0bc89b !important;
+  opacity:1 !important;
+}
+.finance-detail{
+  min-height:280px !important;
+  padding:28px 30px !important;
+  border:1px solid rgba(126,150,177,.18) !important;
+  border-radius:14px !important;
+  background:rgba(9,15,24,.78) !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+}
+.finance-detail h3{
+  margin:7px 0 9px !important;
+  font-size:24px !important;
+  line-height:1.15 !important;
+}
+.finance-detail > p{
+  max-width:780px !important;
+  margin:0 0 15px !important;
+  font-size:13px !important;
+  line-height:1.55 !important;
+  color:#9ba8b9 !important;
+}
+.finance-detail-tags{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:7px !important;
+  margin-top:2px !important;
+}
+.finance-detail-tags span{
+  padding:6px 9px !important;
+  border:1px solid rgba(126,150,177,.2) !important;
+  border-radius:999px !important;
+  font-size:9px !important;
+  text-transform:uppercase !important;
+  letter-spacing:.04em !important;
+  color:#aeb9c8 !important;
+}
+.finance-detail-proof{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:10px !important;
+  margin-top:22px !important;
+}
+.finance-detail-proof > div{
+  padding:12px 13px !important;
+  border:1px solid rgba(20,203,163,.22) !important;
+  border-radius:9px !important;
+  background:rgba(12,24,30,.48) !important;
+}
+.finance-detail-proof strong{
+  display:block !important;
+  font-size:17px !important;
+  line-height:1.1 !important;
+  color:#f3f5f7 !important;
+}
+.finance-detail-proof small{
+  display:block !important;
+  margin-top:5px !important;
+  font-size:9px !important;
+  line-height:1.35 !important;
+  color:#7f8ea1 !important;
+}
+@media(max-width:800px){
+  .finance-explorer{
+    grid-template-columns:1fr !important;
+    padding:16px !important;
+  }
+  .finance-tabs{
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
+@media(max-width:520px){
+  .finance-tabs{grid-template-columns:1fr !important;}
+  .finance-detail{min-height:230px !important;padding:20px !important;}
+  .finance-detail-proof{grid-template-columns:1fr !important;}
+}
+</style>
+
+
+<style id="reference-career-timeline">
+/* =========================================================
+   CAREER TIMELINE — minimal, clean, recruiter-readable
+   ========================================================= */
+
+.career-timeline-reference{
+  padding-top:58px !important;
+  padding-bottom:64px !important;
+}
+
+.career-timeline-reference .section-head{
+  margin-bottom:34px !important;
+}
+
+/* Five equal milestones across one clean horizontal line */
+.reference-timeline{
+  position:relative !important;
+  display:grid !important;
+  grid-template-columns:repeat(5,minmax(0,1fr)) !important;
+  gap:0 !important;
+  width:100% !important;
+  padding:0 4px 12px !important;
+  border:0 !important;
+  background:transparent !important;
+  overflow:visible !important;
+}
+
+/* Quiet line — points remain the visual focus */
+.reference-timeline::before{
+  content:"" !important;
+  position:absolute !important;
+  left:2.2% !important;
+  right:2.2% !important;
+  top:53px !important;
+  height:1px !important;
+  background:rgba(135,153,175,.32) !important;
+  z-index:0 !important;
+}
+
+.reference-timeline-item{
+  position:relative !important;
+  min-width:0 !important;
+  padding:0 16px !important;
+  text-align:center !important;
+}
+
+/* Date: small and restrained */
+.reference-timeline-top{
+  height:36px !important;
+  display:flex !important;
+  align-items:flex-start !important;
+  justify-content:center !important;
+  position:relative !important;
+  z-index:2 !important;
+}
+
+.reference-timeline-top strong{
+  color:#d5a941 !important;
+  font-family:var(--mono,monospace) !important;
+  font-size:9px !important;
+  font-weight:700 !important;
+  line-height:1.2 !important;
+  letter-spacing:.035em !important;
+  white-space:nowrap !important;
+}
+
+/* One consistent centre point for every milestone */
+.reference-timeline-node{
+  position:relative !important;
+  z-index:4 !important;
+  width:16px !important;
+  height:16px !important;
+  margin:9px auto 0 !important;
+  border:2px solid #0bc89b !important;
+  border-radius:50% !important;
+  background:#090d12 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  box-shadow:0 0 0 5px rgba(11,200,155,.055) !important;
+}
+
+.reference-timeline-node span{
+  width:5px !important;
+  height:5px !important;
+  border-radius:50% !important;
+  background:#0bc89b !important;
+  display:block !important;
+}
+
+/* Content below the line */
+.reference-timeline-bottom{
+  position:relative !important;
+  z-index:2 !important;
+  padding-top:20px !important;
+  text-align:center !important;
+}
+
+/* Company / school row */
+.reference-company{
+  min-height:24px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:6px !important;
+  margin-bottom:10px !important;
+  color:#a5b0bf !important;
+  font-family:var(--mono,monospace) !important;
+  font-size:8px !important;
+  font-weight:700 !important;
+  line-height:1.25 !important;
+  letter-spacing:.025em !important;
+  text-transform:uppercase !important;
+}
+
+.reference-company img{
+  width:30px !important;
+  height:20px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  flex:0 0 auto !important;
+}
+
+.reference-logo-text{
+  min-width:44px !important;
+  height:22px !important;
+  padding:0 6px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  border:1px solid rgba(126,150,177,.25) !important;
+  border-radius:6px !important;
+  color:#aab5c4 !important;
+  font-size:7px !important;
+  white-space:nowrap !important;
+}
+
+.reference-logo-text.edhec{
+  color:#0bc89b !important;
+  border-color:rgba(11,200,155,.30) !important;
+}
+
+.reference-logo-text.guestready{
+  color:#f07b55 !important;
+  border-color:rgba(240,123,85,.28) !important;
+}
+
+/* Short role/title */
+.reference-timeline-bottom h3{
+  max-width:205px !important;
+  min-height:40px !important;
+  margin:0 auto 8px !important;
+  color:#eef2f6 !important;
+  font-size:14px !important;
+  line-height:1.25 !important;
+  font-weight:700 !important;
+  letter-spacing:-.01em !important;
+}
+
+/* One concise line/two-line description */
+.reference-timeline-bottom p{
+  max-width:205px !important;
+  min-height:31px !important;
+  margin:0 auto 10px !important;
+  color:#8f9bad !important;
+  font-size:9px !important;
+  line-height:1.4 !important;
+}
+
+/* Tiny keyword pills */
+.reference-tags{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  justify-content:center !important;
+  gap:4px !important;
+  max-width:210px !important;
+  min-height:18px !important;
+  margin:0 auto !important;
+}
+
+.reference-tags span{
+  padding:4px 7px !important;
+  border:1px solid rgba(126,150,177,.20) !important;
+  border-radius:999px !important;
+  color:#7f8c9f !important;
+  font-family:var(--mono,monospace) !important;
+  font-size:6.5px !important;
+  font-weight:700 !important;
+  letter-spacing:.02em !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+
+/* Recent role gets only a subtle emphasis */
+.reference-timeline-item:last-child .reference-timeline-node{
+  box-shadow:0 0 0 5px rgba(11,200,155,.08) !important;
+}
+
+@media(max-width:1100px){
+  .reference-timeline{
+    grid-template-columns:repeat(5,225px) !important;
+    overflow-x:auto !important;
+    padding-bottom:18px !important;
+  }
+
+  .reference-timeline::before{
+    left:20px !important;
+    right:auto !important;
+    width:1080px !important;
+  }
+}
+
+@media(max-width:700px){
+  .career-timeline-reference{
+    padding-top:46px !important;
+    padding-bottom:52px !important;
+  }
+
+  .reference-timeline{
+    grid-template-columns:repeat(5,215px) !important;
+  }
+
+  .reference-timeline-item{
+    padding:0 10px !important;
+  }
+}
+</style>
+
+
+<style id="selected-work-clean-override">
+/* Selected work — compact case-study rail */
+.home-page #selected-work{
+  padding-top:12px !important;
+  padding-bottom:34px !important;
+}
+.home-page #selected-work .section-head{
+  margin-bottom:18px !important;
+}
+.home-page #selected-work .section-head h2{
+  font-size:clamp(24px,2.6vw,34px) !important;
+  line-height:1.1 !important;
+  margin:0 0 7px !important;
+}
+.home-page #selected-work .section-head .copy{
+  max-width:820px !important;
+  font-size:12px !important;
+  line-height:1.45 !important;
+}
+.home-page #selected-work .selected-work-grid{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:14px !important;
+  align-items:stretch !important;
+}
+.home-page #selected-work .selected-work-card{
+  position:relative !important;
+  min-height:270px !important;
+  height:100% !important;
+  padding:17px 18px 16px !important;
+  border-radius:14px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  overflow:hidden !important;
+  background:linear-gradient(145deg,rgba(16,24,34,.96),rgba(9,15,22,.98)) !important;
+  border:1px solid rgba(126,150,177,.16) !important;
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease !important;
+}
+.home-page #selected-work .selected-work-card:hover{
+  transform:translateY(-4px) !important;
+  border-color:rgba(11,200,155,.38) !important;
+  box-shadow:0 16px 30px rgba(0,0,0,.2),0 0 22px rgba(11,200,155,.055) !important;
+}
+.home-page #selected-work .selected-work-card::after{
+  content:"" !important;
+  position:absolute !important;
+  left:18px !important;right:18px !important;bottom:0 !important;height:2px !important;
+  background:linear-gradient(90deg,#e7b739,#0bc89b) !important;
+  opacity:.7 !important;
+}
+.home-page #selected-work .selected-work-index{
+  position:absolute !important;
+  top:16px !important;right:17px !important;
+  width:auto !important;height:auto !important;
+  border:0 !important;border-radius:0 !important;
+  display:block !important;
+  margin:0 !important;
+  color:#e7b739 !important;
+  font:700 9px/1 var(--mono,monospace) !important;
+  letter-spacing:.08em !important;
+}
+.home-page #selected-work .selected-work-card img{
+  display:block !important;
+  width:auto !important;height:25px !important;max-width:105px !important;
+  object-fit:contain !important;object-position:left center !important;
+  margin:0 0 13px !important;
+}
+.home-page #selected-work .selected-work-card .text-brand{
+  display:inline-flex !important;
+  width:max-content !important;
+  min-height:25px !important;
+  padding:5px 8px !important;
+  border:1px solid rgba(20,210,160,.28) !important;
+  border-radius:6px !important;
+  margin:0 0 13px !important;
+  color:#18cfa1 !important;
+  font-size:9px !important;
+  letter-spacing:.08em !important;
+}
+.home-page #selected-work .selected-work-card .section-code{
+  display:block !important;
+  margin:0 0 7px !important;
+  font-size:9px !important;
+  line-height:1.3 !important;
+  letter-spacing:.08em !important;
+}
+.home-page #selected-work .selected-work-card h3{
+  font-size:18px !important;
+  line-height:1.16 !important;
+  margin:0 0 13px !important;
+  max-width:88% !important;
+}
+.home-page #selected-work .case-question{
+  padding:9px 10px !important;
+  margin:0 0 10px !important;
+  border-left:2px solid rgba(231,183,57,.65) !important;
+  background:rgba(255,255,255,.018) !important;
+  border-radius:0 7px 7px 0 !important;
+}
+.home-page #selected-work .case-question b{
+  display:block !important;
+  margin-bottom:3px !important;
+  color:#e7b739 !important;
+  font:700 8px/1 var(--mono,monospace) !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+}
+.home-page #selected-work .case-question span{
+  display:block !important;
+  color:#8d9bae !important;
+  font-size:10px !important;
+  line-height:1.4 !important;
+}
+.home-page #selected-work .case-output{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:5px !important;
+  margin-top:auto !important;
+  padding-top:5px !important;
+}
+.home-page #selected-work .case-output span{
+  padding:4px 7px !important;
+  border:1px solid rgba(126,150,177,.17) !important;
+  border-radius:999px !important;
+  color:#7f8da0 !important;
+  font:600 7px/1 var(--mono,monospace) !important;
+  letter-spacing:.05em !important;
+}
+.home-page #selected-work .selected-work-card a{
+  display:inline-block !important;
+  margin-top:12px !important;
+  padding:0 !important;
+  font:700 9px/1 var(--mono,monospace) !important;
+  letter-spacing:.08em !important;
+  color:#18cfa1 !important;
+  text-decoration:none !important;
+}
+@media(max-width:1050px){
+  .home-page #selected-work .selected-work-grid{grid-template-columns:1fr 1fr !important;}
+}
+@media(max-width:700px){
+  .home-page #selected-work .selected-work-grid{grid-template-columns:1fr !important;}
+  .home-page #selected-work .selected-work-card{min-height:0 !important;}
+}
+</style>
+
+<style id="final-polish-overrides">
+/* ================= FINAL POLISH ================= */
+.home-page .nav-home-about{white-space:nowrap !important;}
+
+/* Career timeline: compact, aligned and closer to a professional portfolio timeline. */
+.home-page .career-timeline-reference{
+  padding-top:42px !important;
+  padding-bottom:48px !important;
+}
+.home-page .career-timeline-reference .section-head{
+  margin-bottom:24px !important;
+}
+.home-page .career-timeline-reference .section-head h2{
+  font-size:clamp(30px,3.2vw,46px) !important;
+  line-height:1.04 !important;
+  margin:0 0 10px !important;
+}
+.home-page .career-timeline-reference .section-head .copy{
+  max-width:760px !important;
+  font-size:14px !important;
+  line-height:1.5 !important;
+}
+.home-page .reference-timeline{
+  padding:0 0 8px !important;
+}
+.home-page .reference-timeline::before{
+  top:46px !important;
+  left:3% !important;
+  right:3% !important;
+  background:linear-gradient(90deg,rgba(126,150,177,.18),rgba(11,200,155,.38),rgba(126,150,177,.18)) !important;
+}
+.home-page .reference-timeline-item{padding:0 10px !important;}
+.home-page .reference-timeline-top{height:30px !important;}
+.home-page .reference-timeline-top strong{font-size:8px !important;letter-spacing:.06em !important;}
+.home-page .reference-timeline-node{
+  width:13px !important;height:13px !important;
+  margin:9px auto 0 !important;
+  border-width:2px !important;
+  box-shadow:0 0 0 4px rgba(11,200,155,.045) !important;
+}
+.home-page .reference-timeline-node span{width:4px !important;height:4px !important;}
+.home-page .reference-timeline-bottom{padding-top:15px !important;}
+.home-page .reference-company{
+  min-height:20px !important;
+  margin-bottom:8px !important;
+  font-size:7px !important;
+  gap:5px !important;
+  line-height:1.2 !important;
+}
+.home-page .reference-company img{width:25px !important;height:16px !important;}
+.home-page .reference-logo-text{min-width:40px !important;height:20px !important;padding:0 5px !important;font-size:6.5px !important;border-radius:5px !important;}
+.home-page .reference-timeline-bottom h3{
+  max-width:190px !important;
+  min-height:34px !important;
+  margin:0 auto 7px !important;
+  font-size:13px !important;
+  line-height:1.18 !important;
+}
+.home-page .reference-timeline-bottom p{
+  max-width:180px !important;
+  min-height:25px !important;
+  margin:0 auto 8px !important;
+  font-size:8px !important;
+  line-height:1.35 !important;
+}
+.home-page .reference-tags{max-width:190px !important;min-height:16px !important;gap:3px !important;}
+.home-page .reference-tags span{padding:3px 6px !important;font-size:6px !important;}
+
+/* Evidence: compact cards with subtle motion, glow and animated accent line. */
+.home-page .evidence-strip{
+  padding-top:42px !important;
+  padding-bottom:54px !important;
+}
+.home-page .evidence-heading{margin-bottom:22px !important;}
+.home-page .evidence-heading h2{
+  margin:8px 0 0 !important;
+  font-size:clamp(25px,2.5vw,36px) !important;
+  line-height:1.08 !important;
+}
+.home-page .evidence-grid{
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:12px !important;
+}
+.home-page .evidence-card{
+  position:relative !important;
+  min-height:132px !important;
+  padding:18px 18px 16px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  border:1px solid rgba(126,150,177,.18) !important;
+  border-radius:14px !important;
+  background:linear-gradient(145deg,rgba(16,24,34,.96),rgba(10,16,23,.96)) !important;
+  overflow:hidden !important;
+  transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease,background .28s ease !important;
+}
+.home-page .evidence-card::after{
+  content:"" !important;
+  position:absolute !important;
+  left:18px !important;
+  right:18px !important;
+  bottom:0 !important;
+  height:2px !important;
+  background:linear-gradient(90deg,#e7b739,#0bc89b) !important;
+  transform:scaleX(.18) !important;
+  transform-origin:left !important;
+  transition:transform .35s ease !important;
+}
+.home-page .evidence-card::before{
+  content:"" !important;
+  position:absolute !important;
+  width:90px !important;height:90px !important;
+  right:-40px !important;top:-45px !important;
+  border-radius:50% !important;
+  background:rgba(11,200,155,.08) !important;
+  filter:blur(18px) !important;
+  opacity:0 !important;
+  transition:opacity .3s ease !important;
+}
+.home-page .evidence-card:hover{
+  transform:translateY(-5px) !important;
+  border-color:rgba(11,200,155,.42) !important;
+  box-shadow:0 14px 32px rgba(0,0,0,.22),0 0 24px rgba(11,200,155,.07) !important;
+}
+.home-page .evidence-card:hover::after{transform:scaleX(1) !important;}
+.home-page .evidence-card:hover::before{opacity:1 !important;}
+.home-page .evidence-index{
+  position:absolute !important;
+  top:12px !important;right:14px !important;
+  color:#6f7e91 !important;
+  font:700 7px/1 var(--mono,monospace) !important;
+  letter-spacing:.08em !important;
+}
+.home-page .evidence-card b{
+  color:#f1f4f7 !important;
+  font:700 22px/1.05 var(--mono,monospace) !important;
+  letter-spacing:.01em !important;
+}
+.home-page .evidence-card small{
+  max-width:220px !important;
+  margin-top:8px !important;
+  color:#8795a8 !important;
+  font-size:10px !important;
+  line-height:1.4 !important;
+}
+@media(max-width:900px){
+  .home-page .evidence-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+}
+@media(max-width:700px){
+  .home-page .reference-timeline{grid-template-columns:repeat(5,190px) !important;}
+  .home-page .evidence-grid{grid-template-columns:1fr !important;}
+}
+</style>
+
+
+<style id="selected-work-spacing-final">
+.home-page .recruiter-snapshot{margin-bottom:12px !important;}
+.home-page #selected-work{margin-top:0 !important;}
+.home-page #selected-work + .workflow-section{padding-top:28px !important;}
+</style>
+
+<style id="scroll-to-explore">
+  .scroll-explore{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+    padding:12px 0 34px;
+    margin-top:-18px;
+    position:relative;
+    z-index:2;
+    color:#f5f7fb;
+    text-align:center;
+  }
+  .scroll-explore-label{
+    font-family:var(--mono,ui-monospace,monospace);
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.34em;
+    text-transform:uppercase;
+    opacity:.92;
+  }
+  .scroll-explore-arrow{
+    width:28px;
+    height:44px;
+    position:relative;
+    display:flex;
+    justify-content:center;
+  }
+  .scroll-explore-arrow::before{
+    content:"";
+    position:absolute;
+    top:0;
+    width:2px;
+    height:30px;
+    background:linear-gradient(to bottom,rgba(31,214,181,.15),#16c79c);
+  }
+  .scroll-explore-arrow::after{
+    content:"";
+    position:absolute;
+    top:3px;
+    width:16px;
+    height:16px;
+    border-right:3px solid #20d7bf;
+    border-bottom:3px solid #20d7bf;
+    transform:rotate(45deg);
+    animation:scrollPulse 1.8s ease-in-out infinite;
+  }
+  .scroll-explore-dot{
+    width:5px;height:5px;border-radius:50%;background:#d6a83e;
+    box-shadow:0 0 0 7px rgba(214,168,62,.08);
+    animation:scrollDot 1.8s ease-in-out infinite;
+  }
+  @keyframes scrollPulse{
+    0%,100%{transform:translateY(0) rotate(45deg);opacity:.55}
+    50%{transform:translateY(7px) rotate(45deg);opacity:1}
+  }
+  @keyframes scrollDot{
+    0%,100%{transform:translateY(0);opacity:.45}
+    50%{transform:translateY(7px);opacity:1}
+  }
+  @media(max-width:700px){
+    .scroll-explore{padding:4px 0 26px;margin-top:-8px}
+    .scroll-explore-label{font-size:10px;letter-spacing:.24em}
+  }
+</style>
+
+<style id="hero-shift-up">
+  /* Move the homepage hero substantially upward and remove the dead space above it. */
+  .home-page .home-hero{
+    margin-top:-58px !important;
+    padding-top:0 !important;
+    padding-bottom:28px !important;
+  }
+  .home-page .home-hero .hero-grid{
+    transform:translateY(-4px);
+  }
+  .home-page .home-hero h1{
+    margin-top:6px !important;
+  }
+  @media(max-width:760px){
+    .home-page .home-hero{margin-top:-28px !important;}
+  }
+</style>
+
+<style id="hero-space-final">
+/* FINAL COMPACT HERO — eliminate dead space and keep the profile card lightweight */
+.home-page .commandbar{
+  height:56px !important;
+  min-height:56px !important;
+  padding:10px 14px !important;
+  margin-bottom:6px !important;
+}
+.home-page .command-quick{
+  margin-top:0 !important;
+  margin-bottom:6px !important;
+  min-height:38px !important;
+}
+.home-page .home-hero{
+  position:relative !important;
+  top:-82px !important;
+  margin-bottom:-82px !important;
+  padding-top:0 !important;
+  padding-bottom:18px !important;
+}
+.home-page .home-hero .hero-grid{
+  align-items:start !important;
+  gap:38px !important;
+}
+.home-page .home-hero h1{
+  margin-top:0 !important;
+  margin-bottom:14px !important;
+  font-size:clamp(52px,5.8vw,88px) !important;
+  line-height:.98 !important;
+}
+.home-page .home-hero .copy{
+  max-width:780px !important;
+  margin-bottom:18px !important;
+  font-size:16px !important;
+  line-height:1.45 !important;
+}
+.home-page .actions{
+  gap:10px !important;
+}
+.home-page .actions .btn{
+  padding:12px 17px !important;
+  font-size:10px !important;
+}
+.home-page .profile-hero-card{
+  width:250px !important;
+  max-width:250px !important;
+  padding:12px !important;
+  border-radius:16px !important;
+  justify-self:end !important;
+}
+.home-page .profile-photo-frame{
+  height:150px !important;
+  min-height:150px !important;
+  border-radius:11px !important;
+}
+.home-page .profile-name-under-photo{
+  margin:7px 0 0 !important;
+  font-size:12px !important;
+}
+.home-page .profile-hero-copy{
+  padding-top:8px !important;
+}
+.home-page .profile-hero-copy small{
+  font-size:8px !important;
+}
+.home-page .profile-hero-copy .big{
+  font-size:17px !important;
+  margin:3px 0 5px !important;
+}
+.home-page .profile-hero-copy p{
+  font-size:10px !important;
+  line-height:1.35 !important;
+  margin-bottom:7px !important;
+}
+.home-page .hero-proof{
+  gap:3px !important;
+}
+.home-page .hero-proof span{
+  font-size:8px !important;
+}
+.home-page .scroll-explore{
+  margin-top:-40px !important;
+}
+@media(max-width:1000px){
+  .home-page .home-hero{top:-55px !important;margin-bottom:-55px !important;}
+  .home-page .profile-hero-card{width:220px !important;max-width:220px !important;}
+  .home-page .profile-photo-frame{height:132px !important;min-height:132px !important;}
+}
+@media(max-width:760px){
+  .home-page .home-hero{top:-28px !important;margin-bottom:-28px !important;}
+  .home-page .home-hero .hero-grid{gap:20px !important;}
+  .home-page .profile-hero-card{width:100% !important;max-width:300px !important;justify-self:start !important;}
+  .home-page .profile-photo-frame{height:170px !important;min-height:170px !important;}
+}
+</style>
+
+
+<style id="hero-compact-structure-final">
+/* =========================================================
+   HERO — compact, clean, no overlap
+   ========================================================= */
+.home-page .home-main{
+  padding-top:0 !important;
+}
+
+/* Keep the command area useful without consuming a full screen. */
+.home-page .commandbar{
+  height:48px !important;
+  min-height:48px !important;
+  padding:8px 12px !important;
+  margin:0 0 7px !important;
+  border-radius:12px !important;
+}
+.home-page .commandbar input{
+  font-size:12px !important;
+}
+.home-page .commandbar button{
+  padding:7px 12px !important;
+  font-size:9px !important;
+}
+.home-page .command-quick{
+  display:flex !important;
+  align-items:center !important;
+  gap:7px !important;
+  min-height:32px !important;
+  margin:0 0 10px !important;
+}
+.home-page .command-quick button{
+  min-height:30px !important;
+  height:30px !important;
+  padding:0 12px !important;
+  font-size:10px !important;
+  line-height:1 !important;
+}
+.home-page .command-help{
+  margin-left:auto !important;
+  font-size:9px !important;
+  white-space:nowrap !important;
+}
+
+/* Hero sits naturally below the command area — no negative positioning. */
+.home-page .home-hero{
+  position:relative !important;
+  top:auto !important;
+  margin:0 !important;
+  padding:8px 0 16px !important;
+  min-height:0 !important;
+}
+.home-page .home-hero .hero-grid{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) 238px !important;
+  align-items:center !important;
+  gap:32px !important;
+  min-height:0 !important;
+}
+.home-page .home-hero .hero-grid > .reveal:first-child{
+  min-width:0 !important;
+  padding:0 !important;
+}
+
+/* Smaller headline = same impact, substantially less vertical consumption. */
+.home-page .home-hero .eyebrow{
+  font-size:10px !important;
+  letter-spacing:.13em !important;
+}
+.home-page .home-hero h1{
+  margin:7px 0 12px !important;
+  font-size:clamp(48px,5vw,72px) !important;
+  line-height:.94 !important;
+  letter-spacing:-.045em !important;
+}
+.home-page .home-hero .copy{
+  max-width:780px !important;
+  margin:0 0 15px !important;
+  font-size:14px !important;
+  line-height:1.42 !important;
+}
+.home-page .home-hero .actions{
+  gap:8px !important;
+}
+.home-page .home-hero .actions .btn{
+  min-height:42px !important;
+  padding:10px 15px !important;
+  font-size:10px !important;
+  white-space:nowrap !important;
+}
+
+/* Compact profile card — image is smaller but remains prominent. */
+.home-page .profile-hero-card{
+  width:238px !important;
+  max-width:238px !important;
+  padding:10px !important;
+  border-radius:15px !important;
+  justify-self:end !important;
+}
+.home-page .profile-photo-frame{
+  height:128px !important;
+  min-height:128px !important;
+  border-radius:10px !important;
+}
+.home-page .profile-name-under-photo{
+  margin:6px 0 0 !important;
+  font-size:11px !important;
+  letter-spacing:.18em !important;
+}
+.home-page .profile-hero-copy{
+  padding-top:7px !important;
+}
+.home-page .profile-hero-copy small{
+  font-size:7px !important;
+}
+.home-page .profile-hero-copy .big{
+  margin:3px 0 4px !important;
+  font-size:16px !important;
+  line-height:1.05 !important;
+}
+.home-page .profile-hero-copy p{
+  margin:0 0 7px !important;
+  font-size:9px !important;
+  line-height:1.3 !important;
+}
+.home-page .hero-proof{
+  gap:2px !important;
+}
+.home-page .hero-proof span{
+  font-size:7px !important;
+  line-height:1.3 !important;
+}
+
+/* Scroll cue stays close to the hero instead of creating a second large block. */
+.home-page .scroll-explore{
+  margin:0 !important;
+  padding:5px 0 20px !important;
+  gap:8px !important;
+}
+.home-page .scroll-explore-label{
+  font-size:10px !important;
+  letter-spacing:.25em !important;
+}
+.home-page .scroll-explore-arrow{
+  height:30px !important;
+}
+.home-page .scroll-explore-arrow::before{height:20px !important;}
+.home-page .scroll-explore-arrow::after{
+  width:12px !important;
+  height:12px !important;
+  border-width:2px !important;
+}
+
+/* Navigation / tabs: text-fit, slightly larger and never clipped. */
+.home-page .nav a,
+.home-page .nav-dropdown > a{
+  font-size:10px !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+  padding:8px 6px !important;
+}
+.home-page .header-actions .btn,
+.home-page .mode-toggle{
+  font-size:9px !important;
+  white-space:nowrap !important;
+}
+
+@media(max-width:1000px){
+  .home-page .home-hero .hero-grid{
+    grid-template-columns:minmax(0,1fr) 215px !important;
+    gap:24px !important;
+  }
+  .home-page .profile-hero-card{
+    width:215px !important;
+    max-width:215px !important;
+  }
+  .home-page .profile-photo-frame{
+    height:116px !important;
+    min-height:116px !important;
+  }
+}
+
+@media(max-width:760px){
+  .home-page .commandbar{
+    height:44px !important;
+    min-height:44px !important;
+  }
+  .home-page .command-quick{
+    overflow-x:auto !important;
+    scrollbar-width:none !important;
+  }
+  .home-page .command-quick::-webkit-scrollbar{display:none !important;}
+  .home-page .command-help{display:none !important;}
+  .home-page .home-hero .hero-grid{
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+  }
+  .home-page .profile-hero-card{
+    width:min(100%,280px) !important;
+    max-width:280px !important;
+    justify-self:start !important;
+  }
+  .home-page .profile-photo-frame{
+    height:150px !important;
+    min-height:150px !important;
+  }
+  .home-page .home-hero h1{
+    font-size:clamp(44px,12vw,62px) !important;
+  }
+  .home-page .home-hero .copy{
+    font-size:13px !important;
+  }
+  .home-page .home-hero .actions{
+    flex-wrap:wrap !important;
+  }
+}
+</style>
+
+
+<style id="profile-photo-shoulders-final">
+/* Profile photo: slightly larger and framed lower so the shoulders remain visible. */
+.home-page .profile-photo-frame{
+  height:155px !important;
+  min-height:155px !important;
+  border-radius:11px !important;
+  overflow:hidden !important;
+}
+.home-page .profile-photo-frame img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center 38% !important;
+  display:block !important;
+}
+@media(max-width:1000px){
+  .home-page .profile-photo-frame{
+    height:140px !important;
+    min-height:140px !important;
+  }
+}
+@media(max-width:760px){
+  .home-page .profile-photo-frame{
+    height:170px !important;
+    min-height:170px !important;
+  }
+}
+</style>
+
+
+<style id="space-saving-section-overrides">
+/* Keep the homepage sections visually continuous — remove oversized dead space. */
+.home-page .decision-system.finance-expertise-layout{
+  padding-top:28px !important;
+  padding-bottom:42px !important;
+  margin-top:0 !important;
+}
+.home-page .decision-system.finance-expertise-layout .decision-head{
+  margin-top:0 !important;
+  padding-top:0 !important;
+}
+.home-page .workflow-section{
+  padding-top:26px !important;
+  padding-bottom:34px !important;
+  margin-top:0 !important;
+}
+.home-page .workflow-heading{
+  margin-top:0 !important;
+  padding-top:0 !important;
+  margin-bottom:22px !important;
+}
+.home-page .skill-explorer-section{
+  padding-top:30px !important;
+  padding-bottom:42px !important;
+  margin-top:0 !important;
+}
+.home-page .skill-explorer-section .section-head{
+  margin-top:0 !important;
+  padding-top:0 !important;
+}
+/* Prevent hidden/reveal transforms from creating visual gaps. */
+.home-page .decision-system.reveal,
+.home-page .workflow-section,
+.home-page .skill-explorer-section{
+  min-height:0 !important;
+}
+/* Navigation should contain only HOME on the homepage. */
+.home-page .nav-home-about{
+  white-space:nowrap !important;
+}
+</style>
+
+
+<style id="scroll-gate-final">
+/* Keep the first-screen experience clean: the scroll cue ends the hero,
+   and the portfolio content begins only after the next scroll. */
+.home-page .scroll-explore{
+  min-height:clamp(240px,38vh,380px) !important;
+  box-sizing:border-box !important;
+  margin:0 !important;
+  padding:12px 0 28px !important;
+  justify-content:flex-end !important;
+}
+
+/* Push the next content below the initial viewport rather than showing
+   the beginning of the next section underneath the scroll cue. */
+.home-page .scroll-explore + .identity-strip{
+  margin-top:0 !important;
+}
+
+@media(min-height:760px){
+  .home-page .scroll-explore{
+    min-height:clamp(300px,calc(100vh - 480px),430px) !important;
+    max-height:360px !important;
+  }
+}
+
+@media(max-width:700px){
+  .home-page .scroll-explore{
+    min-height:clamp(180px,30vh,260px) !important;
+    padding-bottom:22px !important;
+  }
+}
+</style>
+
+
+<style id="selected-work-logic-profile-final">
+/* Compact analytical logic line beneath each case question. */
+.home-page #selected-work .case-logic{
+  display:flex !important;
+  align-items:baseline !important;
+  gap:7px !important;
+  margin:0 0 10px !important;
+  padding:7px 9px !important;
+  border-left:2px solid rgba(11,200,155,.55) !important;
+  background:rgba(11,200,155,.025) !important;
+  border-radius:0 6px 6px 0 !important;
+  min-height:0 !important;
+}
+.home-page #selected-work .case-logic b{
+  flex:0 0 auto !important;
+  color:#18cfa1 !important;
+  font:700 8px/1 var(--mono,monospace) !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+}
+.home-page #selected-work .case-logic span{
+  min-width:0 !important;
+  color:#8d9bae !important;
+  font:500 9px/1.35 var(--mono,monospace) !important;
+  letter-spacing:.01em !important;
+}
+
+/* Profile card: approximately 20% larger than the current desktop treatment. */
+.home-page .profile-hero-card{
+  width:286px !important;
+  max-width:286px !important;
+  padding:12px !important;
+}
+.home-page .profile-photo-frame{
+  height:154px !important;
+  min-height:154px !important;
+}
+.home-page .profile-name-under-photo{
+  margin:7px 0 0 !important;
+  font-size:13px !important;
+}
+.home-page .profile-hero-copy{
+  padding-top:9px !important;
+}
+.home-page .profile-hero-copy small{font-size:8.5px !important;}
+.home-page .profile-hero-copy .big{
+  font-size:19px !important;
+  margin:4px 0 6px !important;
+}
+.home-page .profile-hero-copy p{
+  font-size:10.8px !important;
+  line-height:1.35 !important;
+  margin-bottom:8px !important;
+}
+.home-page .hero-proof{gap:3px !important;}
+.home-page .hero-proof span{font-size:8.4px !important;}
+
+/* Remove the artificial dead space before the scroll cue. */
+.home-page .scroll-explore{
+  min-height:0 !important;
+  max-height:none !important;
+  height:auto !important;
+  margin:0 !important;
+  padding:8px 0 24px !important;
+  justify-content:center !important;
+  gap:10px !important;
+}
+
+@media(max-width:1000px){
+  .home-page .profile-hero-card{
+    width:264px !important;
+    max-width:264px !important;
+  }
+  .home-page .profile-photo-frame{
+    height:154px !important;
+    min-height:154px !important;
+  }
+}
+@media(max-width:760px){
+  .home-page .profile-hero-card{
+    width:100% !important;
+    max-width:360px !important;
+  }
+  .home-page .profile-photo-frame{
+    height:185px !important;
+    min-height:185px !important;
+  }
+}
+</style>
+
+
+<style id="final-space-polish">
+/* FINAL SPACE POLISH — align the command area, enlarge the profile cleanly,
+   and make the finance-OS heading compact and readable. */
+
+/* 1) Command area: slightly left, with a cleaner single-line rhythm. */
+.home-page .commandbar,
+.home-page .command-quick{
+  position:relative !important;
+  left:-22px !important;
+  width:calc(100% + 22px) !important;
+}
+.home-page .commandbar{
+  margin-bottom:6px !important;
+}
+.home-page .commandbar input{
+  min-width:0 !important;
+  overflow:hidden !important;
+  text-overflow:ellipsis !important;
+  white-space:nowrap !important;
+}
+.home-page .command-quick{
+  padding-left:0 !important;
+}
+
+/* 2) Profile: ~20% larger, but still compact enough to preserve the hero. */
+.home-page .home-hero .hero-grid{
+  grid-template-columns:minmax(0,1fr) 320px !important;
+  gap:34px !important;
+}
+.home-page .profile-hero-card{
+  width:320px !important;
+  max-width:320px !important;
+  padding:14px !important;
+  border-radius:17px !important;
+}
+.home-page .profile-photo-frame{
+  height:184px !important;
+  min-height:184px !important;
+  border-radius:12px !important;
+}
+.home-page .profile-photo-frame img{
+  object-fit:cover !important;
+  object-position:center 36% !important;
+  transform:scale(1.025) !important;
+  transform-origin:center center !important;
+}
+.home-page .profile-name-under-photo{
+  margin:8px 0 0 !important;
+  font-size:14px !important;
+}
+.home-page .profile-hero-copy{
+  padding-top:10px !important;
+}
+.home-page .profile-hero-copy small{
+  font-size:9px !important;
+}
+.home-page .profile-hero-copy .big{
+  font-size:20px !important;
+  margin:5px 0 6px !important;
+}
+.home-page .profile-hero-copy p{
+  font-size:11px !important;
+  line-height:1.35 !important;
+  margin-bottom:9px !important;
+}
+.home-page .hero-proof{
+  gap:4px !important;
+}
+.home-page .hero-proof span{
+  font-size:8.5px !important;
+}
+
+/* 3) Finance OS: smaller heading + description visually attached to it.
+      This removes the oversized text block and wasted vertical space. */
+.home-page .decision-system .decision-head{
+  display:grid !important;
+  grid-template-columns:minmax(250px,auto) minmax(300px,1fr) !important;
+  grid-template-areas:
+    "label label"
+    "title copy" !important;
+  column-gap:42px !important;
+  align-items:end !important;
+  margin-bottom:22px !important;
+}
+.home-page .decision-system .decision-head .section-code{
+  grid-area:label !important;
+  margin-bottom:6px !important;
+}
+.home-page .decision-system .decision-head h2{
+  grid-area:title !important;
+  margin:0 !important;
+  font-size:clamp(30px,3vw,42px) !important;
+  line-height:1.02 !important;
+  letter-spacing:-.035em !important;
+  max-width:620px !important;
+}
+.home-page .decision-system .decision-head .copy{
+  grid-area:copy !important;
+  margin:0 !important;
+  max-width:760px !important;
+  font-size:14px !important;
+  line-height:1.45 !important;
+}
+
+@media(max-width:1100px){
+  .home-page .home-hero .hero-grid{
+    grid-template-columns:minmax(0,1fr) 285px !important;
+    gap:26px !important;
+  }
+  .home-page .profile-hero-card{
+    width:285px !important;
+    max-width:285px !important;
+  }
+  .home-page .profile-photo-frame{
+    height:170px !important;
+    min-height:170px !important;
+  }
+}
+
+@media(max-width:760px){
+  .home-page .commandbar,
+  .home-page .command-quick{
+    left:0 !important;
+    width:100% !important;
+  }
+  .home-page .home-hero .hero-grid{
+    grid-template-columns:1fr !important;
+  }
+  .home-page .profile-hero-card{
+    width:min(100%,340px) !important;
+    max-width:340px !important;
+  }
+  .home-page .profile-photo-frame{
+    height:195px !important;
+    min-height:195px !important;
+  }
+  .home-page .decision-system .decision-head{
+    display:block !important;
+    margin-bottom:18px !important;
+  }
+  .home-page .decision-system .decision-head h2{
+    font-size:30px !important;
+    margin:5px 0 8px !important;
+  }
+  .home-page .decision-system .decision-head .copy{
+    font-size:13px !important;
+  }
+}
+</style>
+
+
+<style id="employer-loop-compact">
+/* =========================================================
+   PAST EMPLOYERS — compact, continuous marquee
+   ========================================================= */
+.home-page .employer-loop-section{
+  width:100% !important;
+  margin:0 !important;
+  padding:12px 0 8px !important;
+  overflow:hidden !important;
+}
+.home-page .employer-loop-label{
+  display:block !important;
+  width:max-content !important;
+  margin:0 auto 10px !important;
+  color:#69788c !important;
+  font:700 9px/1 var(--mono,monospace) !important;
+  letter-spacing:.34em !important;
+  text-transform:uppercase !important;
+  text-align:center !important;
+}
+.home-page .employer-loop-window{
+  position:relative !important;
+  width:100% !important;
+  overflow:hidden !important;
+  mask-image:linear-gradient(90deg,transparent 0,#000 8%,#000 92%,transparent 100%) !important;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 8%,#000 92%,transparent 100%) !important;
+}
+.home-page .employer-loop-track{
+  display:flex !important;
+  width:max-content !important;
+  align-items:center !important;
+  animation:employerMarquee 24s linear infinite !important;
+  will-change:transform !important;
+}
+.home-page .employer-loop-set{
+  display:flex !important;
+  align-items:center !important;
+  gap:58px !important;
+  flex:0 0 auto !important;
+  padding-right:58px !important;
+}
+.home-page .employer-loop-item{
+  flex:0 0 auto !important;
+  height:38px !important;
+  min-width:140px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  opacity:.86 !important;
+  filter:none !important;
+  transition:opacity .2s ease,transform .2s ease,filter .2s ease !important;
+}
+.home-page .employer-loop-item:hover{
+  opacity:.95 !important;
+  filter:none !important;
+  transform:translateY(-1px) !important;
+}
+.home-page .employer-loop-item img{
+  display:block !important;
+  width:auto !important;
+  height:32px !important;
+  max-width:150px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+}
+.home-page .employer-loop-item.allianz img{
+  max-width:135px !important;
+  height:28px !important;
+}
+.home-page .employer-loop-item.guestready img{
+  max-width:122px !important;
+  height:32px !important;
+}
+.home-page .employer-loop-item.hairclub img{
+  max-width:122px !important;
+  height:32px !important;
+}
+.home-page .employer-loop-item.allianz{opacity:.95 !important;}
+.home-page .employer-loop-item.guestready{opacity:.92 !important;}
+.home-page .employer-loop-item.hairclub{opacity:.92 !important;}
+.home-page .employer-loop-divider{
+  width:1px !important;
+  height:22px !important;
+  background:rgba(126,150,177,.18) !important;
+  flex:0 0 auto !important;
+}
+@keyframes employerMarquee{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+@media (prefers-reduced-motion:reduce){
+  .home-page .employer-loop-track{animation:none !important;}
+}
+@media(max-width:700px){
+  .home-page .employer-loop-section{padding:8px 0 2px !important;}
+  .home-page .employer-loop-label{font-size:8px !important;letter-spacing:.25em !important;margin-bottom:8px !important;}
+  .home-page .employer-loop-set{gap:34px !important;padding-right:34px !important;}
+  .home-page .employer-loop-item{min-width:105px !important;height:32px !important;}
+  .home-page .employer-loop-item img{max-width:110px !important;height:26px !important;}
+}
+</style>
+
+<style id="tool-loop-compact">
+/* TOOLS / SYSTEMS — compact continuous marquee */
+.home-page .tool-loop-section{
+  width:100% !important;
+  margin:0 !important;
+  padding:2px 0 0 !important;
+  overflow:hidden !important;
+}
+.home-page .tool-loop-label{
+  display:block !important;
+  width:max-content !important;
+  margin:0 auto 8px !important;
+  color:#69788c !important;
+  font:700 9px/1 var(--mono,monospace) !important;
+  letter-spacing:.32em !important;
+  text-transform:uppercase !important;
+}
+.home-page .tool-loop-window{
+  position:relative !important;
+  width:100% !important;
+  overflow:hidden !important;
+  mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%) !important;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%) !important;
+}
+.home-page .tool-loop-track{
+  display:flex !important;
+  width:max-content !important;
+  align-items:center !important;
+  animation:toolMarquee 26s linear infinite !important;
+  will-change:transform !important;
+}
+.home-page .tool-loop-set{
+  display:flex !important;
+  align-items:center !important;
+  gap:42px !important;
+  flex:0 0 auto !important;
+  padding-right:42px !important;
+}
+.home-page .tool-loop-item{
+  display:flex !important;
+  align-items:center !important;
+  gap:8px !important;
+  min-width:92px !important;
+  justify-content:center !important;
+  opacity:.78 !important;
+  transition:opacity .2s ease,transform .2s ease !important;
+}
+.home-page .tool-loop-item:hover{
+  opacity:1 !important;
+  transform:translateY(-1px) !important;
+}
+.home-page .tool-loop-mark{
+  width:28px !important;
+  height:28px !important;
+  border:1px solid rgba(126,150,177,.26) !important;
+  border-radius:7px !important;
+  display:grid !important;
+  place-items:center !important;
+  background:rgba(13,20,29,.72) !important;
+  color:#aebbd0 !important;
+  font:800 9px/1 var(--mono,monospace) !important;
+  letter-spacing:-.02em !important;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.02) !important;
+}
+.home-page .tool-loop-name{
+  font:700 9px/1 var(--mono,monospace) !important;
+  color:#8d9bb0 !important;
+  letter-spacing:.04em !important;
+  white-space:nowrap !important;
+}
+.home-page .tool-loop-divider{
+  width:1px !important;
+  height:18px !important;
+  background:rgba(126,150,177,.16) !important;
+  flex:0 0 auto !important;
+}
+@keyframes toolMarquee{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+@media (prefers-reduced-motion:reduce){
+  .home-page .tool-loop-track{animation:none !important;}
+}
+@media(max-width:700px){
+  .home-page .tool-loop-section{padding:0 !important;}
+  .home-page .tool-loop-label{font-size:8px !important;letter-spacing:.24em !important;margin-bottom:6px !important;}
+  .home-page .tool-loop-set{gap:26px !important;padding-right:26px !important;}
+  .home-page .tool-loop-item{min-width:78px !important;gap:6px !important;}
+  .home-page .tool-loop-mark{width:24px !important;height:24px !important;font-size:8px !important;}
+  .home-page .tool-loop-name{font-size:8px !important;}
+}
+</style>
+
+<style id="employer-loop-scroll-spacing">
+.home-page .scroll-explore{
+  min-height:92px !important;
+  height:92px !important;
+  padding:6px 0 14px !important;
+  gap:7px !important;
+}
+.home-page .scroll-explore-label{
+  font-size:10px !important;
+  letter-spacing:.23em !important;
+}
+.home-page .employer-loop-section + .scroll-explore{
+  margin-top:0 !important;
+}
+@media(max-width:700px){
+  .home-page .scroll-explore{
+    min-height:78px !important;
+    height:78px !important;
+    padding:4px 0 12px !important;
+  }
+}
+</style>
+
+
+<style id="final-hero-alignment-20260825">
+/* FINAL HERO ALIGNMENT + COMPACT COMMAND BAR */
+.home-page .commandbar{
+  height:40px !important;
+  min-height:40px !important;
+  padding:6px 10px !important;
+  margin:0 0 5px !important;
+  border-radius:10px !important;
+  box-sizing:border-box !important;
+}
+.home-page .commandbar .prompt{
+  font-size:12px !important;
+  line-height:1 !important;
+}
+.home-page .commandbar input{
+  font-size:11px !important;
+  line-height:1.1 !important;
+}
+.home-page .commandbar button{
+  min-height:28px !important;
+  height:28px !important;
+  padding:5px 11px !important;
+  font-size:8px !important;
+  border-radius:8px !important;
+}
+.home-page .command-quick{
+  min-height:27px !important;
+  height:27px !important;
+  margin:0 0 8px !important;
+  gap:6px !important;
+}
+.home-page .command-quick button{
+  min-height:27px !important;
+  height:27px !important;
+  padding:0 10px !important;
+  font-size:9px !important;
+  border-radius:8px !important;
+}
+.home-page .command-help{
+  font-size:8px !important;
+}
+
+/* Keep the text block and profile card on the exact same top line. */
+.home-page .home-hero{
+  padding-top:8px !important;
+}
+.home-page .home-hero .hero-grid{
+  align-items:start !important;
+}
+.home-page .home-hero .hero-grid > .reveal:first-child,
+.home-page .profile-hero-card{
+  align-self:start !important;
+}
+.home-page .home-hero .eyebrow{
+  margin-top:0 !important;
+}
+.home-page .home-hero h1{
+  margin-top:7px !important;
+}
+
+@media(max-width:760px){
+  .home-page .commandbar{height:38px !important;min-height:38px !important;}
+  .home-page .command-quick{height:26px !important;min-height:26px !important;}
+  .home-page .command-quick button{height:26px !important;min-height:26px !important;}
+}
+</style>
+
+<style id="final-header-finance-compact-20260825">
+/* Header: remove location and show compact dynamic date/time/year. */
+.home-page .site-datetime{
+  min-width:118px !important;
+  text-align:center !important;
+  white-space:nowrap !important;
+  font:700 9px/1.15 var(--mono,monospace) !important;
+  letter-spacing:.08em !important;
+  color:#7f8da2 !important;
+}
+
+/* FINANCE OS: substantially smaller, tighter and better balanced. */
+.home-page .finance-explorer{
+  grid-template-columns:220px minmax(0,1fr) !important;
+  gap:16px !important;
+  padding:16px !important;
+  border-radius:14px !important;
+}
+.home-page .finance-tabs{gap:6px !important;}
+.home-page .finance-tab{
+  min-height:42px !important;
+  height:42px !important;
+  padding:0 11px !important;
+  grid-template-columns:20px minmax(0,1fr) 14px !important;
+  gap:6px !important;
+  border-radius:8px !important;
+}
+.home-page .finance-tab > span{font-size:8px !important;}
+.home-page .finance-tab b{font-size:10px !important;}
+.home-page .finance-tab i{font-size:11px !important;}
+.home-page .finance-detail{
+  min-height:220px !important;
+  padding:20px 22px !important;
+  border-radius:12px !important;
+}
+.home-page .finance-detail h3{
+  margin:5px 0 7px !important;
+  font-size:21px !important;
+  line-height:1.15 !important;
+}
+.home-page .finance-detail p{
+  font-size:12px !important;
+  line-height:1.45 !important;
+  margin:0 0 12px !important;
+}
+.home-page .finance-detail-tags{gap:6px !important;}
+.home-page .finance-detail-tags span{
+  padding:5px 8px !important;
+  font-size:8px !important;
+}
+.home-page .finance-detail-proof{gap:8px !important;}
+.home-page .finance-detail-proof > div{padding:10px 11px !important;}
+.home-page .finance-detail-proof strong{font-size:16px !important;}
+.home-page .finance-detail-proof small{font-size:8px !important;}
+.home-page .decision-head h2{
+  font-size:30px !important;
+  line-height:1.12 !important;
+  margin:6px 0 8px !important;
+}
+.home-page .decision-head .copy{
+  font-size:12px !important;
+  line-height:1.45 !important;
+  max-width:920px !important;
+}
+
+/* Pull employer/tool loop upward so the next visual block feels connected. */
+.home-page .employer-loop-section{
+  margin-top:-18px !important;
+  padding-top:0 !important;
+  padding-bottom:4px !important;
+}
+.home-page .employer-loop-label{margin-bottom:7px !important;}
+.home-page .tool-loop-section{
+  padding-top:0 !important;
+  padding-bottom:2px !important;
+}
+.home-page .tool-loop-label{margin-bottom:6px !important;}
+
+@media(max-width:900px){
+  .home-page .finance-explorer{grid-template-columns:190px minmax(0,1fr) !important;gap:12px !important;}
+}
+@media(max-width:700px){
+  .home-page .site-datetime{min-width:96px !important;font-size:8px !important;}
+  .home-page .finance-explorer{grid-template-columns:1fr !important;padding:12px !important;}
+  .home-page .finance-tabs{display:grid !important;grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+  .home-page .finance-tab{height:40px !important;min-height:40px !important;}
+  .home-page .finance-detail{min-height:0 !important;padding:16px !important;}
+  .home-page .decision-head h2{font-size:25px !important;}
+}
+</style>
+
+
+<style id="education-compact-overrides">
+/* Compact side-by-side education section */
+.education-compact-section{
+  margin-top:34px !important;
+  margin-bottom:38px !important;
+}
+.education-compact-head{
+  display:grid !important;
+  grid-template-columns:180px minmax(0,1fr) !important;
+  gap:24px !important;
+  align-items:start !important;
+  margin-bottom:18px !important;
+}
+.education-compact-head h2{
+  margin:0 !important;
+  font-size:34px !important;
+  line-height:1.08 !important;
+  letter-spacing:-0.03em !important;
+}
+.education-compact-grid{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:16px !important;
+}
+.education-compact-card{
+  position:relative;
+  padding:20px 22px !important;
+  min-height:0 !important;
+  border:1px solid rgba(107,132,165,.28) !important;
+  border-radius:18px !important;
+  background:rgba(15,22,33,.78) !important;
+  overflow:hidden;
+}
+.education-compact-card::before{
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:3px;
+  background:linear-gradient(180deg,#10c99b,#1bc7e2);
+  opacity:.9;
+}
+.education-card-top{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:12px !important;
+  margin-bottom:12px !important;
+}
+.education-year{
+  font-family:inherit !important;
+  font-size:12px !important;
+  font-weight:700 !important;
+  letter-spacing:.08em !important;
+  color:#d7ac43 !important;
+  white-space:nowrap !important;
+}
+.education-type{
+  display:inline-flex !important;
+  align-items:center !important;
+  padding:5px 9px !important;
+  border:1px solid rgba(17,202,158,.35) !important;
+  border-radius:999px !important;
+  font-size:9px !important;
+  font-weight:700 !important;
+  letter-spacing:.08em !important;
+  color:#10c99b !important;
+  text-transform:uppercase !important;
+}
+.education-compact-card h3{
+  margin:0 0 8px !important;
+  font-size:21px !important;
+  line-height:1.2 !important;
+  letter-spacing:-.02em !important;
+}
+.education-school{
+  margin:0 0 8px !important;
+  color:#a2afc4 !important;
+  font-size:13px !important;
+  line-height:1.4 !important;
+}
+.education-detail{
+  margin:0 !important;
+  color:#7f8da5 !important;
+  font-size:11.5px !important;
+  line-height:1.45 !important;
+}
+.education-tags{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:7px !important;
+  margin-top:14px !important;
+}
+.education-tags span{
+  padding:5px 8px !important;
+  border:1px solid rgba(107,132,165,.24) !important;
+  border-radius:999px !important;
+  font-size:8.5px !important;
+  letter-spacing:.06em !important;
+  color:#8f9db3 !important;
+  text-transform:uppercase !important;
+}
+@media (max-width:900px){
+  .education-compact-head{grid-template-columns:1fr !important; gap:8px !important;}
+  .education-compact-grid{grid-template-columns:1fr !important;}
+}
+</style>
+
+<style id="education-and-expertise-tighten">
+  .education-card-top{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:14px !important;
+    flex-wrap:wrap !important;
+  }
+  .education-badges{
+    display:flex !important;
+    align-items:center !important;
+    gap:8px !important;
+    flex-wrap:wrap !important;
+    justify-content:flex-end !important;
+  }
+  .education-type-green{
+    border-color:rgba(11,200,155,.75) !important;
+    color:#0bc89b !important;
+    background:rgba(11,200,155,.06) !important;
+  }
+  .education-compact-card{
+    padding:24px 28px !important;
+  }
+  .education-compact-card h3{
+    font-size:21px !important;
+    line-height:1.16 !important;
+    margin:14px 0 10px !important;
+  }
+  .education-compact-card .education-school{
+    font-size:14px !important;
+    line-height:1.35 !important;
+    margin:0 0 8px !important;
+  }
+  .education-compact-card .education-detail{
+    font-size:12px !important;
+    line-height:1.45 !important;
+    margin:0 0 12px !important;
+    max-width:920px !important;
+  }
+  .education-tags{
+    gap:7px !important;
+  }
+  .education-tags span{
+    padding:6px 9px !important;
+    font-size:9px !important;
+  }
+
+  /* Keep all capability tabs visible in a tighter, cleaner footprint. */
+  .portfolio-expertise-section .expertise-tabs{
+    gap:6px !important;
+  }
+  .portfolio-expertise-section .expertise-tab{
+    min-height:46px !important;
+    height:46px !important;
+    padding:0 11px !important;
+    border-radius:8px !important;
+    grid-template-columns:22px 1fr 14px !important;
+    gap:6px !important;
+  }
+  .portfolio-expertise-section .expertise-tab > span{
+    font-size:8px !important;
+  }
+  .portfolio-expertise-section .expertise-tab b{
+    font-size:10px !important;
+    line-height:1.1 !important;
+  }
+  .portfolio-expertise-section .expertise-tab i{
+    font-size:12px !important;
+  }
+
+  @media(max-width:760px){
+    .education-badges{
+      justify-content:flex-start !important;
+    }
+    .education-compact-card{
+      padding:20px !important;
+    }
+  }
+</style>
+
+
+<style id="final-space-reduction">
+/* Final spacing pass: keep the first viewport compact and remove the dead gap. */
+.home-page .home-hero{
+  padding-bottom:6px !important;
+}
+.home-page .home-hero + .employer-loop-section{
+  margin-top:-8px !important;
+}
+.home-page .employer-loop-section{
+  padding-top:6px !important;
+}
+.home-page .tool-loop-section{
+  padding-top:0 !important;
+}
+.home-page .scroll-explore{
+  min-height:0 !important;
+  height:82px !important;
+  max-height:82px !important;
+  margin:0 !important;
+  padding:8px 0 14px !important;
+}
+@media(max-width:700px){
+  .home-page .scroll-explore{
+    height:68px !important;
+    max-height:68px !important;
+    min-height:0 !important;
+    padding-bottom:10px !important;
+  }
+}
+</style>
+
+<style id="unified-one-page-layout">
+  /* One-page portfolio navigation */
+  .home-page .nav-single-home{white-space:nowrap!important;}
+  .home-page .topbar-inner{gap:20px!important;}
+  .home-page .nav{gap:28px!important;}
+  .home-page .header-actions{margin-left:auto!important;}
+
+  /* Unified About block: compact, not another hero */
+  .home-page .onepage-about{
+    padding:34px 0 28px!important;
+    border-top:1px solid rgba(126,150,177,.14)!important;
+  }
+  .home-page .onepage-about-grid{
+    display:grid!important;
+    grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)!important;
+    gap:18px!important;
+    align-items:stretch!important;
+  }
+  .home-page .onepage-about-card{
+    padding:20px!important;
+    border:1px solid rgba(126,150,177,.16)!important;
+    border-radius:14px!important;
+    background:linear-gradient(145deg,rgba(16,24,34,.92),rgba(9,15,22,.96))!important;
+  }
+  .home-page .onepage-about-card h3{
+    margin:7px 0 8px!important;
+    font-size:22px!important;
+    line-height:1.15!important;
+  }
+  .home-page .onepage-about-card p{
+    margin:0!important;
+    font-size:12px!important;
+    line-height:1.52!important;
+    color:#96a3b6!important;
+  }
+  .home-page .onepage-facts{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:10px!important;
+    margin-top:14px!important;
+  }
+  .home-page .onepage-fact{
+    padding:10px 11px!important;
+    border:1px solid rgba(126,150,177,.14)!important;
+    border-radius:9px!important;
+    background:rgba(255,255,255,.015)!important;
+  }
+  .home-page .onepage-fact span{
+    display:block!important;
+    margin-bottom:4px!important;
+    color:#627287!important;
+    font:700 8px/1 var(--mono,monospace)!important;
+    letter-spacing:.08em!important;
+    text-transform:uppercase!important;
+  }
+  .home-page .onepage-fact b{
+    display:block!important;
+    color:#eef2f6!important;
+    font-size:11px!important;
+    line-height:1.25!important;
+  }
+  .home-page .onepage-about-card .mini-flow{
+    display:flex!important;
+    flex-wrap:wrap!important;
+    gap:6px!important;
+    margin-top:14px!important;
+  }
+  .home-page .onepage-about-card .mini-flow span{
+    padding:5px 7px!important;
+    border:1px solid rgba(126,150,177,.18)!important;
+    border-radius:999px!important;
+    color:#8f9bad!important;
+    font:700 8px/1 var(--mono,monospace)!important;
+    letter-spacing:.04em!important;
+  }
+  .home-page .onepage-about-card.principle{display:flex!important;flex-direction:column!important;justify-content:center!important;}
+
+  /* Experience — structured three-role cards */
+  .home-page .onepage-experience{
+    padding:48px 0 54px!important;
+  }
+  .home-page .onepage-experience .section-head{
+    margin-bottom:28px!important;
+  }
+  .home-page .onepage-experience .section-head h2{
+    font-size:clamp(30px,3vw,46px)!important;
+    line-height:1.06!important;
+    margin:0 0 8px!important;
+  }
+  .home-page .onepage-experience .section-head .copy{
+    font-size:14px!important;
+    line-height:1.5!important;
+    max-width:820px!important;
+    margin:0!important;
+  }
+  .home-page .onepage-experience-grid{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:20px!important;
+  }
+  .home-page .onepage-experience-card{
+    position:relative!important;
+    min-width:0!important;
+    min-height:365px!important;
+    padding:26px!important;
+    border:1px solid rgba(126,150,177,.18)!important;
+    border-radius:18px!important;
+    background:linear-gradient(145deg,rgba(16,24,34,.97),rgba(8,14,21,.99))!important;
+    display:flex!important;
+    flex-direction:column!important;
+    transition:border-color .25s ease,transform .25s ease,box-shadow .25s ease!important;
+  }
+  .home-page .onepage-experience-card:hover{
+    border-color:rgba(11,200,155,.42)!important;
+    transform:translateY(-3px)!important;
+    box-shadow:0 16px 40px rgba(0,0,0,.18)!important;
+  }
+  .home-page .onepage-exp-top{
+    display:flex!important;
+    justify-content:space-between!important;
+    align-items:flex-start!important;
+    gap:14px!important;
+    margin-bottom:36px!important;
+  }
+  .home-page .onepage-exp-logo{
+    height:30px!important;
+    width:110px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+  }
+  .home-page .onepage-exp-logo img{
+    display:block!important;
+    max-width:100%!important;
+    max-height:28px!important;
+    width:auto!important;
+    height:auto!important;
+    object-fit:contain!important;
+  }
+  .home-page .onepage-exp-date{
+    color:#d7aa43!important;
+    font:700 11px/1 var(--mono,monospace)!important;
+    white-space:nowrap!important;
+    letter-spacing:.02em!important;
+  }
+  .home-page .onepage-exp-meta{
+    margin-bottom:14px!important;
+  }
+  .home-page .onepage-exp-role,
+  .home-page .onepage-exp-division{
+    display:block!important;
+    font:700 10px/1.35 var(--mono,monospace)!important;
+    letter-spacing:.08em!important;
+    text-transform:uppercase!important;
+  }
+  .home-page .onepage-exp-role{color:#8d9bae!important;}
+  .home-page .onepage-exp-division{color:#18cfa1!important;margin-top:5px!important;}
+  .home-page .onepage-experience-card h3{
+    margin:0 0 14px!important;
+    color:#eef2f6!important;
+    font-size:clamp(20px,1.65vw,27px)!important;
+    line-height:1.14!important;
+    letter-spacing:-.015em!important;
+  }
+  .home-page .onepage-experience-card p{
+    margin:0!important;
+    color:#8f9bad!important;
+    font-size:13px!important;
+    line-height:1.58!important;
+  }
+  .home-page .onepage-exp-tags{
+    display:flex!important;
+    flex-wrap:wrap!important;
+    gap:7px!important;
+    margin-top:auto!important;
+    padding-top:28px!important;
+  }
+  .home-page .onepage-exp-tags span{
+    padding:7px 9px!important;
+    border:1px solid rgba(126,150,177,.18)!important;
+    border-radius:999px!important;
+    color:#7f8da0!important;
+    font:700 8px/1 var(--mono,monospace)!important;
+    letter-spacing:.04em!important;
+    white-space:nowrap!important;
+  }
+  @media(max-width:1000px){
+    .home-page .onepage-experience-grid{grid-template-columns:1fr!important;}
+    .home-page .onepage-experience-card{min-height:300px!important;}
+  }
+  @media(max-width:600px){
+    .home-page .onepage-experience{padding:38px 0 44px!important;}
+    .home-page .onepage-experience-card{padding:22px!important;min-height:330px!important;}
+    .home-page .onepage-exp-top{margin-bottom:28px!important;}
+    .home-page .onepage-exp-date{font-size:9px!important;}
+  }
+
+  /* Anchor spacing so scrolling lands cleanly below the fixed header. */
+  .home-page #about,#experience,#capabilities,#recommendations{scroll-margin-top:84px!important;}
+
+  /* Recommendations as a compact continuation of the one-page story */
+  .home-page .onepage-recommendations{padding-top:28px!important;padding-bottom:20px!important;}
+  .home-page .onepage-recommendations .section-head{margin-bottom:16px!important;}
+  .home-page .onepage-recommendations .section-head h2{font-size:clamp(24px,2.5vw,34px)!important;margin:0 0 6px!important;}
+  .home-page .onepage-recommendations .section-head .copy{font-size:12px!important;line-height:1.45!important;max-width:760px!important;margin:0!important;}
+  .home-page .onepage-rec-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important;}
+  .home-page .onepage-rec-card{padding:15px 16px!important;border:1px solid rgba(126,150,177,.16)!important;border-radius:12px!important;background:linear-gradient(145deg,rgba(16,24,34,.9),rgba(9,15,22,.94))!important;}
+  .home-page .onepage-rec-meta{display:flex!important;justify-content:space-between!important;gap:8px!important;color:#627287!important;font:700 7px/1 var(--mono,monospace)!important;letter-spacing:.08em!important;text-transform:uppercase!important;margin-bottom:8px!important;}
+  .home-page .onepage-rec-card h3{margin:0 0 7px!important;font-size:15px!important;line-height:1.2!important;}
+  .home-page .onepage-rec-card p{margin:0 0 10px!important;color:#8f9bad!important;font-size:10px!important;line-height:1.45!important;}
+  .home-page .onepage-rec-card a{font:700 8px/1 var(--mono,monospace)!important;color:#18cfa1!important;text-decoration:none!important;letter-spacing:.06em!important;}
+
+  @media(max-width:900px){
+    .home-page .onepage-about-grid,.home-page .onepage-experience-grid,.home-page .onepage-rec-grid{grid-template-columns:1fr 1fr!important;}
+    .home-page .onepage-experience-card:last-child,.home-page .onepage-rec-card:last-child{grid-column:1/-1!important;}
+  }
+  @media(max-width:700px){
+    .home-page .nav{gap:14px!important;}
+    .home-page .onepage-about-grid,.home-page .onepage-experience-grid,.home-page .onepage-rec-grid{grid-template-columns:1fr!important;}
+    .home-page .onepage-experience-card:last-child,.home-page .onepage-rec-card:last-child{grid-column:auto!important;}
+    .home-page .onepage-facts{grid-template-columns:1fr!important;}
+  }
+</style>
+
+<style id="profile-horizontal-final">
+/* Profile card: photo left, details right */
+.home-page .hero-grid{
+  grid-template-columns:minmax(0,1fr) minmax(480px,1fr) !important;
+  align-items:stretch !important;
+  gap:36px !important;
+}
+.home-page .profile-hero-card{
+  width:100% !important;
+  max-width:none !important;
+  justify-self:stretch !important;
+  display:grid !important;
+  grid-template-columns:42% 58% !important;
+  grid-template-rows:auto 1fr !important;
+  column-gap:22px !important;
+  padding:18px !important;
+  align-items:center !important;
+}
+.home-page .profile-photo-frame{
+  grid-column:1 !important;
+  grid-row:1 / span 2 !important;
+  height:100% !important;
+  min-height:300px !important;
+  border-radius:14px !important;
+}
+.home-page .profile-name-under-photo{
+  grid-column:2 !important;
+  grid-row:1 !important;
+  align-self:end !important;
+  margin:0 0 8px !important;
+  text-align:left !important;
+}
+.home-page .profile-hero-copy{
+  grid-column:2 !important;
+  grid-row:2 !important;
+  padding-top:0 !important;
+  align-self:start !important;
+}
+.home-page .profile-hero-copy .big{
+  font-size:30px !important;
+  margin:7px 0 9px !important;
+}
+.home-page .profile-hero-copy p{
+  font-size:13px !important;
+  line-height:1.5 !important;
+}
+.home-page .hero-proof{
+  display:flex !important;
+  flex-direction:column !important;
+  gap:8px !important;
+  margin-top:18px !important;
+}
+@media(max-width:900px){
+  .home-page .hero-grid{grid-template-columns:1fr !important;}
+  .home-page .profile-hero-card{grid-template-columns:42% 58% !important; max-width:none !important;}
+}
+@media(max-width:600px){
+  .home-page .profile-hero-card{grid-template-columns:1fr !important; grid-template-rows:auto auto auto !important;}
+  .home-page .profile-photo-frame{grid-column:1 !important;grid-row:1 !important;min-height:240px !important;height:240px !important;}
+  .home-page .profile-name-under-photo{grid-column:1 !important;grid-row:2 !important;margin-top:14px !important;text-align:left !important;}
+  .home-page .profile-hero-copy{grid-column:1 !important;grid-row:3 !important;margin-top:8px !important;}
+}
+</style>
+
+<style id="final-profile-principle-polish">
+/* Profile: use the full card area and make the portrait clearer/larger. */
+.home-page .profile-hero-card{
+  width:100% !important;
+  max-width:none !important;
+  min-height:430px !important;
+  grid-template-columns:46% 54% !important;
+  padding:16px !important;
+  column-gap:24px !important;
+  align-items:stretch !important;
+}
+.home-page .profile-photo-frame{
+  height:100% !important;
+  min-height:398px !important;
+  margin:0 !important;
+  border-radius:16px !important;
+  overflow:hidden !important;
+  background:#dfe4ea !important;
+}
+.home-page .profile-photo-frame img{
+  width:100% !important;
+  height:100% !important;
+  display:block !important;
+  object-fit:cover !important;
+  object-position:center 18% !important;
+  image-rendering:auto !important;
+  filter:none !important;
+}
+.home-page .profile-name-under-photo{
+  align-self:start !important;
+  margin:0 0 18px !important;
+  padding-top:0 !important;
+}
+.home-page .profile-hero-copy{
+  align-self:start !important;
+  padding-top:8px !important;
+}
+
+/* Operating principle: start content from the top of the card. */
+.home-page .onepage-about-card.principle{
+  justify-content:flex-start !important;
+  padding:26px 24px !important;
+}
+.home-page .onepage-about-card.principle .section-code{
+  margin-bottom:8px !important;
+}
+.home-page .onepage-about-card.principle h3{
+  margin-top:0 !important;
+}
+
+@media(max-width:900px){
+  .home-page .profile-hero-card{
+    min-height:390px !important;
+    grid-template-columns:46% 54% !important;
+  }
+  .home-page .profile-photo-frame{
+    min-height:358px !important;
+  }
+}
+@media(max-width:600px){
+  .home-page .profile-hero-card{
+    min-height:0 !important;
+    grid-template-columns:1fr !important;
+    padding:14px !important;
+  }
+  .home-page .profile-photo-frame{
+    min-height:300px !important;
+    height:300px !important;
+  }
+}
+</style>
+
+
+<style id="publish-ready-profile-final">
+/* PUBLISH-READY PROFILE — large, balanced, recruiter-first */
+.home-page .home-hero .hero-grid{
+  grid-template-columns:minmax(0,1fr) 430px !important;
+  gap:42px !important;
+  align-items:stretch !important;
+}
+.home-page .profile-hero-card{
+  width:100% !important;
+  max-width:430px !important;
+  min-height:0 !important;
+  padding:0 !important;
+  display:grid !important;
+  grid-template-columns:1fr !important;
+  grid-template-rows:360px auto !important;
+  align-self:start !important;
+  overflow:hidden !important;
+  border:1px solid rgba(126,150,177,.20) !important;
+  border-radius:18px !important;
+  background:linear-gradient(145deg,rgba(16,24,34,.98),rgba(9,15,22,.99)) !important;
+  box-shadow:0 24px 60px rgba(0,0,0,.28) !important;
+}
+.home-page .profile-photo-frame{
+  width:100% !important;
+  height:360px !important;
+  min-height:360px !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:#101923 !important;
+  overflow:hidden !important;
+}
+.home-page .profile-photo-frame img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+  transform:none !important;
+  display:block !important;
+}
+.home-page .profile-hero-copy{
+  min-width:0 !important;
+  padding:20px 22px 22px !important;
+  display:block !important;
+}
+.home-page .profile-name-right{
+  margin:0 0 11px !important;
+  font:700 18px/1 var(--mono,monospace) !important;
+  letter-spacing:.14em !important;
+  color:#eef2f6 !important;
+}
+.home-page .profile-hero-copy small{
+  margin:0 0 6px !important;
+  font-size:8px !important;
+}
+.home-page .profile-hero-copy .big{
+  margin:0 0 7px !important;
+  font-size:25px !important;
+  line-height:1.05 !important;
+}
+.home-page .profile-hero-copy p{
+  max-width:none !important;
+  margin:0 0 14px !important;
+  font-size:11px !important;
+  line-height:1.4 !important;
+}
+.home-page .hero-proof{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:7px !important;
+  margin:0 !important;
+  padding:12px 0 0 !important;
+  border-top:1px solid rgba(126,150,177,.10) !important;
+}
+.home-page .hero-proof span{
+  font-size:8px !important;
+  line-height:1.35 !important;
+}
+.home-page .hero-proof span b{font-size:10px !important;}
+
+@media(max-width:1150px){
+  .home-page .home-hero .hero-grid{
+    grid-template-columns:minmax(0,1fr) 370px !important;
+    gap:30px !important;
+  }
+  .home-page .profile-hero-card{max-width:370px !important;grid-template-rows:315px auto !important;}
+  .home-page .profile-photo-frame{height:315px !important;min-height:315px !important;}
+}
+@media(max-width:900px){
+  .home-page .home-hero .hero-grid{grid-template-columns:1fr 330px !important;gap:24px !important;}
+  .home-page .profile-hero-card{max-width:330px !important;grid-template-rows:280px auto !important;}
+  .home-page .profile-photo-frame{height:280px !important;min-height:280px !important;}
+}
+@media(max-width:760px){
+  .home-page .home-hero .hero-grid{grid-template-columns:1fr !important;gap:20px !important;}
+  .home-page .profile-hero-card{width:100% !important;max-width:390px !important;grid-template-rows:auto auto !important;}
+  .home-page .profile-photo-frame{height:auto !important;min-height:0 !important;aspect-ratio:1 / 1 !important;}
+  .home-page .profile-hero-copy{padding:18px 20px 20px !important;}
+  .home-page .hero-proof{grid-template-columns:1fr !important;}
+}
+</style>
+
+<script id="dynamic-canonical">(function(){var u=location.href.split("#")[0];var l=document.createElement("link");l.id="dynamic-canonical";l.rel="canonical";l.href=u;document.head.appendChild(l);var m=document.createElement("meta");m.setAttribute("property","og:url");m.content=u;document.head.appendChild(m);})();</script>
+<style id="hero-visibility-final-fix">
+/* FINAL FIX: hero content is always visible immediately. */
+.home-page .home-hero .reveal{opacity:1 !important;transform:none !important;visibility:visible !important;}
+</style>
+
+<style id="final-template-hero-and-timeline-20260826">
+/* =========================================================
+   FINAL TOP DESIGN — inspired by the supplied reference
+   ========================================================= */
+.home-page .final-hero{
+  padding:22px 0 18px !important;
+  margin:0 !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+}
+.home-page .final-hero-grid{
+  display:grid !important;
+  grid-template-columns:minmax(260px,340px) minmax(360px,1fr) minmax(250px,310px) !important;
+  gap:34px !important;
+  align-items:center !important;
+  padding:30px !important;
+  border:1px solid rgba(91,116,145,.28) !important;
+  border-radius:18px !important;
+  background:
+    radial-gradient(circle at 12% 18%,rgba(0,210,160,.08),transparent 32%),
+    linear-gradient(145deg,rgba(11,21,30,.98),rgba(7,12,18,.98)) !important;
+  box-shadow:0 20px 70px rgba(0,0,0,.20), inset 0 1px 0 rgba(255,255,255,.025) !important;
+}
+.home-page .final-profile-panel{
+  min-width:0 !important;
+}
+.home-page .final-profile-photo{
+  width:100% !important;
+  aspect-ratio:1 / 1 !important;
+  overflow:hidden !important;
+  border-radius:14px !important;
+  border:1px solid rgba(74,103,132,.40) !important;
+  background:#081018 !important;
+  box-shadow:0 12px 34px rgba(0,0,0,.28) !important;
+}
+.home-page .final-profile-photo img{
+  width:100% !important;
+  height:100% !important;
+  display:block !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+}
+.home-page .final-profile-caption{
+  display:grid !important;
+  grid-template-columns:auto 1fr !important;
+  gap:4px 10px !important;
+  align-items:center !important;
+  padding:12px 4px 0 !important;
+}
+.home-page .final-profile-caption span{
+  grid-column:1 / -1 !important;
+  color:#0bd19d !important;
+  font:700 8px/1 var(--mono,monospace) !important;
+  letter-spacing:.12em !important;
+}
+.home-page .final-profile-caption strong{
+  color:#f2f5f8 !important;
+  font:800 16px/1.1 var(--sans,Arial,sans-serif) !important;
+  letter-spacing:-.02em !important;
+}
+.home-page .final-profile-caption small{
+  color:#8d9bad !important;
+  font:500 9px/1.35 var(--mono,monospace) !important;
+  text-align:right !important;
+}
+.home-page .final-hero-copy{
+  min-width:0 !important;
+  padding:6px 0 !important;
+}
+.home-page .final-hero-copy .eyebrow{
+  display:block !important;
+  margin-bottom:14px !important;
+  color:#0bd19d !important;
+  font:700 10px/1 var(--mono,monospace) !important;
+  letter-spacing:.11em !important;
+}
+.home-page .final-hero-copy h1{
+  margin:0 0 20px !important;
+  max-width:680px !important;
+  color:#f4f6f8 !important;
+  font-size:clamp(48px,5.3vw,76px) !important;
+  line-height:.96 !important;
+  letter-spacing:-.055em !important;
+}
+.home-page .final-hero-copy h1 .green{
+  color:#13cfa2 !important;
+}
+.home-page .final-hero-copy .copy{
+  max-width:700px !important;
+  margin:0 0 26px !important;
+  color:#9ba7b6 !important;
+  font-size:14px !important;
+  line-height:1.55 !important;
+}
+.home-page .final-hero-copy .actions{
+  display:flex !important;
+  gap:10px !important;
+  flex-wrap:wrap !important;
+}
+.home-page .final-hero-metrics{
+  display:flex !important;
+  flex-direction:column !important;
+  gap:18px !important;
+  padding-left:28px !important;
+  border-left:1px solid rgba(102,126,151,.25) !important;
+}
+.home-page .final-metric{
+  display:grid !important;
+  grid-template-columns:44px 1fr !important;
+  gap:12px !important;
+  align-items:center !important;
+}
+.home-page .metric-icon{
+  width:40px !important;
+  height:40px !important;
+  display:grid !important;
+  place-items:center !important;
+  border-radius:50% !important;
+  color:#0bd19d !important;
+  border:1px solid rgba(11,209,157,.25) !important;
+  background:rgba(11,209,157,.035) !important;
+  box-shadow:0 0 0 7px rgba(11,209,157,.025) !important;
+  font:800 18px/1 var(--mono,monospace) !important;
+}
+.home-page .final-metric strong{
+  display:block !important;
+  color:#f1f4f7 !important;
+  font:800 18px/1.1 var(--sans,Arial,sans-serif) !important;
+  letter-spacing:-.02em !important;
+}
+.home-page .final-metric small{
+  display:block !important;
+  margin-top:4px !important;
+  color:#8b98aa !important;
+  font:500 8px/1.35 var(--mono,monospace) !important;
+}
+
+/* The supplied reference puts the timeline immediately after the hero. */
+.home-page .career-timeline-reference{
+  padding:38px 0 46px !important;
+  margin:0 !important;
+}
+.home-page .career-timeline-reference .section-head{
+  margin-bottom:30px !important;
+}
+.home-page .career-timeline-reference .section-head h2{
+  font-size:clamp(28px,3.2vw,42px) !important;
+  line-height:1.02 !important;
+  letter-spacing:-.04em !important;
+  margin:0 0 8px !important;
+}
+.home-page .career-timeline-reference .section-head .copy{
+  font-size:11px !important;
+  color:#8492a5 !important;
+}
+.home-page .reference-timeline{
+  display:grid !important;
+  grid-template-columns:repeat(5,minmax(0,1fr)) !important;
+  gap:0 !important;
+  position:relative !important;
+  padding:24px 0 0 !important;
+  overflow:visible !important;
+}
+.home-page .reference-timeline::before{
+  content:"" !important;
+  position:absolute !important;
+  top:57px !important;
+  left:7% !important;
+  right:7% !important;
+  width:auto !important;
+  height:2px !important;
+  background:linear-gradient(90deg,#0bd19d 0%,#0bd19d 36%,#3b9cff 55%,#f49a4b 76%,#d8b43c 100%) !important;
+  opacity:.55 !important;
+}
+.home-page .reference-timeline-item{
+  padding:0 12px !important;
+  text-align:center !important;
+  position:relative !important;
+  min-width:0 !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+}
+.home-page .reference-timeline-top{
+  height:30px !important;
+  display:flex !important;
+  justify-content:center !important;
+  align-items:flex-start !important;
+}
+.home-page .reference-timeline-top strong{
+  font-size:9px !important;
+  letter-spacing:.05em !important;
+}
+.home-page .reference-timeline-node{
+  width:38px !important;
+  height:38px !important;
+  margin:8px auto 0 !important;
+  border:1px solid rgba(11,209,157,.65) !important;
+  background:#091118 !important;
+  box-shadow:0 0 0 8px rgba(11,209,157,.045),0 0 24px rgba(11,209,157,.12) !important;
+}
+.home-page .reference-timeline-node span{
+  width:10px !important;
+  height:10px !important;
+  box-shadow:0 0 12px currentColor !important;
+}
+.home-page .reference-timeline-item:nth-child(1) .reference-timeline-node{border-color:#0bd19d !important;color:#0bd19d !important}
+.home-page .reference-timeline-item:nth-child(2) .reference-timeline-node{border-color:#18cfc0 !important;color:#18cfc0 !important}
+.home-page .reference-timeline-item:nth-child(3) .reference-timeline-node{border-color:#4da4ff !important;color:#4da4ff !important}
+.home-page .reference-timeline-item:nth-child(4) .reference-timeline-node{border-color:#f49a4b !important;color:#f49a4b !important}
+.home-page .reference-timeline-item:nth-child(5) .reference-timeline-node{border-color:#d8b43c !important;color:#d8b43c !important}
+.home-page .reference-timeline-item:nth-child(2) .reference-timeline-node span{background:#18cfc0 !important}
+.home-page .reference-timeline-item:nth-child(3) .reference-timeline-node span{background:#4da4ff !important}
+.home-page .reference-timeline-item:nth-child(4) .reference-timeline-node span{background:#f49a4b !important}
+.home-page .reference-timeline-item:nth-child(5) .reference-timeline-node span{background:#d8b43c !important}
+.home-page .reference-timeline-bottom{
+  padding-top:22px !important;
+}
+.home-page .reference-company{
+  min-height:30px !important;
+  margin-bottom:10px !important;
+}
+.home-page .reference-company img{
+  width:54px !important;
+  height:25px !important;
+}
+.home-page .reference-logo-text{
+  min-width:68px !important;
+  height:28px !important;
+  padding:0 9px !important;
+  border-radius:8px !important;
+  font-size:8px !important;
+}
+.home-page .reference-timeline-bottom h3{
+  max-width:230px !important;
+  min-height:44px !important;
+  margin:0 auto 9px !important;
+  font-size:16px !important;
+  line-height:1.18 !important;
+}
+.home-page .reference-timeline-bottom p{
+  max-width:225px !important;
+  min-height:42px !important;
+  margin:0 auto 12px !important;
+  font-size:10px !important;
+  line-height:1.45 !important;
+}
+.home-page .reference-tags span{
+  padding:5px 8px !important;
+  font-size:7px !important;
+}
+
+/* Remove the large dead-space scroll cue from the top section. */
+.home-page .scroll-explore{
+  display:none !important;
+}
+
+@media(max-width:1100px){
+  .home-page .final-hero-grid{
+    grid-template-columns:260px minmax(0,1fr) !important;
+    gap:26px !important;
+  }
+  .home-page .final-hero-metrics{
+    grid-column:1 / -1 !important;
+    display:grid !important;
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+    border-left:0 !important;
+    border-top:1px solid rgba(102,126,151,.25) !important;
+    padding:20px 0 0 !important;
+  }
+}
+@media(max-width:760px){
+  .home-page .final-hero-grid{
+    grid-template-columns:1fr !important;
+    padding:18px !important;
+  }
+  .home-page .final-profile-photo{
+    max-width:340px !important;
+  }
+  .home-page .final-hero-copy h1{
+    font-size:clamp(44px,12vw,62px) !important;
+  }
+  .home-page .final-hero-metrics{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+  .home-page .reference-timeline{
+    grid-template-columns:repeat(5,220px) !important;
+    overflow-x:auto !important;
+    padding-bottom:18px !important;
+  }
+  .home-page .reference-timeline::before{
+    left:32px !important;
+    right:auto !important;
+    width:1030px !important;
+  }
+}
+</style>
+
+<style id="stylish-timeline-final-20260826">
+/* =========================================================
+   STYLISH CAREER TIMELINE — FINAL
+   ========================================================= */
+.home-page .career-timeline-reference{
+  padding:52px 0 42px !important;
+  margin:0 !important;
+}
+.home-page .career-timeline-reference .section-head{
+  margin-bottom:34px !important;
+  display:grid !important;
+  grid-template-columns:250px 1fr !important;
+  gap:36px !important;
+  align-items:start !important;
+}
+.home-page .career-timeline-reference .section-head h2{
+  font-size:clamp(36px,4.1vw,58px) !important;
+  line-height:.98 !important;
+  letter-spacing:-.055em !important;
+  margin:0 0 10px !important;
+  color:#f4f6f8 !important;
+}
+.home-page .career-timeline-reference .section-head .copy{
+  font-size:14px !important;
+  line-height:1.5 !important;
+  color:#8795a8 !important;
+  margin:0 !important;
+}
+.home-page .reference-timeline.stylish-timeline{
+  display:grid !important;
+  grid-template-columns:repeat(5,minmax(0,1fr)) !important;
+  gap:0 !important;
+  position:relative !important;
+  padding:42px 0 0 !important;
+  overflow:visible !important;
+}
+.home-page .reference-timeline.stylish-timeline::before{
+  content:"" !important;
+  position:absolute !important;
+  top:74px !important;
+  left:3.5% !important;
+  right:3.5% !important;
+  height:3px !important;
+  background:linear-gradient(90deg,#0bd19d 0%,#18cfc0 25%,#4da4ff 50%,#f49a4b 75%,#d8b43c 100%) !important;
+  border-radius:999px !important;
+  opacity:.9 !important;
+  box-shadow:0 0 18px rgba(11,209,157,.14) !important;
+}
+.home-page .stylish-timeline .reference-timeline-item{
+  padding:0 10px !important;
+  text-align:center !important;
+  position:relative !important;
+  min-width:0 !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+}
+.home-page .stylish-timeline .reference-timeline-top{
+  height:34px !important;
+  display:flex !important;
+  justify-content:center !important;
+  align-items:flex-start !important;
+}
+.home-page .stylish-timeline .reference-timeline-top strong{
+  color:#d9b548 !important;
+  font:800 10px/1 var(--mono,monospace) !important;
+  letter-spacing:.075em !important;
+  white-space:nowrap !important;
+}
+.home-page .stylish-timeline .reference-timeline-node{
+  width:54px !important;
+  height:54px !important;
+  margin:8px auto 0 !important;
+  display:grid !important;
+  place-items:center !important;
+  position:relative !important;
+  z-index:3 !important;
+  border:2px solid currentColor !important;
+  border-radius:50% !important;
+  background:#081018 !important;
+  box-shadow:0 0 0 10px rgba(10,18,25,.92),0 0 0 12px rgba(11,209,157,.06),0 0 28px currentColor !important;
+}
+.home-page .stylish-timeline .reference-timeline-node::after{
+  content:"" !important;
+  position:absolute !important;
+  left:50% !important;
+  top:100% !important;
+  width:2px !important;
+  height:28px !important;
+  transform:translateX(-50%) !important;
+  background:currentColor !important;
+  opacity:.9 !important;
+}
+.home-page .stylish-timeline .reference-timeline-node .timeline-icon{
+  width:34px !important;
+  height:34px !important;
+  display:grid !important;
+  place-items:center !important;
+  border-radius:50% !important;
+  background:currentColor !important;
+  color:#081018 !important;
+  font:900 17px/1 var(--mono,monospace) !important;
+  box-shadow:0 0 18px currentColor !important;
+}
+.home-page .stylish-timeline .reference-timeline-item:nth-child(1) .reference-timeline-node{color:#0bd19d !important}
+.home-page .stylish-timeline .reference-timeline-item:nth-child(2) .reference-timeline-node{color:#18cfc0 !important}
+.home-page .stylish-timeline .reference-timeline-item:nth-child(3) .reference-timeline-node{color:#4da4ff !important}
+.home-page .stylish-timeline .reference-timeline-item:nth-child(4) .reference-timeline-node{color:#f49a4b !important}
+.home-page .stylish-timeline .reference-timeline-item:nth-child(5) .reference-timeline-node{color:#d8b43c !important}
+.home-page .stylish-timeline .reference-timeline-bottom{
+  margin-top:30px !important;
+  min-height:270px !important;
+  padding:20px 18px 18px !important;
+  border:1px solid rgba(85,111,137,.38) !important;
+  border-radius:16px !important;
+  background:linear-gradient(145deg,rgba(11,20,29,.9),rgba(7,12,18,.82)) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.025),0 16px 40px rgba(0,0,0,.16) !important;
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease !important;
+}
+.home-page .stylish-timeline .reference-timeline-item:hover .reference-timeline-bottom{
+  transform:translateY(-5px) !important;
+  border-color:currentColor !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.035),0 20px 48px rgba(0,0,0,.24),0 0 24px rgba(11,209,157,.06) !important;
+}
+.home-page .stylish-timeline .reference-timeline-item:nth-child(1) .reference-timeline-bottom{color:#0bd19d !important}
+.home-page .stylish-timeline .reference-timeline-item:nth-child(2) .reference-timeline-bottom{color:#18cfc0 !important}
+.home-page .stylish-timeline .reference-timeline-item:nth-child(3) .reference-timeline-bottom{color:#4da4ff !important}
+.home-page .stylish-timeline .reference-timeline-item:nth-child(4) .reference-timeline-bottom{color:#f49a4b !important}
+.home-page .stylish-timeline .reference-timeline-item:nth-child(5) .reference-timeline-bottom{color:#d8b43c !important}
+.home-page .stylish-timeline .reference-company{
+  min-height:38px !important;
+  margin-bottom:14px !important;
+  display:flex !important;
+  justify-content:center !important;
+  align-items:center !important;
+}
+.home-page .stylish-timeline .reference-company img{
+  width:70px !important;
+  height:30px !important;
+  object-fit:contain !important;
+  filter:drop-shadow(0 4px 10px rgba(0,0,0,.25)) !important;
+}
+.home-page .stylish-timeline .reference-logo-text{
+  min-width:108px !important;
+  height:32px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:0 12px !important;
+  border:1px solid currentColor !important;
+  border-radius:9px !important;
+  color:#cfd8e2 !important;
+  font:800 9px/1 var(--mono,monospace) !important;
+  letter-spacing:.06em !important;
+  background:rgba(255,255,255,.015) !important;
+}
+.home-page .stylish-timeline .reference-timeline-bottom h3{
+  max-width:230px !important;
+  min-height:46px !important;
+  margin:0 auto 11px !important;
+  color:#f1f4f7 !important;
+  font:800 18px/1.16 var(--sans,Arial,sans-serif) !important;
+  letter-spacing:-.025em !important;
+}
+.home-page .stylish-timeline .reference-timeline-bottom p{
+  max-width:235px !important;
+  min-height:52px !important;
+  margin:0 auto 15px !important;
+  color:#8795a8 !important;
+  font:500 11px/1.55 var(--sans,Arial,sans-serif) !important;
+}
+.home-page .stylish-timeline .reference-tags{
+  display:flex !important;
+  justify-content:center !important;
+  flex-wrap:wrap !important;
+  gap:6px !important;
+}
+.home-page .stylish-timeline .reference-tags span{
+  border:1px solid currentColor !important;
+  color:#9aa8b9 !important;
+  background:rgba(255,255,255,.015) !important;
+  border-radius:999px !important;
+  padding:6px 9px !important;
+  font:800 8px/1 var(--mono,monospace) !important;
+  letter-spacing:.04em !important;
+}
+.home-page .timeline-summary{
+  width:max-content !important;
+  max-width:100% !important;
+  margin:28px auto 0 !important;
+  display:flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  padding:10px 16px !important;
+  border:1px solid rgba(82,105,132,.38) !important;
+  border-radius:999px !important;
+  background:rgba(10,17,24,.72) !important;
+  color:#9ca8b7 !important;
+  font:500 11px/1.4 var(--sans,Arial,sans-serif) !important;
+}
+.home-page .timeline-summary-icon{
+  width:24px !important;
+  height:24px !important;
+  display:grid !important;
+  place-items:center !important;
+  border-radius:50% !important;
+  background:#d8b43c !important;
+  color:#081018 !important;
+  font:900 12px/1 var(--mono,monospace) !important;
+  flex:0 0 24px !important;
+}
+@media(max-width:900px){
+  .home-page .career-timeline-reference .section-head{
+    grid-template-columns:1fr !important;
+    gap:8px !important;
+  }
+  .home-page .reference-timeline.stylish-timeline{
+    grid-template-columns:repeat(5,250px) !important;
+    overflow-x:auto !important;
+    padding:42px 10px 18px !important;
+    margin:0 -10px !important;
+    scrollbar-width:thin !important;
+  }
+  .home-page .reference-timeline.stylish-timeline::before{
+    left:42px !important;
+    right:auto !important;
+    width:1130px !important;
+  }
+}
+@media(max-width:600px){
+  .home-page .career-timeline-reference{
+    padding:38px 0 30px !important;
+  }
+  .home-page .career-timeline-reference .section-head h2{
+    font-size:38px !important;
+  }
+  .home-page .reference-timeline.stylish-timeline{
+    grid-template-columns:repeat(5,235px) !important;
+  }
+  .home-page .reference-timeline.stylish-timeline::before{
+    width:1055px !important;
+  }
+  .home-page .timeline-summary{
+    width:100% !important;
+    border-radius:14px !important;
+  }
+}
+</style>
 </head>
-<body class="home-page intro-active" data-theme="dark"><a class="skip-link" href="#main-content">Skip to main content</a>
-<div aria-label="Portfolio introduction" class="intro-screen" id="introScreen">
-<div class="intro-content">
-<p class="intro-badge">FINANCE · FP&amp;A · BI</p>
-<h1 aria-hidden="true" aria-label="Shivesh Raj" class="intro-name">SHIVESH RAJ</h1>
-<div aria-label="Loading portfolio" aria-valuemax="100" aria-valuemin="0" class="intro-progress" role="progressbar">
-<span></span>
+<body class="home-page intro-active" data-theme="dark">
+
+<div class="intro-screen" id="introScreen" aria-label="Portfolio introduction">
+  <button type="button" class="intro-skip-btn" id="introSkipBtn">SKIP →</button>
+  <div class="intro-content">
+    <p class="intro-badge">FINANCE · FP&amp;A · BI</p>
+    <h1 class="intro-name" aria-label="Shivesh Raj">SHIVESH RAJ</h1>
+    <div class="intro-progress" role="progressbar" aria-label="Loading portfolio" aria-valuemin="0" aria-valuemax="100">
+      <span></span>
+    </div>
+    <p class="intro-loading-label" id="introLoadingLabel">PORTFOLIO READY — CLICK TO ENTER</p>
+    <button type="button" class="enter-portfolio" id="enterPortfolio" aria-label="Enter portfolio">CLICK TO ENTER</button>
+  </div>
 </div>
-<p class="intro-loading-label" id="introLoadingLabel">PORTFOLIO READY - CLICK TO ENTER</p>
-<button aria-label="Enter portfolio" class="enter-portfolio" id="enterPortfolio" type="button">CLICK TO ENTER</button>
-</div>
-</div>
-<header class="premium-header portfolio-reference-header" id="topbar">
-<div class="premium-header-shell portfolio-reference-shell">
-<nav aria-label="Primary navigation" class="portfolio-reference-nav">
-<a aria-current="location" class="portfolio-nav-link active" href="#top">HOME</a>
-<a class="portfolio-nav-link" href="#projects">PROJECTS</a>
-<a class="portfolio-nav-link" href="#live-project">LIVE PROJECT</a>
-<a class="portfolio-nav-link" href="#experience">WORK EX</a>
-</nav>
-<div aria-label="Portfolio actions" class="portfolio-reference-actions">
-<a class="portfolio-reference-action portfolio-reference-work-button" href="#about-experience"><span>ABOUT ME</span></a>
-<a aria-label="Book a meeting" class="portfolio-reference-action portfolio-reference-meeting" href="https://calendly.com/shivesh-raj-ars/30min" rel="noopener" target="_blank"><span class="portfolio-reference-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="15.5" rx="2" width="17" x="3.5" y="5"></rect><path d="M7.5 3v4M16.5 3v4M3.5 9.5h17M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01"></path></svg></span><span>BOOK A MEETING</span></a>
-<a aria-label="Download CV" class="portfolio-reference-action" href="./assets/cv.pdf" rel="noopener" target="_blank"><span class="portfolio-reference-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3v12"></path><path d="m7.5 10.5 4.5 4.5 4.5-4.5"></path><path d="M5 20.5h14"></path></svg></span><span>DOWNLOAD CV</span></a>
-<a aria-label="Contact Shivesh Raj" class="portfolio-reference-action portfolio-reference-email" href="mailto:shivesh.raj@edhec.com"><span class="portfolio-reference-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="14" rx="2" width="17" x="3.5" y="5"></rect><path d="m4.5 7.5 7.5 5.2 7.5-5.2"></path></svg></span><span class="portfolio-reference-email-label">CONTACT ME</span></a>
-<a aria-label="Open LinkedIn profile" class="portfolio-reference-action portfolio-reference-linkedin" href="https://www.linkedin.com/in/shiveshraj" rel="noopener" target="_blank"><span aria-hidden="true" class="portfolio-reference-linkedin-mark">in</span><span>LINKEDIN</span></a>
-</div>
-</div>
+
+<header class="topbar" id="topbar">
+  <div class="shell topbar-inner">
+<nav class="nav" aria-label="Primary">
+      <a href="#topbar" class="nav-single-home">HOME</a>
+      <a href="projects.html">PROJECTS</a>
+      <div class="nav-dropdown">
+        <a href="projects.html" class="projects-link">CASE STUDIES <span class="nav-caret">▾</span></a>
+        <div class="nav-menu">
+          <a href="guestready-case-study.html">GUESTREADY</a>
+          <a href="allianz-case-study.html">ALLIANZ TRADE</a>
+        </div>
+      </div>
+    </nav>
+    <div class="header-actions">
+      <button class="mode-toggle" id="recruiterToggle" type="button" aria-pressed="false">RECRUITER MODE</button>
+      <a class="btn primary topbar-cv" href="assets/CV.pdf">CV ↓</a>
+      <div class="status site-datetime" id="siteDateTime" aria-label="Current local date and time"></div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle colour theme">◐</button>
+    </div>
+  </div>
 </header>
-<main class="shell home-main" id="main-content" tabindex="-1">
-<div aria-hidden="true" class="command-palette" hidden="" id="commandPalette">
-<div class="palette-backdrop" data-palette-close=""></div>
-<div aria-labelledby="paletteTitle" aria-modal="true" class="palette-panel" role="dialog">
-<div class="palette-head"><div><span class="section-code">/ COMMAND PALETTE</span><h2 id="paletteTitle">Navigate the finance workspace.</h2></div><button aria-label="Close command palette" class="palette-close" data-palette-close="" type="button">ESC</button></div>
-<div class="palette-grid">
-<button class="palette-item" data-command="/guestready" type="button"><span>02</span><b>GUESTREADY</b><small>FP&amp;A / OPEX project</small></button>
-<button class="palette-item" data-command="/allianz" type="button"><span>03</span><b>ALLIANZ TRADE</b><small>BI / KPI project</small></button>
-<button class="palette-item" data-command="/cv" type="button"><span>06</span><b>CV</b><small>Open the current resume</small></button>
-</div>
-</div>
-</div>
-<section class="hero home-hero final-hero" id="top">
-<div class="photo-reference-hero">
-<div class="photo-reference-profile">
-<div class="photo-reference-photo">
-<img alt="Shivesh Raj" class="portfolio-profile-image" src="./assets/profile-picture.jpeg"/>
-</div>
-<div class="photo-reference-name">
-<strong>SHIVESH RAJ</strong>
-<span>FINANCE · FP&amp;A · BUSINESS INTELLIGENCE</span>
-</div>
-</div>
-<div class="photo-reference-copy">
-<span class="eyebrow">FINANCE · FP&amp;A · BUSINESS INTELLIGENCE</span>
-<h1>Finance analysis built to <span class="green">explain.</span></h1>
-<p class="copy">
-        A working portfolio of finance, FP&amp;A and business-intelligence analysis:
-        how I structure the data, calculate the result, validate the number and
-        turn it into a decision.
-      </p>
-<div class="hero-cta-row" aria-label="Primary portfolio actions">
-<a class="hero-cta hero-cta-primary" href="#projects">VIEW PROJECTS <span aria-hidden="true">→</span></a>
-<a class="hero-capabilities-link" href="#capabilities" aria-label="Jump to capabilities">
-  <span class="hero-capabilities-label">CLICK HERE TO KNOW MY <strong>CAPABILITIES</strong></span>
-  <span class="hero-capabilities-icon" aria-hidden="true">↓</span>
-</a>
-</div>
-<div aria-label="How I work" class="hero-workflow">
-<span class="hero-workflow-title">HOW I WORK</span>
-<div class="hero-workflow-grid">
-<div class="workflow-step"><i aria-hidden="true">▥</i><div><b>DATA</b><small>Collecting &amp;<br/>structuring data</small></div></div>
-<div class="workflow-step"><i aria-hidden="true">Σ</i><div><b>CALCULATION</b><small>Building models &amp;<br/>performing analysis</small></div></div>
-<div class="workflow-step"><i aria-hidden="true">◇</i><div><b>CONTROL</b><small>Validating results &amp;<br/>ensuring accuracy</small></div></div>
-<div class="workflow-step"><i aria-hidden="true">◉</i><div><b>DECISION</b><small>Turning insights into<br/>business decisions</small></div></div>
-</div>
-</div>
-</div>
-<div aria-label="Education and employers" class="photo-reference-brands">
-<span class="photo-reference-brands-label">KEY EXPERIENCE WITH</span>
-<div class="photo-reference-brand">
-<img alt="Allianz Trade" src="./assets/allianz-logo.png"/>
-</div>
-<div class="photo-reference-brand">
-<img alt="GuestReady" src="./assets/guestready-logo.png"/>
-</div>
-<div class="photo-reference-brand edhec-brand">
-<img alt="EDHEC Business School" src="./assets/edhec-logo.png"/>
-</div>
-</div>
-<section aria-label="Selected finance achievements" class="hero-achievements-box">
-<article class="hero-achievement"><span aria-hidden="true" class="hero-achievement-icon hero-icon-wallet"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M4 7.5h12.5a3.5 3.5 0 0 1 0 7H5a2 2 0 0 1-2-2v-7a3 3 0 0 1 2-2h10" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path><path d="M15 10.9h4.5" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><div><strong>€125K+</strong><span class="hero-achievement-label">Monthly OPEX scope</span></div></article>
-<article class="hero-achievement"><span aria-hidden="true" class="hero-achievement-icon hero-icon-trend"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M4 17 10 11l4 4 6-7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 8h5v5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span><div><strong>20% → 5%</strong><span class="hero-achievement-label">Forecast variance improvement</span></div></article>
-<article class="hero-achievement"><span aria-hidden="true" class="hero-achievement-icon hero-icon-bars"><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><rect height="8" rx="1" width="4" x="3" y="12"></rect><rect height="13" rx="1" width="4" x="10" y="7"></rect><rect height="17" rx="1" width="4" x="17" y="3"></rect></svg></span><div><strong>16+</strong><span class="hero-achievement-label">KPIs standardised across business units</span></div></article>
-<article class="hero-achievement"><span aria-hidden="true" class="hero-achievement-icon hero-icon-invoice"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M6 3h8l4 4v14H6z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5M9 12h6M9 16h5" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><div><strong>3.5K+</strong><span class="hero-achievement-label">AP invoices reconstructed</span></div></article>
-<article class="hero-achievement"><span aria-hidden="true" class="hero-achievement-icon hero-icon-euro">€</span><div><strong>€10K-€15K</strong><span class="hero-achievement-label">Operational costs reconciled</span></div></article>
-</section></div>
-</section>
-<!-- Professional moving logo sections -->
-<section aria-label="Past employers" class="employer-loop-section">
-<div class="employer-loop-label">PAST EMPLOYERS</div>
-<div class="employer-loop-window">
-<div class="employer-loop-track">
-<div class="employer-loop-set">
-<div class="employer-loop-item allianz"><img alt="Allianz Trade" src="./assets/allianz-logo.png"/></div>
-<span class="employer-loop-divider"></span>
-<div class="employer-loop-item guestready"><img alt="GuestReady" src="./assets/guestready-logo.png"/></div>
-<span class="employer-loop-divider"></span>
-<div class="employer-loop-item hairclub"><img alt="Hair Club London" src="./assets/hair-club-london-logo.png"/></div>
-<span class="employer-loop-divider"></span>
-</div>
-<div aria-hidden="true" class="employer-loop-set">
-<div class="employer-loop-item allianz"><img alt="" src="./assets/allianz-logo.png"/></div>
-<span class="employer-loop-divider"></span>
-<div class="employer-loop-item guestready"><img alt="" src="./assets/guestready-logo.png"/></div>
-<span class="employer-loop-divider"></span>
-<div class="employer-loop-item hairclub"><img alt="" src="./assets/hair-club-london-logo.png"/></div>
-<span class="employer-loop-divider"></span>
-</div>
-</div>
-</div>
-</section>
-<section aria-label="Tools and systems" class="tool-loop-section">
-<div class="tool-loop-label">SKILLS &amp; TOOLS</div>
-<div class="tool-loop-window">
-<div class="tool-loop-track">
-<div class="tool-loop-set">
-<div class="tool-loop-item"><img alt="Microsoft Excel" src="./assets/excel.png"/></div><span class="tool-loop-divider"></span>
-<div class="tool-loop-item"><img alt="Power BI" src="./assets/power-bi.png"/></div><span class="tool-loop-divider"></span>
-<div class="tool-loop-item"><img alt="Python" src="./assets/python.png"/></div><span class="tool-loop-divider"></span>
-<div class="tool-loop-item google-apps-logo"><img alt="Google Apps Script" src="./assets/google-apps-script.png"/></div><span class="tool-loop-divider"></span>
-<div class="tool-loop-item microstrategy-logo"><img alt="MicroStrategy" src="./assets/microstrategy.png"/></div><span class="tool-loop-divider"></span>
-<div class="tool-loop-item pennylane-logo"><img alt="Pennylane" src="./assets/pennylane.png"/></div><span class="tool-loop-divider"></span>
-<div class="tool-loop-item payhawk-logo"><img alt="Payhawk" src="./assets/payhawk.png"/></div><span class="tool-loop-divider"></span>
-<div class="tool-loop-item"><img alt="Microsoft Word" src="./assets/microsoft-word.png"/></div><span class="tool-loop-divider"></span>
-</div>
-<div aria-hidden="true" class="tool-loop-set">
-<div class="tool-loop-item"><img alt="" src="./assets/excel.png"/></div><span class="tool-loop-divider"></span>
-<div class="tool-loop-item"><img alt="" src="./assets/power-bi.png"/></div><span class="tool-loop-divider"></span>
-<div class="tool-loop-item"><img alt="" src="./assets/python.png"/></div><span class="tool-loop-divider"></span>
-<div class="tool-loop-item google-apps-logo"><img alt="" src="./assets/google-apps-script.png"/></div><span class="tool-loop-divider"></span>
-<div class="tool-loop-item microstrategy-logo"><img alt="" src="./assets/microstrategy.png"/></div><span class="tool-loop-divider"></span>
-<div class="tool-loop-item pennylane-logo"><img alt="" src="./assets/pennylane.png"/></div><span class="tool-loop-divider"></span>
-<div class="tool-loop-item payhawk-logo"><img alt="" src="./assets/payhawk.png"/></div><span class="tool-loop-divider"></span>
-<div class="tool-loop-item"><img alt="" src="./assets/microsoft-word.png"/></div><span class="tool-loop-divider"></span>
-</div>
-</div>
-</div>
-</section>
-<section class="photo-reference-dashboard" id="about-experience">
-<!-- 01 ABOUT -->
-<article class="photo-panel about-panel about-option1-panel">
-<div class="about-option1-head">
-<div class="about-option1-title">
-<div class="unified-section-header unified-section-header-teal"><span class="unified-section-number">01</span><span class="unified-section-divider"></span><span class="unified-section-label">ABOUT</span></div>
-<h2>Finance × Data × Operations<span class="about-dot">.</span></h2>
-</div>
-<p class="about-option1-intro">I work across finance operations, FP&amp;A, reporting and business intelligence - structuring messy inputs, applying financial logic and turning the result into a decision-ready output.</p>
-</div>
-<div class="about-option1-grid">
-<div class="about-option1-item about-focus">
-<div class="about-option1-icon">◎</div>
-<div>
-<span class="about-option1-label">FOCUS</span>
-<strong>Finance / FP&amp;A / BI</strong>
-</div>
-</div>
-<div class="about-option1-item about-education">
-<div class="about-option1-icon">◇</div>
-<div>
-<span class="about-option1-label">EDUCATION</span>
-<strong>Double Degree ·<br/>Grande École Programme</strong>
-</div>
-</div>
-<div class="about-option1-item about-tools">
-<div class="about-option1-icon">□</div>
-<div>
-<span class="about-option1-label">TOOLS</span>
-<strong>Excel · Power BI · SQL ·<br/>MicroStrategy</strong>
-</div>
-</div>
-<div class="about-option1-item about-approach">
-<div class="about-option1-icon">↗</div>
-<div>
-<span class="about-option1-label">APPROACH</span>
-<strong>Data → Logic →<br/>Control → Decision</strong>
-</div>
-</div>
-</div>
-</article>
-<!-- 03 CAREER TIMELINE -->
-</section>
-<article class="photo-panel timeline-panel timeline-v2" id="timeline">
-<div class="timeline-v2-head">
-<div class="unified-section-header unified-section-header-gold timeline-v2-kicker"><span class="unified-section-number">03</span><span class="unified-section-divider"></span><span class="unified-section-label">CAREER TIMELINE</span></div>
-<div class="timeline-v2-lens">GROWTH <i>/</i> LEARNING <i>/</i> IMPACT</div>
-</div>
-<div class="timeline-v2-intro">
-<h2>The path behind the finance career.</h2>
-<p>From engineering to finance - a journey of continuous learning and growing impact.</p>
-</div>
-<div aria-label="Career timeline" class="timeline-v2-track">
-<div aria-hidden="true" class="timeline-v2-motion-lane"><span class="timeline-v2-moving-light"></span></div>
-<article class="timeline-v2-item timeline-v2-education">
-<div class="timeline-v2-card">
-<div class="timeline-v2-logo timeline-v2-logo-bit"><img alt="Birla Institute of Technology Mesra logo" src="./assets/bit-mesra-logo.png"/></div>
-<h3>Birla Institute of Technology</h3>
-<p>Bachelor of Technology in Chemical Engineering · Ranchi, India</p>
-<div class="timeline-v2-tags"><span>ENGINEERING</span></div>
-<div aria-label="Date range" class="timeline-v2-meta-box timeline-v2-date-range"><strong>MAY 2016 - MAY 2020</strong></div>
-</div>
-<div class="timeline-v2-meta">
-<div class="timeline-v2-meta-box timeline-v2-type"><span aria-hidden="true">◆</span> EDUCATION</div>
-</div>
-</article>
-<article class="timeline-v2-item timeline-v2-experience">
-<div class="timeline-v2-card">
-<div class="timeline-v2-logo"><img alt="Hair Club London" src="./assets/hair-club-london-logo.png"/></div>
-<h3>Hair Club London</h3>
-<p>Financial Planning Analyst (FP&amp;A) (Fixed Term Contract) · Delhi, India</p>
-<div class="timeline-v2-tags"><span>FINANCE · COMMERCIAL</span></div>
-<div aria-label="Date range" class="timeline-v2-meta-box timeline-v2-date-range"><strong>APR 2020 - AUG 2022</strong></div>
-</div>
-<div class="timeline-v2-meta">
-<div class="timeline-v2-meta-box timeline-v2-type"><span aria-hidden="true">▣</span> PROFESSIONAL EXPERIENCE</div>
-</div>
-</article>
-<article class="timeline-v2-item timeline-v2-education2">
-<div class="timeline-v2-card">
-<div class="timeline-v2-logo timeline-v2-edhec"><img alt="EDHEC Business School" src="./assets/edhec-logo.png"/></div>
-<h3>EDHEC Business School</h3>
-<p>MSc in Management and Strategy, Organization &amp; Consulting (Grande École Programme, Double Degree) · Lille, France</p>
-<div class="timeline-v2-tags"><span>FINANCE · STRATEGY</span></div>
-<div aria-label="Date range" class="timeline-v2-meta-box timeline-v2-date-range"><strong>AUG 2022 - JAN 2026</strong></div>
-</div>
-<div class="timeline-v2-meta">
-<div class="timeline-v2-meta-box timeline-v2-type"><span aria-hidden="true">◆</span> EDUCATION</div>
-</div>
-</article>
-<article class="timeline-v2-item timeline-v2-guestready">
-<div class="timeline-v2-card">
-<div class="timeline-v2-logo"><img alt="GuestReady" src="./assets/guestready-logo.png"/></div>
-<h3>GuestReady</h3>
-<p>Financial Planning Analyst (FP&amp;A) (CDD) · Paris, France</p>
-<div class="timeline-v2-tags"><span>FP&amp;A · AP</span></div>
-<div aria-label="Date range" class="timeline-v2-meta-box timeline-v2-date-range"><strong>AUG 2023 - JUL 2024</strong></div>
-</div>
-<div class="timeline-v2-meta">
-<div class="timeline-v2-meta-box timeline-v2-type"><span aria-hidden="true">▣</span> PROFESSIONAL EXPERIENCE</div>
-</div>
-</article>
-<article class="timeline-v2-item timeline-v2-allianz">
-<div class="timeline-v2-card">
-<div class="timeline-v2-logo"><img alt="Allianz Trade" src="./assets/allianz-logo.png"/></div>
-<h3>Allianz Trade</h3>
-<p>Financial Planning Analyst (CDD) · Paris, France</p>
-<div class="timeline-v2-tags"><span>BI · TRANSFORMATION</span></div>
-<div aria-label="Date range" class="timeline-v2-meta-box timeline-v2-date-range"><strong>JUL 2025 - JUN 2026</strong></div>
-</div>
-<div class="timeline-v2-meta">
-<div class="timeline-v2-meta-box timeline-v2-type"><span aria-hidden="true">▣</span> PROFESSIONAL EXPERIENCE</div>
-</div>
-</article>
-</div>
-</article>
-<article class="photo-panel live-project-panel" id="live-project">
-<section class="danone-home-live">
-  <div class="danone-home-live-top"><span class="section-code">LIVE PROJECT / 01</span><span class="danone-home-live-status"><i></i> CURRENTLY ACTIVE</span></div>
-  <div class="danone-home-live-grid">
-    <div><h2>Danone <span>Financial Modelling</span> &amp; Valuation.</h2><p>Independent project covering historical financial analysis, integrated three-statement forecasting and DCF valuation.</p><div class="danone-home-tags"><span>3-STATEMENT MODEL</span><span>2021A–2030E</span><span>EXCEL</span><span>FP&amp;A</span></div></div>
-    <div class="danone-home-milestones"><div><span>DELIVERABLE 01</span><strong>Forecasting completed</strong><small>Historical analysis + 2026E–2030E forecast</small></div><div><span>DELIVERABLE 02</span><strong>DCF valuation</strong><small>In progress · Coming soon</small></div></div>
+<main class="shell home-main">
+  <div class="commandbar"><span class="prompt">SR&gt;</span><input id="commandInput" placeholder="Try /guestready, /projects, /recommendations"><button id="runCommand">RUN</button></div>
+  <div class="quick command-quick"><button data-command="/guestready">/guestready</button><button data-command="/projects">/projects</button><span class="command-help">/ to focus · Enter to run · ⌘K command palette</span></div>
+  <div class="command-palette" id="commandPalette" hidden aria-hidden="true">
+    <div class="palette-backdrop" data-palette-close></div>
+    <div class="palette-panel" role="dialog" aria-modal="true" aria-labelledby="paletteTitle">
+      <div class="palette-head"><div><span class="section-code">/ COMMAND PALETTE</span><h2 id="paletteTitle">Navigate the finance workspace.</h2></div><button class="palette-close" type="button" data-palette-close aria-label="Close command palette">ESC</button></div>
+      <div class="palette-grid">
+        
+        <button type="button" class="palette-item" data-command="/guestready"><span>02</span><b>GUESTREADY</b><small>FP&amp;A / OPEX case study</small></button>
+        <button type="button" class="palette-item" data-command="/allianz"><span>03</span><b>ALLIANZ TRADE</b><small>BI / KPI reporting</small></button>
+        
+        
+        <button type="button" class="palette-item" data-command="/cv"><span>06</span><b>CV</b><small>Open the current resume</small></button>
+      </div>
+    </div>
   </div>
-  <div class="danone-home-live-bottom"><span>PROJECT STATUS <b>01 / 02 DELIVERABLES</b></span><a href="danone-financial-model.html">EXPLORE LIVE PROJECT <span>↗</span></a></div>
-</section>
-</article>
-<article class="photo-panel projects-panel" id="projects">
-<section aria-labelledby="projects-reference-title" class="projects-reference-section">
-<div class="projects-reference-heading">
-<div aria-label="Section 03 Projects" class="unified-section-header unified-section-header-blue">
-<span class="unified-section-number">03</span>
-<span aria-hidden="true" class="unified-section-divider"></span>
-<span class="unified-section-label">PROJECTS</span>
-</div>
-<div class="projects-reference-copy">
-<h2 id="projects-reference-title">Selected <span>finance &amp; data</span> <em>projects.</em></h2>
-<p>Three projects combining finance, data and analysis to structure information, validate results and turn insights into decision support.</p>
-</div>
-</div>
-<div class="projects-reference-grid">
-<article class="projects-reference-card projects-reference-teal">
-<span class="projects-reference-index">01</span>
-<div class="projects-reference-head">
-  <div class="projects-reference-company"><img src="./assets/guestready-logo.png" alt="GuestReady"></div>
-  <div class="projects-reference-head-info">
-    <div class="projects-reference-period"><span aria-hidden="true">▣</span><span>AUG 2023</span><i>-</i><span>JUL 2024</span></div>
-    <div class="projects-reference-meta">PROJECT · FP&amp;A<br/>WORKSTREAM · OPEX &amp; FORECASTING</div>
+
+  <section class="hero home-hero final-hero" id="home-hero">
+    <div class="final-hero-grid">
+      <div class="final-profile-panel">
+        <div class="final-profile-photo">
+          <img src="assets/Profile-Picture.jpeg" alt="Shivesh Raj">
+        </div>
+        <div class="final-profile-caption">
+          <span>PROFILE</span>
+          <strong>SHIVESH RAJ</strong>
+          <small>Finance · FP&amp;A · Business Intelligence</small>
+        </div>
+      </div>
+
+      <div class="final-hero-copy">
+        <span class="eyebrow">FINANCE · FP&amp;A · BUSINESS INTELLIGENCE</span>
+        <h1>Finance analysis<br>built to <span class="green">explain.</span></h1>
+        <p class="copy">A working portfolio of finance, FP&amp;A and business-intelligence analysis: how I structure the data, calculate the result, validate the number and turn it into a decision.</p>
+        <div class="actions">
+          <a class="btn primary" href="projects.html">VIEW PROJECTS ↗</a>
+          <a class="btn" href="assets/CV.pdf">DOWNLOAD CV ↓</a>
+        </div>
+      </div>
+
+      <aside class="final-hero-metrics" aria-label="Selected finance metrics">
+        <div class="final-metric">
+          <span class="metric-icon">€</span>
+          <div><strong>€125K+</strong><small>monthly OPEX scope</small></div>
+        </div>
+        <div class="final-metric">
+          <span class="metric-icon">▥</span>
+          <div><strong>16+</strong><small>KPIs standardised</small></div>
+        </div>
+        <div class="final-metric">
+          <span class="metric-icon">▤</span>
+          <div><strong>€150K+</strong><small>supplier payments</small></div>
+        </div>
+        <div class="final-metric">
+          <span class="metric-icon">↗</span>
+          <div><strong>20% → 5%</strong><small>forecast variance improvement</small></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+<section class="career-timeline-reference" id="timeline">
+  <div class="section-head reveal">
+    <div><span class="section-code">03 / CAREER TIMELINE</span></div>
+    <div>
+      <h2>The path behind the finance career.</h2>
+      <p class="copy">Education and professional milestones, shown separately from the detailed roles below.</p>
+    </div>
   </div>
-  <span aria-hidden="true" class="projects-reference-insight projects-reference-insight-growth"><i></i><i></i><i></i><i></i></span>
-</div>
-<div class="projects-reference-rule"></div>
-<h3>OPEX Forecasting &amp; Variance Analysis</h3>
-<p><span class="projects-reference-impact">IMPACT</span> Built driver-based monthly OPEX forecasts, validated supplier-cost assumptions and investigated forecast-versus-actual movements across a €125K+ monthly scope.</p>
-<div class="projects-reference-tags"><span>EXCEL</span><span>FORECASTING</span><span>OPEX</span><span>VARIANCE</span></div>
-<div class="projects-reference-footer"><div><strong>20% → 5%</strong><small>FORECAST VARIANCE</small></div><a href="guestready-case-study.html#project1">READ CASE STUDY →</a></div>
-</article>
-<article class="projects-reference-card projects-reference-blue">
-<span class="projects-reference-index">02</span>
-<div class="projects-reference-head">
-  <div class="projects-reference-company"><img src="./assets/guestready-logo.png" alt="GuestReady"></div>
-  <div class="projects-reference-head-info">
-    <div class="projects-reference-period"><span aria-hidden="true">▣</span><span>AUG 2023</span><i>-</i><span>JUL 2024</span></div>
-    <div class="projects-reference-meta">PROJECT · FINANCE OPERATIONS<br/>WORKSTREAM · MONTH-END CLOSE</div>
+
+  <div class="reference-timeline stylish-timeline" aria-label="Career timeline">
+    <article class="reference-timeline-item reveal">
+      <div class="reference-timeline-top"><strong>AUG 2016 – MAY 2020</strong></div>
+      <div class="reference-timeline-node"><span class="timeline-icon" aria-hidden="true">⌂</span></div>
+      <div class="reference-timeline-bottom">
+        <div class="reference-company"><span class="reference-logo-text">BIT MESRA</span></div>
+        <h3>B.Tech · Chemical Engineering</h3>
+        <p>Engineering foundation in quantitative analysis, process thinking and problem solving.</p>
+        <div class="reference-tags"><span>ENGINEERING</span><span>ANALYTICS</span></div>
+      </div>
+    </article>
+
+    <article class="reference-timeline-item reveal">
+      <div class="reference-timeline-top"><strong>APR 2020 – AUG 2022</strong></div>
+      <div class="reference-timeline-node"><span class="timeline-icon" aria-hidden="true">↗</span></div>
+      <div class="reference-timeline-bottom">
+        <div class="reference-company"><img src="assets/Hair-Club-London.png" alt="Hair Club London"></div>
+        <h3>Hair Club London</h3>
+        <p>Finance and commercial analysis across sales mix, margins and pricing.</p>
+        <div class="reference-tags"><span>FINANCE</span><span>COMMERCIAL</span></div>
+      </div>
+    </article>
+
+    <article class="reference-timeline-item reveal">
+      <div class="reference-timeline-top"><strong>MAY 2022 – JAN 2026</strong></div>
+      <div class="reference-timeline-node"><span class="timeline-icon" aria-hidden="true">▣</span></div>
+      <div class="reference-timeline-bottom">
+        <div class="reference-company"><span class="reference-logo-text edhec">EDHEC</span></div>
+        <h3>Master in Management &amp; MSc Strategy &amp; Consulting</h3>
+        <p>Finance, strategy, consulting and financial-statement analysis.</p>
+        <div class="reference-tags"><span>FINANCE</span><span>STRATEGY</span></div>
+      </div>
+    </article>
+
+    <article class="reference-timeline-item reveal">
+      <div class="reference-timeline-top"><strong>AUG 2023 – JUL 2024</strong></div>
+      <div class="reference-timeline-node"><span class="timeline-icon" aria-hidden="true">◔</span></div>
+      <div class="reference-timeline-bottom">
+        <div class="reference-company"><img src="assets/GuestReady.jpg" alt="GuestReady"></div>
+        <h3>GuestReady</h3>
+        <p>Finance operations, AP, forecasting, OPEX and management reporting.</p>
+        <div class="reference-tags"><span>FP&amp;A</span><span>AP</span></div>
+      </div>
+    </article>
+
+    <article class="reference-timeline-item reveal">
+      <div class="reference-timeline-top"><strong>JUL 2025 – JAN 2026</strong></div>
+      <div class="reference-timeline-node"><span class="timeline-icon" aria-hidden="true">◎</span></div>
+      <div class="reference-timeline-bottom">
+        <div class="reference-company"><img src="assets/Allianz-Trade.png" alt="Allianz Trade"></div>
+        <h3>Allianz Trade</h3>
+        <p>Finance transformation, BI reporting and KPI standardisation across Group Surety.</p>
+        <div class="reference-tags"><span>BI</span><span>TRANSFORMATION</span></div>
+      </div>
+    </article>
   </div>
-  <span aria-hidden="true" class="projects-reference-insight projects-reference-insight-pie"></span>
-</div>
-<div class="projects-reference-rule"></div>
-<h3>Month-End Accrual &amp; Close Support</h3>
-<p><span class="projects-reference-impact">IMPACT</span> Supported period-end accrual logic, GL and cost-centre allocation, supplier reconciliation and subsequent checks, including €10K-€15K of operational costs reconciled.</p>
-<div class="projects-reference-tags"><span>ACCRUALS</span><span>GL</span><span>RECONCILIATION</span><span>CLOSE</span></div>
-<div class="projects-reference-footer"><div><strong>€10K-€15K</strong><small>COSTS RECONCILED</small></div><a href="guestready-case-study.html#project2">READ CASE STUDY →</a></div>
-</article>
-<article class="projects-reference-card projects-reference-purple">
-<span class="projects-reference-index">03</span>
-<div class="projects-reference-head">
-  <div class="projects-reference-company"><img src="./assets/allianz-logo.png" alt="Allianz Trade"></div>
-  <div class="projects-reference-head-info">
-    <div class="projects-reference-period"><span aria-hidden="true">▣</span><span>JUL 2025</span><i>-</i><span>JUN 2026</span></div>
-    <div class="projects-reference-meta">PROJECT · FINANCE TRANSFORMATION<br/>WORKSTREAM · GROUP SURETY BI</div>
+
+  <div class="timeline-summary reveal">
+    <span class="timeline-summary-icon">★</span>
+    <span>From building a strong analytical foundation to driving financial impact across global teams.</span>
   </div>
-  <span aria-hidden="true" class="projects-reference-insight projects-reference-insight-people">♙♙♙</span>
-</div>
-<div class="projects-reference-rule"></div>
-<h3>Financial Institution Dashboard</h3>
-<p><span class="projects-reference-impact">IMPACT</span> Built regional reporting solutions across 15+ business units, standardised 16+ KPIs and translated exposure data into stakeholder-ready dashboards.</p>
-<div class="projects-reference-tags"><span>POWER BI</span><span>MICROSTRATEGY</span><span>SQL</span><span>KPI REPORTING</span></div>
-<div class="projects-reference-footer"><div><strong>16+</strong><small>KPIs STANDARDISED</small></div><a href="allianz-case-study.html">READ CASE STUDY →</a></div>
-</article>
-</div></div>
 </section>
-</article>
-<article class="photo-panel experience-panel experience-reference-exact" id="experience">
-<div class="unified-section-header unified-section-header-orange">
-<span class="unified-section-number">04</span><span class="unified-section-divider"></span><span class="unified-section-label">EXPERIENCE</span>
-</div>
-<p class="panel-subtitle">Roles across <span class="accent-finance">finance,</span> <span class="accent-fpa">FP&amp;A</span> and <span class="accent-transform">transformation.</span></p>
-<div aria-hidden="true" class="experience-reference-line"></div>
-<div class="experience-list">
-<article class="experience-card experience-card-teal">
-<span class="experience-index">01</span>
-<div class="experience-card-head">
-<div class="experience-company"><img alt="Allianz Trade" src="./assets/allianz-logo.png"/></div>
-<div class="experience-head-info">
-<div class="experience-period"><span aria-hidden="true" class="experience-calendar">▣</span><span>JUL 2025</span><i>-</i><span>JUN 2026</span></div>
-<div class="experience-meta">ROLE · FINANCIAL PLANNING ANALYST (CDD)<br/>LOCATION · PARIS, FRANCE</div>
-</div>
-<span aria-hidden="true" class="experience-insight experience-insight-growth"><i></i><i></i><i></i><i></i></span>
-</div>
-<div class="experience-rule"></div>
-<h3>Financial Planning Analyst (CDD)</h3>
-<p><span class="experience-outcome">IMPACT</span> Built regional finance dashboards across 15+ business units, standardised 16+ KPIs and automated reporting in MicroStrategy.</p>
-<div class="experience-tags"><span>MICROSTRATEGY</span><span>POWER BI</span><span>SQL</span><span>JIRA</span></div>
-</article>
-<article class="experience-card experience-card-blue">
-<span class="experience-index">02</span>
-<div class="experience-card-head">
-<div class="experience-company"><img alt="GuestReady" src="./assets/guestready-logo.png"/></div>
-<div class="experience-head-info">
-<div class="experience-period"><span aria-hidden="true" class="experience-calendar">▣</span><span>AUG 2023</span><i>-</i><span>JUL 2024</span></div>
-<div class="experience-meta">ROLE · FINANCIAL PLANNING ANALYST (FP&amp;A) (CDD)<br/>LOCATION · PARIS, FRANCE</div>
-</div>
-<span aria-hidden="true" class="experience-insight experience-insight-pie"></span>
-</div>
-<div class="experience-rule"></div>
-<h3>Financial Planning Analyst (FP&amp;A) (CDD)</h3>
-<p><span class="experience-outcome">IMPACT</span> Supported AP, forecasting, OPEX and management reporting; improved forecast variance from 20% to 5% across a €125K+ monthly OPEX scope.</p>
-<div class="experience-tags"><span>EXCEL</span><span>QUICKBOOKS</span><span>TIPALTI</span><span>PAYHAWK</span><span>SPENDESK</span></div>
-</article>
-<article class="experience-card experience-card-purple">
-<span class="experience-index">03</span>
-<div class="experience-card-head">
-<div class="experience-company"><img alt="Hair Club London" src="./assets/hair-club-london-logo.png"/></div>
-<div class="experience-head-info">
-<div class="experience-period"><span aria-hidden="true" class="experience-calendar">▣</span><span>JUL 2020</span><i>-</i><span>JUL 2022</span></div>
-<div class="experience-meta">ROLE · FINANCIAL PLANNING ANALYST (FP&amp;A) (FIXED TERM CONTRACT)<br/>LOCATION · DELHI, INDIA</div>
-</div>
-<span aria-hidden="true" class="experience-insight experience-insight-people">♙♙♙</span>
-</div>
-<div class="experience-rule"></div>
-<h3>Financial Planning Analyst (FP&amp;A) (Fixed Term Contract)</h3>
-<p><span class="experience-outcome">IMPACT</span> Built driver-based forecasting models, improved revenue forecast accuracy and supported pricing decisions contributing to 10% revenue growth.</p>
-<div class="experience-tags"><span>EXCEL</span><span>FORECASTING</span><span>VARIANCE</span><span>PRICING</span></div>
-</article>
-</div>
-</article>
-<section class="achievements-section" id="achievements">
-<div class="achievements-head">
-<div class="unified-section-header unified-section-header-gold"><span class="unified-section-number">05</span><span class="unified-section-divider"></span><span class="unified-section-label">ACHIEVEMENTS</span></div>
-<div>
-<h2>Selected <span>achievements.</span></h2>
-<p>Quantified outcomes and finance work delivered across FP&amp;A, finance operations and business intelligence.</p>
-</div>
-</div>
-<div class="achievement-grid">
-<article class="achievement-card achievement-teal achievement-featured">
-<div aria-hidden="true" class="achievement-decor achievement-decor-trend"><span class="trend-line"></span><i></i><i></i><i></i><i></i></div>
-<div class="achievement-index">01</div>
-<div class="achievement-content">
-<span aria-hidden="true" class="achievement-visual achievement-visual-trend">
-<svg fill="none" viewbox="0 0 24 24"><path d="M4 18V5m0 13h16M8 14l4-4 3 3 5-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path><path d="M17 7h3v3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
-</span>
-<div class="achievement-main">
-<div class="achievement-value">20% <b>→</b> 5%</div>
-<h3>Forecast variance<br/>improvement</h3>
-<p>Improved forecast variance across a €125K+ monthly OPEX scope.</p>
-<span class="achievement-tag">FP&amp;A · FORECASTING</span>
-</div>
-</div>
-</article>
-<article class="achievement-card achievement-teal">
-<div aria-hidden="true" class="achievement-decor achievement-decor-bars"><i></i><i></i><i></i><i></i></div>
-<div class="achievement-index">02</div>
-<div class="achievement-content">
-<span aria-hidden="true" class="achievement-visual achievement-visual-euro">€</span>
-<div class="achievement-main">
-<div class="achievement-value">€125K+</div>
-<h3>Monthly OPEX scope</h3>
-<p>Built and supported driver-based OPEX forecasting and variance analysis.</p>
-<span class="achievement-tag">OPEX · ANALYSIS</span>
-</div>
-</div>
-</article>
-<article class="achievement-card achievement-blue">
-<div aria-hidden="true" class="achievement-decor achievement-decor-map"></div>
-<div class="achievement-index">03</div>
-<div class="achievement-content">
-<span aria-hidden="true" class="achievement-visual achievement-visual-bars">
-<svg fill="currentColor" viewbox="0 0 24 24"><rect height="8" rx="1" width="4" x="3" y="12"></rect><rect height="13" rx="1" width="4" x="10" y="7"></rect><rect height="17" rx="1" width="4" x="17" y="3"></rect></svg>
-</span>
-<div class="achievement-main">
-<div class="achievement-value">16+</div>
-<h3>KPIs standardised</h3>
-<p>Standardised business KPIs across 15+ business units for regional reporting.</p>
-<span class="achievement-tag">BI · KPI GOVERNANCE</span>
-</div>
-</div>
-</article>
-<article class="achievement-card achievement-teal">
-<div aria-hidden="true" class="achievement-decor achievement-decor-wallet"><span></span><i></i></div>
-<div class="achievement-index">04</div>
-<div class="achievement-content">
-<span aria-hidden="true" class="achievement-visual achievement-visual-people">
-<svg fill="none" viewbox="0 0 24 24"><path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm8 1a2.5 2.5 0 1 0 0-5M3.5 20v-2.2A4.8 4.8 0 0 1 8.3 13h1.4a4.8 4.8 0 0 1 4.8 4.8V20M15 13.5c3.1.1 5.5 1.8 5.5 4.5V20" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg>
-</span>
-<div class="achievement-main">
-<div class="achievement-value">€150K+</div>
-<h3>Supplier payment scope</h3>
-<p>Supported supplier payment processing and finance operations across the workflow.</p>
-<span class="achievement-tag">AP · CONTROLS</span>
-</div>
-</div>
-</article>
-<article class="achievement-card achievement-teal">
-<div aria-hidden="true" class="achievement-decor achievement-decor-pie"></div>
-<div class="achievement-index">05</div>
-<div class="achievement-content">
-<span aria-hidden="true" class="achievement-visual achievement-visual-reconcile">
-<svg fill="none" viewbox="0 0 24 24"><path d="M6 3h8l4 4v14H6z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5M9 12h6M9 16h5" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg>
-</span>
-<div class="achievement-main">
-<div class="achievement-value">€10K-€15K</div>
-<h3>Operational<br/>costs reconciled</h3>
-<p>Reconciled operational costs across accrual, GL, supplier and close checks.</p>
-<span class="achievement-tag">CLOSE · RECONCILIATION</span>
-</div>
-</div>
-</article>
-<article class="achievement-card achievement-blue">
-<div aria-hidden="true" class="achievement-decor achievement-decor-files"><i></i><i></i><i></i></div>
-<div class="achievement-index">06</div>
-<div class="achievement-content">
-<span aria-hidden="true" class="achievement-visual achievement-visual-document">
-<svg fill="none" viewbox="0 0 24 24"><path d="M6 3h8l4 4v14H6z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5M9 12h6M9 16h5" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg>
-</span>
-<div class="achievement-main">
-<div class="achievement-value">3.5K+</div>
-<h3>AP invoices reconstructed</h3>
-<p>Reconstructed historical AP invoices to support audit documentation and evidence.</p>
-<span class="achievement-tag">AUDIT · DOCUMENTATION</span>
-</div>
-</div>
-</article>
-</div>
+
+  <section class="employer-loop-section" aria-label="Past employers">
+    <span class="employer-loop-label">PAST EMPLOYERS</span>
+    <div class="employer-loop-window">
+      <div class="employer-loop-track">
+        <div class="employer-loop-set">
+          <div class="employer-loop-item allianz">
+            <img src="assets/Allianz-Trade.png" alt="Allianz Trade">
+          </div>
+          <div class="employer-loop-divider" aria-hidden="true"></div>
+          <div class="employer-loop-item guestready">
+            <img src="assets/GuestReady.jpg" alt="GuestReady">
+          </div>
+          <div class="employer-loop-divider" aria-hidden="true"></div>
+          <div class="employer-loop-item hairclub">
+            <img src="assets/Hair-Club-London.png" alt="Hair Club London">
+          </div>
+          <div class="employer-loop-divider" aria-hidden="true"></div>
+        </div>
+
+        <div class="employer-loop-set" aria-hidden="true">
+          <div class="employer-loop-item allianz">
+            <img src="assets/Allianz-Trade.png" alt="">
+          </div>
+          <div class="employer-loop-divider" aria-hidden="true"></div>
+          <div class="employer-loop-item guestready">
+            <img src="assets/GuestReady.jpg" alt="">
+          </div>
+          <div class="employer-loop-divider" aria-hidden="true"></div>
+          <div class="employer-loop-item hairclub">
+            <img src="assets/Hair-Club-London.png" alt="">
+          </div>
+          <div class="employer-loop-divider" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="tool-loop-section" aria-label="Tools and systems">
+    <span class="tool-loop-label">TOOLS &amp; SYSTEMS</span>
+    <div class="tool-loop-window">
+      <div class="tool-loop-track">
+        <div class="tool-loop-set">
+          <div class="tool-loop-item"><span class="tool-loop-mark">EX</span><span class="tool-loop-name">Excel</span></div><div class="tool-loop-divider"></div>
+          <div class="tool-loop-item"><span class="tool-loop-mark">BI</span><span class="tool-loop-name">Power BI</span></div><div class="tool-loop-divider"></div>
+          <div class="tool-loop-item"><span class="tool-loop-mark">SQL</span><span class="tool-loop-name">SQL</span></div><div class="tool-loop-divider"></div>
+          <div class="tool-loop-item"><span class="tool-loop-mark">MS</span><span class="tool-loop-name">MicroStrategy</span></div><div class="tool-loop-divider"></div>
+          <div class="tool-loop-item"><span class="tool-loop-mark">J</span><span class="tool-loop-name">Jira</span></div><div class="tool-loop-divider"></div>
+          <div class="tool-loop-item"><span class="tool-loop-mark">QB</span><span class="tool-loop-name">QuickBooks</span></div><div class="tool-loop-divider"></div>
+          <div class="tool-loop-item"><span class="tool-loop-mark">TP</span><span class="tool-loop-name">Tipalti</span></div><div class="tool-loop-divider"></div>
+          <div class="tool-loop-item"><span class="tool-loop-mark">PH</span><span class="tool-loop-name">Payhawk</span></div><div class="tool-loop-divider"></div>
+          <div class="tool-loop-item"><span class="tool-loop-mark">SP</span><span class="tool-loop-name">Spendesk</span></div><div class="tool-loop-divider"></div>
+          <div class="tool-loop-item"><span class="tool-loop-mark">PN</span><span class="tool-loop-name">Pennylane</span></div><div class="tool-loop-divider"></div>
+        </div>
+        <div class="tool-loop-set" aria-hidden="true">
+          <div class="tool-loop-item"><span class="tool-loop-mark">EX</span><span class="tool-loop-name">Excel</span></div><div class="tool-loop-divider"></div>
+          <div class="tool-loop-item"><span class="tool-loop-mark">BI</span><span class="tool-loop-name">Power BI</span></div><div class="tool-loop-divider"></div>
+          <div class="tool-loop-item"><span class="tool-loop-mark">SQL</span><span class="tool-loop-name">SQL</span></div><div class="tool-loop-divider"></div>
+          <div class="tool-loop-item"><span class="tool-loop-mark">MS</span><span class="tool-loop-name">MicroStrategy</span></div><div class="tool-loop-divider"></div>
+          <div class="tool-loop-item"><span class="tool-loop-mark">J</span><span class="tool-loop-name">Jira</span></div><div class="tool-loop-divider"></div>
+          <div class="tool-loop-item"><span class="tool-loop-mark">QB</span><span class="tool-loop-name">QuickBooks</span></div><div class="tool-loop-divider"></div>
+          <div class="tool-loop-item"><span class="tool-loop-mark">TP</span><span class="tool-loop-name">Tipalti</span></div><div class="tool-loop-divider"></div>
+          <div class="tool-loop-item"><span class="tool-loop-mark">PH</span><span class="tool-loop-name">Payhawk</span></div><div class="tool-loop-divider"></div>
+          <div class="tool-loop-item"><span class="tool-loop-mark">SP</span><span class="tool-loop-name">Spendesk</span></div><div class="tool-loop-divider"></div>
+          <div class="tool-loop-item"><span class="tool-loop-mark">PN</span><span class="tool-loop-name">Pennylane</span></div><div class="tool-loop-divider"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="scroll-explore" aria-hidden="true">
+    <span class="scroll-explore-label">SCROLL TO EXPLORE MY WORK</span>
+    <span class="scroll-explore-arrow"></span>
+    <span class="scroll-explore-dot"></span>
+  </div>
+
+
+  <section id="about" class="onepage-about">
+    <div class="section-head reveal">
+      <div><span class="section-code">01 / ABOUT</span></div>
+      <div>
+        <h2>Finance × Data × Operations.</h2>
+        <p class="copy">I work across finance operations, FP&amp;A, reporting and business intelligence — structuring messy inputs, applying financial logic and turning the result into a decision-ready output.</p>
+      </div>
+    </div>
+    <div class="onepage-about-grid">
+      <article class="onepage-about-card reveal">
+        <span class="section-code">PROFILE</span>
+        <h3>Analytical by nature. Commercial by mindset.</h3>
+        <p>My approach is simple: reconcile the inputs, quantify the movement, understand the drivers and communicate what should happen next.</p>
+        <div class="onepage-facts">
+          <div class="onepage-fact"><span>FOCUS</span><b>Finance / FP&amp;A / BI</b></div>
+          <div class="onepage-fact"><span>EDHEC</span><b>Double Degree · Grande École Programme</b></div>
+          <div class="onepage-fact"><span>TOOLS</span><b>Excel · Power BI · SQL · MicroStrategy</b></div>
+          <div class="onepage-fact"><span>APPROACH</span><b>Data → Logic → Control → Decision</b></div>
+        </div>
+      </article>
+      <article class="onepage-about-card principle reveal">
+        <span class="section-code">OPERATING PRINCIPLE</span>
+        <h3>What happened → Why → What next?</h3>
+        <p>Finance work becomes more useful when the number is explainable. I focus on reliable data, repeatable calculations, challenge controls and clear business actions.</p>
+        <div class="mini-flow"><span>DATA</span><span>LOGIC</span><span>ANALYSIS</span><span>INSIGHT</span><span>DECISION</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience" class="onepage-experience">
+    <div class="section-head reveal">
+      <div><span class="section-code">02 / EXPERIENCE</span></div>
+      <div>
+        <h2>Roles across finance, FP&amp;A and transformation.</h2>
+        <p class="copy">Three roles across finance operations, FP&amp;A and finance transformation.</p>
+      </div>
+    </div>
+
+    <div class="onepage-experience-grid">
+
+      <article class="onepage-experience-card reveal">
+        <div class="onepage-exp-top">
+          <div class="onepage-exp-logo">
+            <img src="assets/Allianz-Trade.png" alt="Allianz Trade">
+          </div>
+          <span class="onepage-exp-date">JUL 2025 – JAN 2026</span>
+        </div>
+        <div class="onepage-exp-meta">
+          <span class="onepage-exp-role">Role · Finance Transformation</span>
+          <span class="onepage-exp-division">Division · Group Surety</span>
+        </div>
+        <h3>Business Analyst – Finance Transformation</h3>
+        <p>Built regional finance dashboards across 15+ business units, standardised 16+ KPIs and automated reporting in MicroStrategy.</p>
+        <div class="onepage-exp-tags">
+          <span>MICROSTRATEGY</span>
+          <span>POWER BI</span>
+          <span>SQL</span>
+          <span>JIRA</span>
+        </div>
+      </article>
+
+      <article class="onepage-experience-card reveal">
+        <div class="onepage-exp-top">
+          <div class="onepage-exp-logo">
+            <img src="assets/GuestReady.jpg" alt="GuestReady">
+          </div>
+          <span class="onepage-exp-date">AUG 2023 – JUL 2024</span>
+        </div>
+        <div class="onepage-exp-meta">
+          <span class="onepage-exp-role">Role · FP&amp;A</span>
+          <span class="onepage-exp-division">Division · Financial Operations</span>
+        </div>
+        <h3>Financial Planning Analyst (FP&amp;A)</h3>
+        <p>Supported AP, forecasting, OPEX and management reporting; improved forecast variance from 20% to 5% across a €125K+ monthly OPEX scope.</p>
+        <div class="onepage-exp-tags">
+          <span>EXCEL</span>
+          <span>QUICKBOOKS</span>
+          <span>TIPALTI</span>
+          <span>PAYHAWK</span>
+          <span>SPENDESK</span>
+        </div>
+      </article>
+
+      <article class="onepage-experience-card reveal">
+        <div class="onepage-exp-top">
+          <div class="onepage-exp-logo">
+            <img src="assets/Hair-Club-London.png" alt="Hair Club London">
+          </div>
+          <span class="onepage-exp-date">APR 2020 – AUG 2022</span>
+        </div>
+        <div class="onepage-exp-meta">
+          <span class="onepage-exp-role">Role · FP&amp;A</span>
+          <span class="onepage-exp-division">Division · Finance</span>
+        </div>
+        <h3>Financial Planning Analyst (FP&amp;A)</h3>
+        <p>Built driver-based forecasting models, improved revenue forecast accuracy and supported pricing decisions contributing to 10% revenue growth.</p>
+        <div class="onepage-exp-tags">
+          <span>EXCEL</span>
+          <span>FORECASTING</span>
+          <span>VARIANCE</span>
+          <span>PRICING</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="identity-strip reveal"><span><b>FINANCE</b> FP&amp;A · ACCOUNTING · BI</span><span><b>EDHEC</b> DOUBLE DEGREE · MASTER IN MANAGEMENT + MSC STRATEGY &amp; CONSULTING</span><span><b>STEM</b> B.TECH CHEMICAL ENGINEERING</span><span><b>APPROACH</b> DATA → CALCULATION → CONTROL → DECISION</span></div>
+  <section class="finance-signal-rail reveal" aria-label="Portfolio finance signals">
+    <div class="signal-rail-head">
+      <span class="section-code">/ PORTFOLIO SIGNALS</span>
+      <small>CV-DERIVED · NON-LIVE</small>
+    </div>
+    <div class="signal-grid">
+      <article class="signal-cell"><span>OPEX SCOPE</span><strong>€125K+</strong><em>monthly forecast scope</em><i class="signal-line"><b style="--signal:100%"></b></i></article>
+      <article class="signal-cell"><span>FORECAST VARIANCE</span><strong>20% → 5%</strong><em>documented improvement</em><i class="signal-line"><b style="--signal:75%"></b></i></article>
+      <article class="signal-cell"><span>KPI GOVERNANCE</span><strong>16+</strong><em>standardised business KPIs</em><i class="signal-line"><b style="--signal:82%"></b></i></article>
+      <article class="signal-cell"><span>SUPPLIER PAYMENTS</span><strong>€150K+</strong><em>payment processing scope</em><i class="signal-line"><b style="--signal:68%"></b></i></article>
+    </div>
+  </section>
+  <section class="decision-system reveal finance-expertise-layout" aria-label="Finance workflow">
+    <div class="decision-head">
+      <span class="section-code">/ FINANCE OS</span>
+      <h2>Data → calculation → control → decision.</h2>
+      <p class="copy">A practical view of how I approach finance work: structure the inputs, apply the logic, challenge the result and turn it into a decision.</p>
+    </div>
+
+    <div class="finance-explorer">
+      <div class="finance-tabs" role="tablist" aria-label="Finance workflow stages">
+        <button class="finance-tab active" type="button" role="tab" aria-selected="true" data-finance-stage="data">
+          <span>01</span><b>DATA</b><i>→</i>
+        </button>
+        <button class="finance-tab" type="button" role="tab" aria-selected="false" data-finance-stage="calculation">
+          <span>02</span><b>CALCULATION</b><i>→</i>
+        </button>
+        <button class="finance-tab" type="button" role="tab" aria-selected="false" data-finance-stage="control">
+          <span>03</span><b>CONTROL</b><i>→</i>
+        </button>
+        <button class="finance-tab" type="button" role="tab" aria-selected="false" data-finance-stage="decision">
+          <span>04</span><b>DECISION</b><i>→</i>
+        </button>
+      </div>
+
+      <div class="finance-detail" id="financeDetail" role="tabpanel">
+        <span class="section-code">DATA</span>
+        <h3>Start with a reliable base.</h3>
+        <p>Supplier, operational and KPI inputs are structured and validated before the numbers are used for forecasting or reporting.</p>
+        <div class="finance-detail-tags"><span>RECONCILE</span><span>VALIDATE</span><span>STANDARDISE</span></div>
+        <div class="finance-detail-proof">
+          <div><strong>250+</strong><small>monthly supplier invoices</small></div>
+          <div><strong>300+</strong><small>customer refunds reconciled</small></div>
+          <div><strong>60+</strong><small>claims reconciled</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="recruiter-snapshot reveal" aria-label="Recruiter snapshot">
+    <div class="snapshot-label"><span class="section-code">/ RECRUITER VIEW</span><h2>Understand the profile in 20 seconds.</h2></div>
+    <div class="snapshot-grid">
+      <div><b>FINANCE / FP&amp;A / BI</b><span>Forecasting · variance · reporting · controls</span></div>
+      <div><b>€125K+</b><span>monthly OPEX forecast scope</span></div>
+      <div><b>20% → 5%</b><span>forecast variance improvement</span></div>
+      <div><b>16+</b><span>KPIs standardised</span></div>
+    </div>
+    <div class="snapshot-actions"><a class="btn primary" href="#experience">VIEW EXPERIENCE →</a><a class="btn" href="assets/CV.pdf">DOWNLOAD CV ↓</a></div>
+  </section>
+
+  
+
+  <section class="workflow-section">
+    <div class="workflow-heading reveal"><span class="section-code">WORKFLOW / 01</span><h2>HOW I WORK</h2><p>From the business question to a decision-ready financial output.</p></div>
+    <div class="workflow-strip reveal"><div class="workflow-items"><span>01 PROBLEM</span><i>→</i><span>02 DATA</span><i>→</i><span>03 CLEAN &amp; VALIDATE</span><i>→</i><span>04 ANALYSE</span><i>→</i><span>05 RECONCILE</span><i>→</i><span>06 DECIDE</span></div></div>
+  </section>
+
+
+
+<section class="education-compact-section">
+  <div class="education-compact-head reveal">
+    <div><span class="section-code">04 / EDUCATION</span></div>
+    <div>
+      <h2>Academic foundation.</h2>
+    </div>
+  </div>
+  <div class="education-compact-grid">
+    <article class="education-compact-card reveal">
+      <div class="education-card-top">
+        <span class="education-year">MAY 2022 – JAN 2026</span>
+        <div class="education-badges">
+          <span class="education-type">DOUBLE DEGREE</span>
+          <span class="education-type education-type-green">GRANDE ÉCOLE PROGRAMME</span>
+        </div>
+      </div>
+      <h3>Master in Management &amp; MSc Strategy &amp; Consulting</h3>
+      <p class="education-school">EDHEC Business School · Lille, France</p>
+      <p class="education-detail">Grande École Programme · Financial Statement Analysis · Corporate Finance · Cost Accounting · Strategic Management.</p>
+      <div class="education-tags">
+        <span>GRANDE ÉCOLE</span><span>FINANCE</span><span>STRATEGY</span><span>CONSULTING</span>
+      </div>
+    </article>
+
+    <article class="education-compact-card reveal">
+      <div class="education-card-top">
+        <span class="education-year">AUG 2016 – MAY 2020</span>
+        <span class="education-type">ENGINEERING</span>
+      </div>
+      <h3>Bachelor of Technology · Chemical Engineering</h3>
+      <p class="education-school">Birla Institute of Technology, Mesra · Ranchi, India</p>
+      <p class="education-detail">Engineering foundation with analytical problem-solving, process thinking and quantitative methods.</p>
+      <div class="education-tags">
+        <span>MATHEMATICS</span><span>PROCESS</span><span>ANALYTICS</span><span>PROBLEM SOLVING</span>
+      </div>
+    </article>
+  </div>
 </section>
-<section class="skill-explorer-section portfolio-expertise-section" id="capabilities">
-<div class="section-head reveal">
-<div class="unified-section-header unified-section-header-purple"><span class="unified-section-number">06</span><span class="unified-section-divider"></span><span class="unified-section-label">CAPABILITIES</span></div>
-<div>
-<h2>Finance expertise.</h2>
-<p class="copy">Select an area to see how I apply it in real finance, FP&amp;A and business-intelligence work.</p>
-</div>
-</div>
-<div class="expertise-explorer reveal">
-<div aria-label="Finance capabilities" class="expertise-tabs" role="tablist">
-<button aria-controls="expertiseDetail" aria-selected="true" class="expertise-tab active" data-expertise="finance" id="expertise-tab-finance" role="tab" tabindex="0" type="button"><span>01</span><b>Finance &amp; FP&amp;A</b><i>→</i></button>
-<button aria-controls="expertiseDetail" aria-selected="false" class="expertise-tab" data-expertise="forecasting" id="expertise-tab-forecasting" role="tab" tabindex="-1" type="button"><span>02</span><b>Forecasting &amp; Budgeting</b><i>→</i></button>
-<button aria-controls="expertiseDetail" aria-selected="false" class="expertise-tab" data-expertise="performance" id="expertise-tab-performance" role="tab" tabindex="-1" type="button"><span>03</span><b>Variance &amp; Performance</b><i>→</i></button>
-<button aria-controls="expertiseDetail" aria-selected="false" class="expertise-tab" data-expertise="bi" id="expertise-tab-bi" role="tab" tabindex="-1" type="button"><span>04</span><b>Business Intelligence</b><i>→</i></button>
-<button aria-controls="expertiseDetail" aria-selected="false" class="expertise-tab" data-expertise="accounting" id="expertise-tab-accounting" role="tab" tabindex="-1" type="button"><span>05</span><b>Accounting &amp; Close</b><i>→</i></button>
-<button aria-controls="expertiseDetail" aria-selected="false" class="expertise-tab" data-expertise="commercial" id="expertise-tab-commercial" role="tab" tabindex="-1" type="button"><span>06</span><b>Commercial Analysis</b><i>→</i></button>
-<button aria-controls="expertiseDetail" aria-selected="false" class="expertise-tab" data-expertise="data" id="expertise-tab-data" role="tab" tabindex="-1" type="button"><span>07</span><b>Data &amp; Automation</b><i>→</i></button>
-</div>
-<div aria-labelledby="expertise-tab-finance" class="expertise-detail" id="expertiseDetail" role="tabpanel" tabindex="0"></div>
-</div>
+
+  <section id="capabilities" class="skill-explorer-section portfolio-expertise-section">
+    <div class="section-head reveal">
+      <div><span class="section-code">05 / CAPABILITIES</span></div>
+      <div>
+        <h2>Finance expertise.</h2>
+        <p class="copy">Select an area to see how I apply it in real finance, FP&amp;A and business-intelligence work.</p>
+      </div>
+    </div>
+
+    <div class="expertise-explorer reveal">
+      <div class="expertise-tabs" role="tablist" aria-label="Finance capabilities">
+        <button class="expertise-tab active" type="button" role="tab" aria-selected="true" data-expertise="finance">
+          <span>01</span><b>Finance &amp; FP&amp;A</b><i>→</i>
+        </button>
+        <button class="expertise-tab" type="button" role="tab" aria-selected="false" data-expertise="forecasting">
+          <span>02</span><b>Forecasting &amp; Budgeting</b><i>→</i>
+        </button>
+        <button class="expertise-tab" type="button" role="tab" aria-selected="false" data-expertise="performance">
+          <span>03</span><b>Variance &amp; Performance</b><i>→</i>
+        </button>
+        <button class="expertise-tab" type="button" role="tab" aria-selected="false" data-expertise="bi">
+          <span>04</span><b>Business Intelligence</b><i>→</i>
+        </button>
+        <button class="expertise-tab" type="button" role="tab" aria-selected="false" data-expertise="accounting">
+          <span>05</span><b>Accounting &amp; Close</b><i>→</i>
+        </button>
+        <button class="expertise-tab" type="button" role="tab" aria-selected="false" data-expertise="commercial">
+          <span>06</span><b>Commercial Analysis</b><i>→</i>
+        </button>
+        <button class="expertise-tab" type="button" role="tab" aria-selected="false" data-expertise="data">
+          <span>07</span><b>Data &amp; Automation</b><i>→</i>
+        </button>
+      </div>
+
+      <div class="expertise-detail" id="expertiseDetail" role="tabpanel">
+        <span class="section-code">CAPABILITY LOGIC</span>
+        <h3>Finance &amp; FP&amp;A</h3>
+        <p>Forecast → budget → variance → reconciliation → decision support.</p>
+        <div class="detail-tools"><span>Excel</span><span>Power BI</span><span>QuickBooks</span></div>
+        <div class="expertise-proof">
+          <div><strong>€125K+</strong><small>monthly OPEX forecast scope</small></div>
+          <div><strong>20% → 5%</strong><small>forecast variance</small></div>
+          <div><strong>€150K+</strong><small>supplier payments</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="evidence-strip reveal" id="evidence">
+  <div class="evidence-heading">
+    <span class="section-code">06 / EVIDENCE</span>
+    <h2>Numbers with context.</h2>
+  </div>
+  <div class="evidence-grid">
+    <article class="evidence-card"><span class="evidence-index">01</span><b>€125K+</b><small>monthly OPEX forecast scope</small></article>
+    <article class="evidence-card"><span class="evidence-index">02</span><b>20% → 5%</b><small>forecast variance improvement</small></article>
+    <article class="evidence-card"><span class="evidence-index">03</span><b>3.5K+</b><small>historical AP invoices reconstructed for audit documentation</small></article>
+    <article class="evidence-card"><span class="evidence-index">04</span><b>€10K–€15K</b><small>operational costs reconciled</small></article>
+  </div>
 </section>
+<section><div class="section-head reveal"><div><span class="section-code">/ EVIDENCE</span></div><div><h2>Built to be verified.</h2><p class="copy">The CV provides the formal record. This site adds the analytical context: what the work was solving, how the numbers were calculated and what the output supported.</p><div class="actions"><a class="btn primary" href="assets/CV.pdf">DOWNLOAD CV ↓</a></div></div></div></section>
+
+  <section id="recommendations" class="onepage-recommendations">
+    <div class="section-head reveal">
+      <div><span class="section-code">07 / RECOMMENDATIONS</span></div>
+      <div>
+        <h2>Professional evidence.</h2>
+        <p class="copy">Use the links below for the public profile, full CV and supporting evidence layer.</p>
+      </div>
+    </div>
+    <div class="onepage-rec-grid">
+      <article class="onepage-rec-card reveal"><div class="onepage-rec-meta"><span>LINKEDIN</span><span>PROFILE</span></div><h3>Professional profile</h3><p>Public profile for recommendations and professional context.</p><a href="https://www.linkedin.com/in/shiveshraj" target="_blank" rel="noopener">VIEW LINKEDIN ↗</a></article>
+      <article class="onepage-rec-card reveal"><div class="onepage-rec-meta"><span>CV</span><span>AVAILABLE</span></div><h3>Full resume / CV</h3><p>Complete role history, tools, projects and quantified outcomes.</p><a href="assets/CV.pdf">DOWNLOAD CV ↓</a></article>
+      <article class="onepage-rec-card reveal"><div class="onepage-rec-meta"><span>EVIDENCE</span><span>SELECTIVE</span></div><h3>Project evidence</h3><p>Selected models and supporting evidence can be shared where appropriate.</p><a href="mailto:shivesh.raj@edhec.com">REQUEST BY EMAIL ↗</a></article>
+    </div>
+  </section>
+
+<section id="contact"><div class="section-head reveal"><div><span class="section-code">08 / CONNECT</span></div><div><h2>Finance, data, decision-making.</h2><p class="copy">Open to finance, FP&amp;A, finance operations, business intelligence and analytical opportunities.</p><div class="actions"><a class="btn primary" href="mailto:shivesh.raj@edhec.com">EMAIL ↗</a><a class="btn" href="https://www.linkedin.com/in/shiveshraj" target="_blank" rel="noopener">LINKEDIN ↗</a></div></div></div></section>
 </main>
-<button aria-label="Back to top" class="backtop" id="backTop">↑</button>
+<button class="backtop" id="backTop">↑</button>
 <footer class="shell footer"><span>SHIVESH RAJ · FINANCE / FP&amp;A / BI</span><span>© <span id="year"></span></span></footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <script src="script.js"></script>
-<footer class="final-interconnect-footer">
-<div class="final-footer-nav">
-<a href="#top">HOME</a>
-<a href="#projects">PROJECTS</a>
-<a href="index.html#experience">EXPERIENCE</a>
-<a href="#timeline">EDUCATION</a>
-<a href="index.html#capabilities">CAPABILITIES</a>
-<a href="index.html#achievements">ACHIEVEMENTS</a>
-<a href="./assets/cv.pdf" rel="noopener" target="_blank">CV ↓</a>
-</div>
-</footer>
-<!-- FINAL HERO COMPACT PASS -->
+
+<script>
+(function(){
+  const data = {
+    finance: {
+      title:"Finance & FP&A",
+      text:"Forecast → budget → variance → reconciliation → decision support.",
+      tools:["Excel","Power BI","QuickBooks"],
+      proof:[["€125K+","monthly OPEX forecast scope"],["20% → 5%","forecast variance"],["€150K+","supplier payments"]]
+    },
+    forecasting: {
+      title:"Forecasting & Budgeting",
+      text:"Driver-based forecasting using operational activity, supplier assumptions, unit costs and actual-versus-forecast analysis.",
+      tools:["Excel","OPEX model","Cost analysis"],
+      proof:[["€125K+","monthly OPEX scope"],["5%","improved forecast variance"],["250+","monthly AP invoices"]]
+    },
+    performance: {
+      title:"Variance & Performance",
+      text:"Translate actual-versus-forecast movements into driver explanations, KPI tracking and management actions.",
+      tools:["Variance analysis","KPI tracking","Management reporting"],
+      proof:[["20% → 5%","forecast variance"],["16+","standardised KPIs"],["15+","business units"]]
+    },
+    bi: {
+      title:"Business Intelligence",
+      text:"Turn business requirements into defined KPIs, structured data logic, dashboards and stakeholder-ready reporting.",
+      tools:["Power BI","MicroStrategy","SQL"],
+      proof:[["6","regional dashboards"],["15+","business units"],["16+","KPIs standardised"]]
+    },
+    commercial: {
+      title:"Commercial Analysis",
+      text:"Connect revenue, service mix, pricing and margin assumptions to scenario-based decisions.",
+      tools:["Revenue forecasting","Pricing analysis","Scenario analysis"],
+      proof:[["10%","revenue growth"],["188%","quarterly growth"],["69%","CAGR"]]
+    },
+    data: {
+      title:"Data & Automation",
+      text:"Clean → match → reconcile → automate → refresh → report, with controls designed to keep finance outputs reliable.",
+      tools:["Excel","SQL","VBA","Google Apps Script"],
+      proof:[["250+","monthly invoices"],["300+","refunds reconciled"],["60+","claims reconciled"]]
+    }
+  };
+
+  function render(key){
+    const panel=document.getElementById("expertiseDetail");
+    if(!panel || !data[key]) return;
+    const d=data[key];
+    panel.innerHTML =
+      '<span class="section-code">CAPABILITY LOGIC</span>' +
+      '<h3>'+d.title+'</h3>' +
+      '<p>'+d.text+'</p>' +
+      '<div class="detail-tools">'+d.tools.map(x=>'<span>'+x+'</span>').join('')+'</div>' +
+      '<div class="expertise-proof">'+d.proof.map(x=>'<div><strong>'+x[0]+'</strong><small>'+x[1]+'</small></div>').join('')+'</div>';
+  }
+
+  document.querySelectorAll(".portfolio-expertise-section .expertise-tab").forEach(btn=>{
+    btn.addEventListener("click",function(){
+      document.querySelectorAll(".portfolio-expertise-section .expertise-tab").forEach(b=>{
+        b.classList.remove("active");
+        b.setAttribute("aria-selected","false");
+      });
+      this.classList.add("active");
+      this.setAttribute("aria-selected","true");
+      render(this.dataset.expertise);
+    });
+  });
+
+  render("finance");
+})();
+</script>
+
+
+<script id="finance-os-reference-tabs">
+(function(){
+  const stages={
+    data:{label:'DATA',title:'Start with a reliable base.',text:'Supplier, operational and KPI inputs are structured and validated before the numbers are used for forecasting or reporting.',tags:['RECONCILE','VALIDATE','STANDARDISE'],proof:[['250+','monthly supplier invoices'],['300+','customer refunds reconciled'],['60+','claims reconciled']]},
+    calculation:{label:'CALCULATION',title:'Apply the financial logic.',text:'Translate operational drivers into forecasts, costs, KPIs and financial outputs using clear, repeatable calculations.',tags:['FORECAST','MODEL','CALCULATE'],proof:[['€125K+','monthly OPEX forecast scope'],['16+','standardised KPIs'],['6','regional dashboards']]},
+    control:{label:'CONTROL',title:'Challenge the number before it moves.',text:'Forecast-to-actual checks, reconciliations and KPI definitions make unusual movements visible and keep reporting reliable.',tags:['VARIANCE','RECONCILIATION','KPI GOVERNANCE'],proof:[['20% → 5%','forecast variance'],['€150K+','supplier payments'],['15+','business units']]},
+    decision:{label:'DECISION',title:'Explain what changes.',text:'Turn the validated result into a clear business explanation so stakeholders can understand the movement and decide what to do next.',tags:['REPORT','EXPLAIN','ACT'],proof:[['10%','revenue growth'],['188%','quarterly growth'],['69%','CAGR']]}
+  };
+  function render(key){
+    const d=stages[key], panel=document.getElementById('financeDetail');
+    if(!d||!panel)return;
+    panel.innerHTML='<span class="section-code">'+d.label+'</span><h3>'+d.title+'</h3><p>'+d.text+'</p><div class="finance-detail-tags">'+d.tags.map(t=>'<span>'+t+'</span>').join('')+'</div><div class="finance-detail-proof">'+d.proof.map(x=>'<div><strong>'+x[0]+'</strong><small>'+x[1]+'</small></div>').join('')+'</div>';
+  }
+  document.querySelectorAll('.finance-tab').forEach(btn=>btn.addEventListener('click',function(){
+    document.querySelectorAll('.finance-tab').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false');});
+    this.classList.add('active');this.setAttribute('aria-selected','true');render(this.dataset.financeStage);
+  }));
+  render('data');
+})();
+</script>
+
+
+<style id="scroll-content-gate">
+/* Keep the portfolio content hidden on the first screen. The scroll cue
+   acts as the visual endpoint; content reveals naturally as the visitor scrolls. */
+.home-page .scroll-explore ~ .identity-strip,
+.home-page .scroll-explore ~ section,
+.home-page .scroll-explore ~ footer {
+  opacity:0 !important;
+  visibility:hidden !important;
+  transform:translateY(24px) !important;
+  transition:opacity .45s ease, transform .55s ease, visibility 0s linear .55s !important;
+}
+.home-page.scroll-content-revealed .scroll-explore ~ .identity-strip,
+.home-page.scroll-content-revealed .scroll-explore ~ section,
+.home-page.scroll-content-revealed .scroll-explore ~ footer {
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+  transition-delay:0s !important;
+}
+
+/* The cue itself stays compact and centred. */
+.home-page .scroll-explore {
+  position:relative !important;
+  z-index:5 !important;
+  min-height:72px !important;
+  height:72px !important;
+  padding:6px 0 10px !important;
+  margin:0 !important;
+  justify-content:center !important;
+  gap:6px !important;
+  overflow:hidden !important;
+  opacity:1 !important;
+  transition:opacity .25s ease,max-height .35s ease,padding .35s ease,margin .35s ease !important;
+}
+
+/* Once the visitor scrolls, collapse the cue completely so the next section
+   comes into view immediately instead of leaving a blank block. */
+.home-page.scroll-content-revealed .scroll-explore{
+  min-height:0 !important;
+  height:0 !important;
+  max-height:0 !important;
+  padding-top:0 !important;
+  padding-bottom:0 !important;
+  margin:0 !important;
+  opacity:0 !important;
+  pointer-events:none !important;
+}
+
+@media(max-width:700px){
+  .home-page .scroll-explore{
+    min-height:64px !important;
+    height:64px !important;
+    padding:4px 0 8px !important;
+  }
+}
+</style>
+
+<script id="scroll-content-gate-script">
+(function(){
+  const page=document.querySelector('.home-page');
+  const cue=document.querySelector('.home-page .scroll-explore');
+  if(!page || !cue) return;
+  const reveal=()=>{
+    if(window.scrollY > 45) page.classList.add('scroll-content-revealed');
+    else page.classList.remove('scroll-content-revealed');
+  };
+  window.addEventListener('scroll',reveal,{passive:true});
+  reveal();
+})();
+</script>
+
+
+<style id="loop-polish-v2">
+/* ===== Past employers / tools marquee polish ===== */
+.home-page .employer-loop-section{
+  padding:14px 0 6px !important;
+}
+.home-page .employer-loop-label,
+.home-page .tool-loop-label{
+  color:#75859b !important;
+  opacity:.95 !important;
+}
+.home-page .employer-loop-track{
+  animation-duration:34s !important;
+}
+.home-page .employer-loop-set{
+  gap:72px !important;
+  padding-right:72px !important;
+}
+.home-page .employer-loop-item{
+  min-width:156px !important;
+  height:44px !important;
+  opacity:.98 !important;
+}
+.home-page .employer-loop-item img{
+  max-width:158px !important;
+  height:35px !important;
+  filter:brightness(1.16) saturate(.92) !important;
+}
+.home-page .employer-loop-item.allianz img{max-width:142px !important;height:31px !important;}
+.home-page .employer-loop-item.guestready img{max-width:132px !important;height:35px !important;}
+.home-page .employer-loop-item.hairclub img{max-width:136px !important;height:34px !important;}
+.home-page .employer-loop-divider{height:26px !important;background:rgba(126,150,177,.28) !important;}
+
+.home-page .tool-loop-section{
+  padding:4px 0 4px !important;
+}
+.home-page .tool-loop-track{
+  animation-duration:38s !important;
+}
+.home-page .tool-loop-set{
+  gap:48px !important;
+  padding-right:48px !important;
+}
+.home-page .tool-loop-item{
+  min-width:118px !important;
+  gap:10px !important;
+  opacity:.96 !important;
+}
+.home-page .tool-loop-mark{
+  width:34px !important;
+  height:34px !important;
+  border-radius:9px !important;
+  border-color:rgba(126,150,177,.34) !important;
+  background:linear-gradient(180deg,rgba(20,31,45,.96),rgba(10,17,25,.92)) !important;
+  color:#d8e2ef !important;
+  font-size:10px !important;
+  box-shadow:0 0 0 1px rgba(255,255,255,.02), 0 6px 18px rgba(0,0,0,.18) !important;
+}
+.home-page .tool-loop-name{
+  font-size:10px !important;
+  color:#b8c4d5 !important;
+  letter-spacing:.05em !important;
+}
+.home-page .tool-loop-divider{
+  height:22px !important;
+  background:rgba(126,150,177,.22) !important;
+}
+.home-page .tool-loop-window::before,
+.home-page .tool-loop-window::after,
+.home-page .employer-loop-window::before,
+.home-page .employer-loop-window::after{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:10%;
+  z-index:2;
+  pointer-events:none;
+}
+.home-page .tool-loop-window::before,
+.home-page .employer-loop-window::before{
+  left:0;
+  background:linear-gradient(90deg,#070b10 0%,rgba(7,11,16,.92) 25%,rgba(7,11,16,0) 100%);
+}
+.home-page .tool-loop-window::after,
+.home-page .employer-loop-window::after{
+  right:0;
+  background:linear-gradient(270deg,#070b10 0%,rgba(7,11,16,.92) 25%,rgba(7,11,16,0) 100%);
+}
+@media(max-width:700px){
+  .home-page .employer-loop-track{animation-duration:40s !important;}
+  .home-page .tool-loop-track{animation-duration:44s !important;}
+  .home-page .employer-loop-set{gap:42px !important;padding-right:42px !important;}
+  .home-page .employer-loop-item{min-width:112px !important;}
+  .home-page .tool-loop-set{gap:28px !important;padding-right:28px !important;}
+  .home-page .tool-loop-item{min-width:86px !important;}
+  .home-page .tool-loop-mark{width:28px !important;height:28px !important;font-size:9px !important;}
+  .home-page .tool-loop-name{font-size:9px !important;}
+}
+</style>
+
+
+<script id="live-site-datetime">
+(function(){
+  const el=document.getElementById('siteDateTime');
+  if(!el) return;
+  const fmt=new Intl.DateTimeFormat(undefined,{
+    day:'2-digit', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit', hour12:false
+  });
+  function update(){
+    const value=fmt.format(new Date()).replace(/,/g,' ·').toUpperCase();
+    el.textContent=value;
+  }
+  update();
+  window.setInterval(update,30000);
+})();
+</script>
+
+
+<script>
+(function(){
+  const navHome = document.querySelector('.nav-single-home');
+  if(navHome){ navHome.addEventListener('click', function(e){ e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'}); }); }
+  const paletteExperience = document.querySelector('[data-command="/experience"]');
+  if(paletteExperience){ paletteExperience.addEventListener('click', function(){ document.getElementById('experience')?.scrollIntoView({behavior:'smooth',block:'start'}); }); }
+})();
+</script>
+
+
+<script id="intro-navigation-fix">
+(function(){
+  function enterPortfolio(){
+    const screen=document.getElementById('introScreen');
+    const button=document.getElementById('enterPortfolio');
+    if(!screen) return;
+    if(button) button.disabled=true;
+    screen.classList.add('is-leaving');
+    document.body.classList.remove('intro-active');
+    document.body.classList.add('page-ready');
+    window.setTimeout(function(){
+      if(screen && screen.parentNode) screen.remove();
+    },700);
+  }
+  const button=document.getElementById('enterPortfolio');
+  if(button){
+    button.addEventListener('click',enterPortfolio);
+    button.addEventListener('keydown',function(e){
+      if(e.key==='Enter' || e.key===' '){e.preventDefault();enterPortfolio();}
+    });
+  }
+  const skip=document.querySelector('.intro-skip-btn');
+  if(skip){
+    skip.addEventListener('click',function(){
+      const screen=document.getElementById('introScreen');
+      if(screen) screen.remove();
+      document.body.classList.remove('intro-active');
+      document.body.classList.add('page-ready');
+    });
+  }
+
+  const screen=document.getElementById('introScreen');
+  if(screen){
+    screen.addEventListener('click',function(e){
+      if(e.target.closest('.intro-skip-btn') || e.target.closest('.enter-portfolio')) return;
+      enterPortfolio();
+    });
+  }
+  document.addEventListener('keydown',function(e){
+    if((e.key==='Enter' || e.key===' ') && document.getElementById('introScreen')){
+      e.preventDefault();
+      enterPortfolio();
+    }
+    if(e.key==='Escape' && document.getElementById('introScreen')){
+      e.preventDefault();
+      if(screen) screen.remove();
+      document.body.classList.remove('intro-active');
+      document.body.classList.add('page-ready');
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
